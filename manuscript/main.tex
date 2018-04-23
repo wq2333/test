@@ -1,0 +1,222 @@
+
+\documentclass[journal]{vgtc}                % final (journal style)
+%\documentclass[review,journal]{vgtc}         % review (journal style)
+%\documentclass[widereview]{vgtc}             % wide-spaced review
+%\documentclass[preprint,journal]{vgtc}       % preprint (journal style)
+
+%% Uncomment one of the lines above depending on where your paper is
+%% in the conference process. ``review'' and ``widereview'' are for review
+%% submission, ``preprint'' is for pre-publication, and the final version
+%% doesn't use a specific qualifier.
+
+%% Please use one of the ``review'' options in combination with the
+%% assigned online id (see below) ONLY if your paper uses a double blind
+%% review process. Some conferences, like IEEE Vis and InfoVis, have NOT
+%% in the past.
+
+%% Please note that the use of figures other than the optional teaser is not permitted on the first page
+%% of the journal version.  Figures should begin on the second page and be
+%% in CMYK or Grey scale format, otherwise, colour shifting may occur
+%% during the printing process.  Papers submitted with figures other than the optional teaser on the
+%% first page will be refused. Also, the teaser figure should only have the
+%% width of the abstract as the template enforces it.
+
+%% These few lines make a distinction between latex and pdflatex calls and they
+%% bring in essential packages for graphics and font handling.
+%% Note that due to the \DeclareGraphicsExtensions{} call it is no longer necessary
+%% to provide the the path and extension of a graphics file:
+%% \includegraphics{diamondrule} is completely sufficient.
+%%
+\ifpdf%                                % if we use pdflatex
+  \pdfoutput=1\relax                   % create PDFs from pdfLaTeX
+  \pdfcompresslevel=9                  % PDF Compression
+  \pdfoptionpdfminorversion=7          % create PDF 1.7
+  \ExecuteOptions{pdftex}
+  \usepackage{graphicx}                % allow us to embed graphics files
+  \DeclareGraphicsExtensions{.pdf,.png,.jpg,.jpeg} % for pdflatex we expect .pdf, .png, or .jpg files
+\else%                                 % else we use pure latex
+  \ExecuteOptions{dvips}
+  \usepackage{graphicx}                % allow us to embed graphics files
+  \DeclareGraphicsExtensions{.eps}     % for pure latex we expect eps files
+\fi%
+
+%% it is recomended to use ``\autoref{sec:bla}'' instead of ``Fig.~\ref{sec:bla}''
+\graphicspath{{figures/}{pictures/}{images/}{./}} % where to search for the images
+
+\usepackage{microtype}                 % use micro-typography (slightly more compact, better to read)
+\PassOptionsToPackage{warn}{textcomp}  % to address font issues with \textrightarrow
+\usepackage{textcomp}                  % use better special symbols
+\usepackage{mathptmx}                  % use matching math font
+\usepackage{times}                     % we use Times as the main font
+\renewcommand*\ttdefault{txtt}         % a nicer typewriter font
+\usepackage{cite}                      % needed to automatically sort the references
+\usepackage{tabu}                      % only used for the table example
+\usepackage{booktabs}                  % only used for the table example
+%% We encourage the use of mathptmx for consistent usage of times font
+%% throughout the proceedings. However, if you encounter conflicts
+%% with other math-related packages, you may want to disable it.
+\usepackage{wrapfig}
+\usepackage{subfig}
+\usepackage{caption}
+
+\usepackage{hyperref}
+\usepackage[usenames, dvipsnames]{color}
+%% In preprint mode you may define your own headline.
+%\preprinttext{To appear in IEEE Transactions on Visualization and Computer Graphics.}
+
+%% If you are submitting a paper to a conference for review with a double
+%% blind reviewing process, please replace the value ``0'' below with your
+%% OnlineID. Otherwise, you may safely leave it at ``0''.
+\onlineid{0}
+
+%% declare the category of your paper, only shown in review mode
+\vgtccategory{Research}
+%% please declare the paper type of your paper to help reviewers, only shown in review mode
+%% choices:
+%% * algorithm/technique
+%% * application/design study
+%% * evaluation
+%% * system
+%% * theory/model
+\vgtcpapertype{algorithm/technique}
+
+\newcommand\addcomment[1]{\textcolor{red}{#1}}
+
+\newcommand{\specialcell}[2][l]{%
+\begin{tabular}[#1]{@{}l@{}}#2\end{tabular}}
+
+%% Paper title.
+%\title{Data-Driven Animation Effect Enhancement to Activate Static Visual Charts}
+\title{City Folding: Visual Exploration of Urban Dynamics based on Deomgraphic Data Collected via Social Media}
+
+% City Folding: A Map Distortion Method Driven by Social Deomgraphics Data
+
+% Visual Exploration of Urban Demographic Visual Exploration of Urban Data
+
+
+%% This is how authors are specified in the journal style
+
+%% indicate IEEE Member or Student Member in form indicated below
+%\author{Qi Wang, Min Lu, Yang Yue, ...}
+%\authorfooter{
+%% insert punctuation at end of each item
+%\item
+%Qi Wang, Min Lu and Hui Huang are with Shenzhen University. E-mail: \{minlu, huihuang\}@szu.edu.cn
+%\item
+% Noa Fish is with Tel Aviv University, E-mail: {noafish}@post.tau.ac.il
+%\item
+%Dainel Cohen-Or is with Tel Aviv University and Shenzhen University, E-mail: {dcor}@tau.ac.il
+%\item 
+%To whom correspondence should be addressed,
+%email: {huihuang}@szu.edu.cn
+%}
+
+%other entries to be set up for journal
+%\shortauthortitle{Lu \MakeLowercase{\textit{et al.}}: Enhancing Static Visual Charts}
+%\shortauthortitle{Firstauthor \MakeLowercase{\textit{et al.}}: Paper Title}
+
+%% Abstract section.
+\abstract{A city is shaped not only by its natural geographic landscape but also by social accessiblity to various citizens. In this work, via a social wide census investigation via the social media platform, citizens with various demographics are reached. We propose a map distortion method to provide an intuitive perception of the accessiblity, i.e., the kind of city folding phenomenon, in the context of various levels of social attributes (e.g., income, education, etc). Accompanied with temporal and spatial multiple views, the method is capabile to reveal the detail of levels.
+
+\iffalse
+
+For centuries, knowledge sharing and exchange of ideas have relied upon the usage of visual charts and diagrams designed to be viewed in hard-copy form.
+To emphasize and draw attention to certain aspects of the data, static cues like color and geometric shapes were utilized with great success.
+Nowadays, digital displays are ubiquitous in the visualization of any form of data, lifting the confines of static presentations.
+In this work, we propose taking a natural step forward, and incorporate data-driven dynamic enhancements into otherwise static visualization schemes, for the purpose of element emphasis and attention guidance. 
+Given a chart or a diagram, and their underlying data, we perform a simple analysis to determine elements and attributes of importance. According to their characteristics, a suitable dynamic effect is applied directly onto the displayed data, creating an illusion of a visualization brought to life.
+We experiment with three versatile effects, namely, \textit{marching ants}, \textit{geometry deformation} and \textit{blinking}, and provide practical details regarding their mode of operation and extent of interaction with existing visual channels.
+We examine the impact and effectiveness of our enhancements via two user studies designed to assess personal preference as well as gauge the influence of visual dynamic effects on human perception in terms of fast, yet accurate visual understanding. 
+
+Complementary to conventional visual channels such as color, shape, in this work, we propose to enhance the static charts with activating visual channel, i.e., animation effect, to bring life to visualization. The usage of animation effect enhancement is instantiated in different data types, including graph, tree, spatial, temporal, etc. A user study reports its effectiveness. 
+\fi
+%
+} % end of abstract
+
+%% Keywords that describe your work. Will show as 'Index Terms' in journal
+%% please capitalize first letter and insert punctuation after last keyword
+\keywords{Demographics, Spatial-temporal Visualization, Map Distortion}
+
+%% ACM Computing Classification System (CCS). 
+%% See <http://www.acm.org/class/1998/> for details.
+%% The ``\CCScat'' command takes four arguments.
+
+\CCScatlist{ % not used in journal version
+ \CCScat{K.6.1}{Management of Computing and Information Systems}%
+{Project and People Management}{Life Cycle};
+ \CCScat{K.7.m}{The Computing Profession}{Miscellaneous}{Ethics}
+}
+
+%% Uncomment below to include a teaser figure.
+% \teaser{
+%   \centering
+%   \includegraphics[width=\linewidth]{CypressView}
+%   \caption{In the Clouds: Vancouver from Cypress Mountain. Note that the teaser may not be wider than the abstract block.}
+% 	\label{fig:teaser}
+% }
+
+%% Uncomment below to disable the manuscript note
+%\renewcommand{\manuscriptnotetxt}{}
+
+%% Copyright space is enabled by default as required by guidelines.
+%% It is disabled by the 'review' option or via the following command:
+% \nocopyrightspace
+
+\vgtcinsertpkg
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%% START OF THE PAPER %%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%% The ``\maketitle'' command must be the first command after the
+%% ``\begin{document}'' command. It prepares and prints the title block.
+
+%% the only exception to this rule is the \firstsection command
+\firstsection{Introduction}
+
+\maketitle
+
+%% \section{Introduction} %for journal use above \firstsection{..} instead
+%Without interference with other visual encoding, animation effect is proved as a light-weight extra and preattensive cue. 
+
+Collecting data via a widely used social medial platform, users (what the right word here?) with various profiles are reached and assembled as rich (and fair?) demographic data. 
+
+
+
+\input{relatedwork}
+\input{data}
+\input{visualdesign}
+\input{visualsys}
+\input{case}
+% \input{discussion}
+
+\section{Conclusion}
+
+In this paper, we presented the map distrotion, whis driven by the accessibility of demographics. Our experimental findings indicate that ..., that aids in ...
+
+Our current ...
+
+
+ 
+
+
+% In this work, we propose to enhance static charts with kinetic effects, which serve as an plausible and orthogonal extension of conventional static visual cuing. Three kinetic effects (marching ants, geometry deformation and blinking) are introduced to demonstrate the idea from dynamic effects of motion, deformation and on-off repeating patterns. Kinetic effects encode various messages by design dimensions via the data driven mechanism. ...  kinetic effects brings the unsaid or less-notified information and bring the static infographics and charts to life. A controlled user study ...%Aligned with daily life experience , charts  enhanced by Kinetic Effect provides 
+% which maintains the richness of expressibility . 
+
+
+%% if specified like this the section will be committed in review mode
+% \acknowledgments{
+% The authors wish to thank A, B, and C. This work was supported in part by
+% a grant from XYZ (\# 12345-67890).}
+
+%\bibliographystyle{abbrv}
+\bibliographystyle{abbrv-doi}
+%\bibliographystyle{abbrv-doi-narrow}
+%\bibliographystyle{abbrv-doi-hyperref}
+%\bibliographystyle{abbrv-doi-hyperref-narrow}
+
+\bibliography{main}
+\end{document}
+
