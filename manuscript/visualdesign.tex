@@ -1,8 +1,32 @@
-\section{Demographics Driven Map Distortion Method}
+\section{Idea}
 
-\subsection{Data-driven Profile Design}
+Classification method, flow clustering method, Semantic representation. 
+
+The key of our work is to align the analysis of urban dynamics with the available of individual characteristics. 
+
+Problem to solve: 
+\begin{itemize}
+\item \textit{Groups of people}: multiple attributes, semantic understanding, loose attribute boundary
+\item \textit{Urban Dynamics of People Group}: where those people go and how they access the ... in a city. the patterns of behaviour classified by different social characteristics.  
+\end{itemize}
+
+\section{City-folding Visual Analytics}
+
+Semantic understanding of social characteristics.
+
+\subsection{Data-driven Visual Profile}
+
+to abstract to concrete and semantic understanding, to help users clues to do the classification. 
+
+Face... Data-driven inforgraphics~\cite{}. 
 
 Figure~\ref{fig:design_profile} shows the legend for the user profile. Those design dimensions are driven by data. an intuitive perception of the social characteristics. 
+
+Considering the driven machinsm in two attributes: 
+\begin{itemize}
+\item \textit{Numerical}
+\item \textit{Categorical}
+\end{itemize}
 
 \begin{figure}[htb!]
  \centering % avoid the use of \begin{center}...\end{center} and use \centering instead (more compact)
@@ -12,7 +36,6 @@ Figure~\ref{fig:design_profile} shows the legend for the user profile. Those des
 \end{figure}
 
 Various profiles are generated. Figure~\ref{fig:div_profile} shows some results.
-
 
 \begin{figure}[htb!]
  \centering % avoid the use of \begin{center}...\end{center} and use \centering instead (more compact)
@@ -25,6 +48,7 @@ Various profiles are generated. Figure~\ref{fig:div_profile} shows some results.
 
 Figure~\ref{fig:mds} is the MDS project of diversse users. Contour detected. Classification Updated. Automatic ensembling of diverse profiles. 
 
+Groups from demographics
 
 \begin{figure}[htb!]
  \centering % avoid the use of \begin{center}...\end{center} and use \centering instead (more compact)
@@ -32,3 +56,7 @@ Figure~\ref{fig:mds} is the MDS project of diversse users. Contour detected. Cla
  \caption{Interactive Labelling and Classification}
  \label{fig:mds}
 \end{figure}
+
+\subsection{Spatial Visualization}
+
+The space visualization is embedded in 2.5D space. TAZ is used as the .... The height of space is put as the occurrence of visiting. For each group of people, we adjust the DB-Scan Algorithm in the context of TAZ. 
