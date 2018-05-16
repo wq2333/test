@@ -1,265 +1,202 @@
 <head>
+
 	<script type="text/javascript" src="{{static_url('./lib/paper-full.min.js')}}"></script>
-	<style type="text/css">
-		.window1Div{
-			position: absolute;background:#ff000042;width: 35%;height: 100%;top: 0;left: 0;
-		}	
-		.window2Div{
-			position: absolute;background:black;width: 65%;height: 100%;top: 0;left: 35%;float: right;
-		}
-	</style>
+	<script type="text/javascript" src="{{static_url('./lib/d3.min.js')}}"></script>
+	<script type="text/javascript" src="{{static_url('./lib/Detector.js')}}"></script>
+	<script type="text/javascript" src="{{static_url('./lib/jquery.min.js')}}"></script>
+	<script type="text/javascript" src="{{static_url('./lib/lurlquery.js')}}"></script>
+	<script type="text/javascript" src="{{static_url('./lib/three.min.js')}}"></script>
+    <script type="text/javascript" src="{{static_url('./lib/OrbitControls.js')}}"></script>
+	<script type="text/javascript" src="{{static_url('./lib/TrackballControls.js')}}"></script>
 
-	<script type="text/paperscript" canvas="canvas1">
-
-		g_liAttrName = ['gender', 'age', 'income', 'edu', 'resident', 'car', 'house', 'job']
-		g_CurrentAttribteOptions = {}
-		g_liFigure = [];
-		g_CurrentShowFigureIndex = -1
-		currentGender = "m";
-		resetOptions();
-
-		// Create a Paper.js Path to draw a line into it:
-		var path = new Path();
-
-		var canvasRect = document.getElementById('canvas1').getClientRects()[0]
-
-		// Give the stroke a color
-		var centerPos = {x: canvasRect.x + canvasRect.width * 0.5,
-							y: canvasRect.y + canvasRect.height * 0.5}
-		
-	 	paper.project.importSVG("{{static_url('./svg/window1.svg')}}",
-        	function(item){
-        		
-        		g_Root = item;
-
-                //for(var i=0;i<g_Root.children.length;i++){
-                   //console.log(g_Root.children[i].name);
-                //}
-
-        		initItems(item);
-        		initEvent(item);
-
-        })
-
-	function resetOptions(){
-		g_CurrentAttribteOptions = {}
-		g_CurrentShowFigureIndex = -1
-		for(var i = 0; i < g_liAttrName.length; i ++){
-			g_CurrentAttribteOptions[g_liAttrName[i]] = [];
-		}
-	}
-
-	function updateOptions(dressBag, attrClicked){
-
-		var attr = dressBag['attr']
-		var option = dressBag['option']
-
-		var index = g_CurrentAttribteOptions[attr].indexOf(option)
-		if(attrClicked == true && index == -1){
-			g_CurrentAttribteOptions[attr].push(option)
-		}else if(attrClicked == false && index != -1){
-			g_CurrentAttribteOptions[attr].splice(index, 1);
-		}
-
-		console.log(" g_CurrentAttribteOptions ", g_CurrentAttribteOptions);
-
-		//update render
-		var multiple = false
-		// var liMultipleOptionAttribute = []
-		var mapMAttriOptions = {}
-		var liSingleOptionAttribute = []
-		for(var i = 0; i < g_liAttrName.length; i ++){
-			var attr = g_liAttrName[i]
-			if(g_CurrentAttribteOptions[attr].length > 1){
-				multiple = true
-				mapMAttriOptions[attr] = g_CurrentAttribteOptions[attr]
-			}else if(g_CurrentAttribteOptions[attr].length == 1){
-				liSingleOptionAttribute.push(attr);
-			}
-		}		
-		g_Root.getItem({'name': 'button_checkmore'}).visible = multiple;
-
-		//create the Figure 
-		for(var i = 0; i < g_liFigure.length; i ++){
-			for(var j = 0; j < g_liFigure[i].length; j ++){
-				g_liFigure[i][j].visible = false;
-				g_liFigure[i][j].remove();
-			}
-		}
-		g_liFigure = []
-
-		console.log(" SINGLE = ", liSingleOptionAttribute, ' MULTIPE = ', liMultipleOptionAttribute)
-
-		var liFigureOptions = []
-		var commonOption = [];
-
-		// console.log(" liCommoptonp before ", commonOption_t, commonOption_t.length, commonOption_t[0], liFigureOptions_t);
-
-		for(var i = 0; i < liSingleOptionAttribute.length; i ++){
-			var singleAttr = liSingleOptionAttribute[i]
-			var option = g_CurrentAttribteOptions[singleAttr];
-			var dressOn = 'dresslater_' + option;
-
-			if((option[0]=='age_l3')||(option[0]=='age_l4')){
-                  dressOn = 'dresslater_age'+currentGender+option[0].substr(3)
-			}
-
-			if(option[0]=='age_l2'){
-			     dressOn = 'dresslater_gender_'+currentGender
-			}
-		    console.log(" single ATTR:", singleAttr, " dressOn:", dressOn)
-			commonOption.push(dressOn);
-		}
-		liFigureOptions.push(commonOption)
-		console.log("liFigureOption ", liFigureOptions);
-
-		// console.log(" liCommoptonp after ", commonOption_t, liFigureOptions);
-
-		var liMultipleOptionAttribute = Object.keys(mapMAttriOptions);
-
-		for(var i = 0; i < liMultipleOptionAttribute.length; i ++){
-			var mAtrri = liMultipleOptionAttribute[i]
-			var liOption = mapMAttriOptions[mAtrri]
-			var liNewFigureOption = [];
-			for(var j = 0; j < liOption.length; j ++){
-				var option = liOption[j]
-				console.log(' add M-option ', option)
-				for(var p = 0; p < liFigureOptions.length; p ++){
-					var option_temp = liFigureOptions[p];
-					option_temp.push('dresslater_' + option);
-					liNewFigureOption.push(option_temp);
-				}
-			}
-			liFigureOptions = liNewFigureOption
-		}
-
-		console.log(' new figure options ', liFigureOptions);
-
-		//render the figure, make the first one visible
-		for(var i = 0; i < liFigureOptions.length; i ++){
-
-			if(i >= 1)
-				break;
-
-			var figureOptions = liFigureOptions[i];
-
-			var liChild = []
-			console.log(' [1] ')
-			var basePath = g_Root.children['suser_base'].clone()
-			liChild.push(basePath)
-			if(i == 0)
-				basePath.visible = true;
-			console.log(' [2] ')
-			for(var j = 0; j < figureOptions.length; j ++){
-				console.log(" [3] ", figureOptions[j])   //dresslater_agem_l4
-				var temp = g_Root.children[figureOptions[j]].clone();
-				temp.name = 'xx_' + i+ "_" + j
-				if(i == 0)
-					temp.visible = true;
-				else
-					temp.visible = false;
-				liChild.push(temp)
-			}
-			g_liFigure.push(liChild);
-		}
-	}
-	
-	function initItems(item){
-		//invisible dresslater
-		var liDressLater = item.getItems({'name': /^dresslater/});
-		for(var i = 0; i < liDressLater.length; i ++){
-			var dressLater = liDressLater[i]
-			dressLater.visible = false;
-		}
-
-		//invisible button_checkmore		
-		item.getItem({'name': 'button_checkmore'}).visible = false;
-	}
-
-	function initEvent(item){
-
-		for(var i = 0; i < g_liAttrName.length; i ++){
-			var attrName = g_liAttrName[i];
-			var childItem = item.children[attrName];
-			var liOptionBar = childItem.getItems(
-				{'name': /^attr/});
-
-			for(var j = 0; j < liOptionBar.length; j ++){
-				var optionBar = liOptionBar[j]
-				optionBar.strokeWidth = 2
-				optionBar._AttrClick = false
-				optionBar.onClick = function(){
-					this._AttrClick = !this._AttrClick;
-					if(this._AttrClick){
-						this.strokeColor = 'white';
-					}else{						
-						this.strokeColor = null;
-					}
-					if((this._name=='attr_gender_m')&&(this._AttrClick)){
-                        currentGender = "m";
-					}
-					if((this._name=='attr_gender_f')&&(this._AttrClick)){
-                        currentGender = "f";
-					}
-                    changeOption(this._name, this._AttrClick);
-
-				}
-				optionBar.onMouseEnter = function(){
-					this.strokeColor = 'white';
-				}
-				optionBar.onMouseLeave = function(){
-					if(this._AttrClick == false)
-						this.strokeColor = null;
-				}
-			}
-		}
-	}
-
-	function changeOption(optionName, attrClicked){
-		var dressBag = getDressbag(optionName);
-		//update the options
-		updateOptions(dressBag, attrClicked);
-		// if(attrClicked){
-		// 	console.log(' Dress On ', liDressOn);
-		// 	g_Root.children[liDressOn].visible = true;
-		// }else{
-		// 	console.log(' Dress Off ', liDressOn);
-		// 	g_Root.children[liDressOn].visible = false;
-		// }
-	}
-
-	function getDressbag(optionName){
-	    var attr = optionName.split('_')[1]   //gender
-		var deSuffix = optionName.substr('attr_'.length, optionName.length - 'attr_'.length);  //gender_m
-		return {
-			'attr': attr,
-			'option': deSuffix,
-			'dresslater': 'dresslater_' + deSuffix
-		}
-	}
-
-	</script>
+	<script type="text/javascript" src="{{static_url('./js/window1.js')}}"></script>
+	<script type="text/javascript" src="{{static_url('./js/window3.js')}}"></script>
 
 </head>
 
 
 <body>
-	<div>
-		<img src="{{static_url('./img/bg.png')}}" style="width:100%; height:100%"></img>
-	</div>
-	<div class='window1Div'>
-		<!-- <img src="{{static_url('./img/fake.png')}}" style="width:100%; height:100%"></img> -->
-		<canvas id="canvas1" style="
-		    position: absolute;
-		    top: 0;
-		    left: 0;
-		    width: 100%;
-		    height: 100%;
-		    background: white;
-		"></canvas>
+	<canvas id="canvas1" style="position: absolute;top: 0; left: 0; width: 35%;  height: 50%; background: black;"></canvas>
+	<div id='window2' style="position: absolute; width: 35%;height: 50%;top: 50%;left: 0; background:black;"></div>
+	<div id="window3" style="position: absolute;background:black; width: 65%;height: 100%;top: 0;left: 35%;float: right;"></div>
 
-	</div>
-	<div class='window2Div'></div>
+
+<script type="text/paperscript" canvas="canvas1">
+
+		g_liAttrName = ['gender', 'age', 'income', 'edu', 'resident', 'car', 'house', 'job']
+		g_CurrentAttribteOptions = {}
+		g_liFigure = [];
+		g_CurrentShowFigureIndex = -1
+		currentGender = "1";
+		resetOptions();
+
+		// Create a Paper.js Path to draw a line into it:
+		var path = new Path();
+		var canvasRect = document.getElementById('canvas1').getClientRects()[0]
+
+		// Give the stroke a color
+		var centerPos = {x: canvasRect.x + canvasRect.width * 0.5,
+							y: canvasRect.y + canvasRect.height * 0.5}
+
+	 	paper.project.importSVG("{{static_url('./svg/window1.svg')}}",
+        	function(item){
+        		g_Root = item;
+        		initItems(item);
+        		initEvent(item);
+        })
+
+</script>
+<script>
+
+	var $d3g = {};
+    d3threeD( $d3g );
+
+    var renderer, scene, camera;
+
+    var controls, stats, positionning, raycaster;
+    var mouse = new THREE.Vector2();
+
+    var numberjson, mapjson, clusterjson;
+
+
+</script>
+
+
+<script>
+	var h = 600, w = 600;
+    var svg = d3.select("#window2")
+            .append("svg")
+            .attr("width", w)
+            .attr("height", h)
+            .append("g")
+            .attr("transform", "translate(0,0)")
+            .attr("id","svgWindow2");
+
+var padding = 20;
+
+var xScale, yScale;
+var xAxis, yAxis;
+
+var xScale = d3.scale.linear().domain([-80, 80]).range([padding*2, w - padding * 2]);
+var yScale = d3.scale.linear().domain([-80, 80]).range([h - padding * 2, 2*padding ]);
+
+var age = [1,2,3,4];  //1-4
+var gender = [1,2]; //1-2
+var edu = [1,2,3,4];  //1-4
+var job = [1,2,3,4,5,6,7,8,9]; //1-9
+var census = [1,2,3]; //1-3
+
+var income = [1,2,3,4,5];  //1-5
+var car = [1,2];  //1-2
+var house = [1,2,3];  //1-2
+
+var attributesLength = [4,2,4,5,9,3,2,3];
+
+inp = [];
+inp.push(age);
+inp.push(gender);
+inp.push(edu);
+inp.push(income);
+inp.push(job);
+inp.push(census);
+inp.push(car);
+inp.push(house);
+
+drawWindow2(inp, 0);
+
+function drawWindow2(inp, judge){
+    var uids = [];
+	d3.selectAll("#idGrey").remove();
+
+    d3.json("{{static_url('./json/person.json')}}", function(data){
+		dataSelect = data;
+        var count =0;
+        var svgSelect = svg.selectAll(".one")
+                  .data(dataSelect).enter()
+			      .append("g")
+			      .attr("id", "idGrey")
+			      .attr("transform","translate(0,0)")
+			      .attr("class", "content")
+			      .append("circle")
+			      .style("fill", function(d){
+	                    var flag = true;
+                        for(var i=0;i<8;i++){
+                           if(inp[i].indexOf(d.attr[i])==-1){
+	                           flag = false;
+	                       }
+                        }
+                 if(flag){
+                      count++;
+                      uids.push(d.uid);
+                      return "#ff0000";
+                 }else{
+                      return "#8e8e8e";
+                 }
+	         })
+	        .attr("cx", function(d) {
+		            return xScale(d.x);
+	              })
+	        .attr("cy", function(d) {
+		            return yScale(d.y);
+	              })
+	         .attr("r", 2)
+	         .style('opacity', 0.5)
+	         .on("mouseover", function(d){
+	             d3.select(this).style("stroke", "yellow");
+             /*    document.getElementById("a1").innerHTML = "Age: "+d.attr[0];
+                 document.getElementById("a2").innerHTML = "Gender: "+d.attr[1];
+                 document.getElementById("a3").innerHTML = "Education: "+d.attr[2];
+                 document.getElementById("a4").innerHTML = "Income: "+d.attr[3];
+                 document.getElementById("a5").innerHTML = "Job: "+d.attr[4];
+                 document.getElementById("a6").innerHTML = "Census: "+d.attr[5];
+                 document.getElementById("a7").innerHTML = "Car: "+d.attr[6];
+                 document.getElementById("a8").innerHTML = "House: "+d.attr[7];*/
+	         })
+	         .on("mouseout", function(d){
+	             d3.select(this).style("stroke", "none");
+	         });
+	         if(judge==1){
+	         	  getUID(uids);
+	         }
+      });
+}
+
+function getUID(uids){
+      console.log("number of selected citizens ", uids.length);
+      var time1 = 360;
+      var time2 = 720;
+      var mode = 2;
+      console.log("example", uids[0]);
+      getDataWindow3(uids, time1, time2, mode);
+}
+
+function getDataWindow3(uids, time1, time2, mode){
+         var self = this;
+         var formData = new FormData();
+	     formData.append('value', uids);
+	     formData.append('st', time1);
+	     formData.append('et', time2);
+	     formData.append('m', mode);
+	     var url = 'http://localhost:30030/window3';
+	     lSendUrl('POST', url, formData, drawWindow3);
+
+         function drawWindow3(response){
+              numberjson = JSON.parse(response['number']);
+              clusterjson = JSON.parse(response['cluster']);
+              odsum = response['sum'];
+
+              console.log(response['number']);
+
+              d3.json("{{static_url('./json/TAZ.geojson')}}", function(err, data){
+                     mapjson = data;
+                     init();
+                     animate();
+                     initSVGObject();
+              });
+         }
+}
+
+</script>
 
 </body>
 

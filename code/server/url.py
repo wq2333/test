@@ -8,12 +8,14 @@ import sys
 
 from handler.pointhandler import IndexHandler
 from handler.pointhandler import TestHandler
+from handler.odhandler import DataHandler
 
 from handler.kdehandler import KDEHandler
 
 url=[
 	(r'/', IndexHandler),
     (r'/test/(\w+)', TestHandler),
+    (r'/window3', DataHandler)
 
     # (r'/clusterKDE', KDEHandler),
 ]
