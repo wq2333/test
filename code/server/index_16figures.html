@@ -71,7 +71,7 @@
         			{'gender':'female',
         			 'edu': 'primary',
         			 'age': 'young',//young0~18; normal: 18-40; old: 41-60； older: > 60
-        			 'job': 'retired',//management','student', 'business', 'worker', 'technique', 'goverment'
+        			 'job': 'server',//management','student', 'business', 'worker', 'technique', 'goverment'
         			 'income': 1//1,2,3,4,5
         			}, 1000)
         		drawFigure(i + 1, 
@@ -188,7 +188,7 @@
         			 'job': 'business',
         			 'income': 3,
         			 'resident': 1, //1 for resident, 0 for outlier and 
-        			 'house': 1
+        			 'house': 1,
         		}, 90)
         })
 
@@ -319,7 +319,7 @@
 	}
 
 	function addJob(job, pos){
-		var liJob = ['management', 'student', 'business', 'worker', 'technique', 'goverment', 'retired', 'other']
+		var liJob = ['management', 'student', 'business', 'worker', 'server', 'technique', 'goverment', 'retired', 'other']
 		if(liJob.indexOf(job) == -1){
 			console.log(" EMPAY ", job);
 			return;
