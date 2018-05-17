@@ -1,51 +1,214 @@
 <head>
-
-	<script type="text/javascript" src="{{static_url('./lib/paper-full.min.js')}}"></script>
-	<script type="text/javascript" src="{{static_url('./lib/d3.min.js')}}"></script>
-	<script type="text/javascript" src="{{static_url('./lib/Detector.js')}}"></script>
-	<script type="text/javascript" src="{{static_url('./lib/jquery.min.js')}}"></script>
-	<script type="text/javascript" src="{{static_url('./lib/lurlquery.js')}}"></script>
-	<script type="text/javascript" src="{{static_url('./lib/three.min.js')}}"></script>
+    <script type="text/javascript" src="{{static_url('./lib/paper-full.min.js')}}"></script>
+    <script type="text/javascript" src="{{static_url('./lib/d3.min.js')}}"></script>
+    <script type="text/javascript" src="{{static_url('./lib/Detector.js')}}"></script>
+    <script type="text/javascript" src="{{static_url('./lib/jquery.min.js')}}"></script>
+    <script type="text/javascript" src="{{static_url('./lib/lurlquery.js')}}"></script>
+    <script type="text/javascript" src="{{static_url('./lib/three.min.js')}}"></script>
     <script type="text/javascript" src="{{static_url('./lib/OrbitControls.js')}}"></script>
-	<script type="text/javascript" src="{{static_url('./lib/TrackballControls.js')}}"></script>
+    <script type="text/javascript" src="{{static_url('./lib/TrackballControls.js')}}"></script>
 
-	<script type="text/javascript" src="{{static_url('./js/window1.js')}}"></script>
-	<script type="text/javascript" src="{{static_url('./js/window3.js')}}"></script>
+    <script type="text/javascript" src="{{static_url('./js/window1.js')}}"></script>
+    <script type="text/javascript" src="{{static_url('./js/window2.js')}}"></script>
+    <script type="text/javascript" src="{{static_url('./js/window3.js')}}"></script>
+    <script type="text/javascript" src="{{static_url('./js/window4.js')}}"></script>
 
 </head>
 
 
 <body>
-	<canvas id="canvas1" style="position: absolute;top: 0; left: 0; width: 35%;  height: 50%; background: black;"></canvas>
-	<div id='window2' style="position: absolute; width: 35%;height: 50%;top: 50%;left: 0; background:black;"></div>
-	<div id="window3" style="position: absolute;background:black; width: 65%;height: 100%;top: 0;left: 35%;float: right;"></div>
+<canvas id="canvas1" style="position: absolute;top: 0; left: 0; width: 35%;  height: 35%; background: white;"></canvas>
+<div id='window2' style="position: absolute; width: 35%;height: 35%;top: 35%;left: 0; background:white;"></div>
+<canvas id="canvas3" style="position: absolute;top: 80%; left: 0; width: 35%;  height: 20%; background: white;"></canvas>
+<div id="window4" style="position: absolute;background:white; width: 65%;height: 100%;top: 0;left: 35%;float: right;"></div>
 
 
 <script type="text/paperscript" canvas="canvas1">
+		g_liAttrName = ['gender', 'age', 'income', 'edu', 'resident', 'car', 'house', 'job'];
 
-		g_liAttrName = ['gender', 'age', 'income', 'edu', 'resident', 'car', 'house', 'job']
-		g_CurrentAttribteOptions = {}
-		g_liFigure = [];
-		g_CurrentShowFigureIndex = -1
-		currentGender = "1";
-		resetOptions();
+        var age = [1,2,3,4];
+        var gender = [1,2]; //1-2
+        var edu = [1,2,3,4];  //1-4
+        var job = [1,2,3,4,5,6,7,8,9]; //1-9
+        var resident = [1,2,3]; //1-3
+        var income = [1,2,3,4,5];  //1-5
+        var car = [1,2];  //1-2
+        var house = [1,2,3];  //1-3
+
+        attributesLength = [4,2,4,5,9,3,2,3];
+        inp = [];
+
+        inp.push(age);
+        inp.push(gender);
+        inp.push(edu);
+        inp.push(income);
+        inp.push(job);
+        inp.push(resident);
+        inp.push(car);
+        inp.push(house);
 
 		// Create a Paper.js Path to draw a line into it:
 		var path = new Path();
-		var canvasRect = document.getElementById('canvas1').getClientRects()[0]
+		var canvasRect = document.getElementById('canvas1').getClientRects()[0];
 
 		// Give the stroke a color
 		var centerPos = {x: canvasRect.x + canvasRect.width * 0.5,
 							y: canvasRect.y + canvasRect.height * 0.5}
 
-	 	paper.project.importSVG("{{static_url('./svg/window1.svg')}}",
+	 	paper.project.importSVG("{{static_url('./svg/window2.svg')}}",
         	function(item){
         		g_Root = item;
-        		initItems(item);
+        		drawWindow2(inp);
         		initEvent(item);
-        })
+        });
 
 </script>
+
+<script>
+	var h = 500, w = 500;
+    var svg = d3.select("#window2")
+            .append("svg")
+            .attr("width", w)
+            .attr("height", h)
+            .append("g")
+            .attr("transform", "translate(0,0)")
+            .attr("id","svgWindow2");
+
+    svg.append("rect")
+       .attr("x", 5)
+       .attr("y", 5)
+       .attr("width", 490)
+       .attr("height", 490)
+       .style("fill", "#dddddd");
+
+var padding = 5;
+
+var xScale, yScale;
+var xAxis, yAxis;
+
+var xScale = d3.scale.linear().domain([-80, 80]).range([padding*2, w - padding * 2]);
+var yScale = d3.scale.linear().domain([-80, 80]).range([h - padding * 2, 2*padding ]);
+
+dataPortrait = {};
+dataPortraitFromW2 = {};
+
+function drawWindow2(inp, judge){
+	d3.selectAll("#idPoint").remove();
+
+    d3.json("{{static_url('./json/person.json')}}", function(data){
+		dataSelect = data;
+        var count =0;
+        var svgSelect = svg.selectAll(".one")
+                  .data(dataSelect).enter()
+			      .append("g")
+			      .attr("id", "idPoint")
+			      .attr("transform","translate(0,0)")
+			      .append("circle")
+			      .style("fill", function(d){
+	                    var flag = true;
+                        for(var i=0;i<8;i++){
+                           if(inp[i].indexOf(d.attr[i])==-1){
+	                           flag = false;
+	                       }
+                        }
+                 if(flag){
+                      count++;
+                      if(d.attr.toString() in dataPortrait){
+                              dataPortrait[d.attr.toString()] = dataPortrait[d.attr.toString()]+1;
+                      }else{
+                              dataPortrait[d.attr.toString()] = 1;
+                      }
+                      return "#0000ff";
+                 }else{
+                      return "#8e8e8e";
+                 }
+	         })
+	        .attr("cx", function(d) {
+		            return xScale(d.x);
+	              })
+	        .attr("cy", function(d) {
+		            return yScale(d.y);
+	              })
+	         .attr("r", 2.5)
+	         .style('opacity', 0.6)
+	         .on("mouseover", function(d){
+	             d3.select(this).style("stroke", "black").style("stroke-width", 3);
+	         })
+	         .on("mouseout", function(d){
+	             d3.select(this).style("stroke", "none");
+	         });
+            console.log("dataPortrait got.");
+            dataPortraitFromW2 = {};
+            drawWindow3(dataPortrait);
+            squareSelect(dataPortrait);
+    });
+}
+
+</script>
+<script>
+
+        SHIFTBAG = {
+			'house': [-15, 7],
+			'car': [15, 7],
+			'hair': [0, -21],
+			'glass': [0, -6],
+			'1_age': [-5, -26],
+			'3_age': [0, -23],
+			'4_age': [0, -21],
+			'job': [0,23],
+			'2_job': [0, 21],
+			'income': [13, 22],
+			'resident': [-13, 25],
+		}
+
+		var canvas2 = document.getElementById('canvas2');
+		paper.setup(canvas2);
+		var path = new Path();
+		var canvasRect2 = document.getElementById('canvas2').getClientRects()[0]
+
+	paper.project.importSVG("{{static_url('./svg/10.svg')}}",
+        	function(item){
+        		g_Root = item;
+        		g_liText = [];
+
+        		//set basic figure invisible
+        		setBasicPathsVisible(false);
+
+        		//init button
+        		g_Root.children['pre_page_button'].onClick = function(){
+        			console.log(' pre page click! ');
+        			clearCurrentFigures();
+        			//TODO: draw new figures...
+        		}
+        		g_Root.children['next_page_button'].onClick = function(){
+        			console.log(' next page click! ');
+        			clearCurrentFigures();
+        			//TODO: draw new figures...
+
+        		}
+
+        		i = 0;
+        		drawFigure(i,[2,1,3,2,2,2,2,2],324);
+        		drawFigure(i+1,[2,2,2,1,4,2,2,2],269);
+        		drawFigure(i + 2,[2,1,2,1,5,2,2,2],261);
+        		drawFigure(i + 3,[2,2,3,1,4,2,2,2],249);
+        		drawFigure(i + 4,[2,2,3,1,9,2,2,2],237);
+        		drawFigure(i + 5,[2,2,2,1,9,2,2,2],232);
+        		drawFigure(i + 6,[2,1,3,1,5,2,2,2],218);
+
+        		i = 7;
+        		drawFigure(i,[2,1,3,1,2,2,2,2],216);
+        		drawFigure(i + 1,[2,2,3,2,4,2,2,2],212);
+        		drawFigure(i + 2,[2,1,3,2,4,2,2,2],192);
+        		drawFigure(i + 3,[2,1,3,2,5,2,2,2],158);
+        		drawFigure(i + 4,[2,1,3,1,7,2,2,2],148);
+        		drawFigure(i + 5,[2,2,1,1,9,2,2,2],145);
+        		drawFigure(i + 6,[2,2,2,1,5,2,2,2],145);
+        		drawFigure(i + 7,[2,1,2,1,4,2,2,2],142);
+        		drawFigure(i + 8,[2,2,3,2,2,2,2,2],142);
+        })
+</script>
+
 <script>
 
 	var $d3g = {};
@@ -59,108 +222,6 @@
     var numberjson, mapjson, clusterjson;
 
 
-</script>
-
-
-<script>
-	var h = 600, w = 600;
-    var svg = d3.select("#window2")
-            .append("svg")
-            .attr("width", w)
-            .attr("height", h)
-            .append("g")
-            .attr("transform", "translate(0,0)")
-            .attr("id","svgWindow2");
-
-var padding = 20;
-
-var xScale, yScale;
-var xAxis, yAxis;
-
-var xScale = d3.scale.linear().domain([-80, 80]).range([padding*2, w - padding * 2]);
-var yScale = d3.scale.linear().domain([-80, 80]).range([h - padding * 2, 2*padding ]);
-
-var age = [1,2,3,4];  //1-4
-var gender = [1,2]; //1-2
-var edu = [1,2,3,4];  //1-4
-var job = [1,2,3,4,5,6,7,8,9]; //1-9
-var census = [1,2,3]; //1-3
-
-var income = [1,2,3,4,5];  //1-5
-var car = [1,2];  //1-2
-var house = [1,2,3];  //1-2
-
-var attributesLength = [4,2,4,5,9,3,2,3];
-
-inp = [];
-inp.push(age);
-inp.push(gender);
-inp.push(edu);
-inp.push(income);
-inp.push(job);
-inp.push(census);
-inp.push(car);
-inp.push(house);
-
-drawWindow2(inp, 0);
-
-function drawWindow2(inp, judge){
-    var uids = [];
-	d3.selectAll("#idGrey").remove();
-
-    d3.json("{{static_url('./json/person.json')}}", function(data){
-		dataSelect = data;
-        var count =0;
-        var svgSelect = svg.selectAll(".one")
-                  .data(dataSelect).enter()
-			      .append("g")
-			      .attr("id", "idGrey")
-			      .attr("transform","translate(0,0)")
-			      .attr("class", "content")
-			      .append("circle")
-			      .style("fill", function(d){
-	                    var flag = true;
-                        for(var i=0;i<8;i++){
-                           if(inp[i].indexOf(d.attr[i])==-1){
-	                           flag = false;
-	                       }
-                        }
-                 if(flag){
-                      count++;
-                      uids.push(d.uid);
-                      return "#ff0000";
-                 }else{
-                      return "#8e8e8e";
-                 }
-	         })
-	        .attr("cx", function(d) {
-		            return xScale(d.x);
-	              })
-	        .attr("cy", function(d) {
-		            return yScale(d.y);
-	              })
-	         .attr("r", 2)
-	         .style('opacity', 0.5)
-	         .on("mouseover", function(d){
-	             d3.select(this).style("stroke", "yellow");
-             /*    document.getElementById("a1").innerHTML = "Age: "+d.attr[0];
-                 document.getElementById("a2").innerHTML = "Gender: "+d.attr[1];
-                 document.getElementById("a3").innerHTML = "Education: "+d.attr[2];
-                 document.getElementById("a4").innerHTML = "Income: "+d.attr[3];
-                 document.getElementById("a5").innerHTML = "Job: "+d.attr[4];
-                 document.getElementById("a6").innerHTML = "Census: "+d.attr[5];
-                 document.getElementById("a7").innerHTML = "Car: "+d.attr[6];
-                 document.getElementById("a8").innerHTML = "House: "+d.attr[7];*/
-	         })
-	         .on("mouseout", function(d){
-	             d3.select(this).style("stroke", "none");
-	         });
-	         if(judge==1){
-	         	  getUID(uids);
-	         }
-      });
-}
-
 function getUID(uids){
       console.log("number of selected citizens ", uids.length);
       var time1 = 360;
@@ -169,6 +230,7 @@ function getUID(uids){
       console.log("example", uids[0]);
       getDataWindow3(uids, time1, time2, mode);
 }
+
 
 function getDataWindow3(uids, time1, time2, mode){
          var self = this;
