@@ -1,0 +1,401 @@
+<head>
+
+	<script type="text/javascript" src="{{static_url('./lib/paper-full.min.js')}}"></script>
+	<script type="text/javascript" src="{{static_url('./lib/d3.min.js')}}"></script>
+	<script type="text/javascript" src="{{static_url('./lib/Detector.js')}}"></script>
+	<script type="text/javascript" src="{{static_url('./lib/jquery.min.js')}}"></script>
+	<script type="text/javascript" src="{{static_url('./lib/lurlquery.js')}}"></script>
+	<script type="text/javascript" src="{{static_url('./lib/three.min.js')}}"></script>
+    <script type="text/javascript" src="{{static_url('./lib/OrbitControls.js')}}"></script>
+	<script type="text/javascript" src="{{static_url('./lib/TrackballControls.js')}}"></script>
+
+	<script type="text/javascript" src="{{static_url('./js/window1.js')}}"></script>
+	<script type="text/javascript" src="{{static_url('./js/window3.js')}}"></script>
+
+</head>
+
+
+<body>
+	<canvas id="canvas1" style="position: absolute;top: 0; left: 0; width: 35%;  height: 30%; background: green;"></canvas>
+	<div id="window2" style="position: absolute; top: 30%; left: 0; width: 35%;  height: 50%; background: yellow;"></div>
+	<canvas id="canvas2" style="position: absolute;top: 80%; left: 0; width: 35%;  height: 20%; background: white;"></canvas>
+	<div id="window3" style="position: absolute;background:black; width: 65%;height: 100%;top: 0;left: 35%;float: right;"></div>
+
+
+<script type="text/paperscript" canvas="canvas1">
+
+		// g_liAttrName = ['gender', 'age', 'income', 'edu', 'resident', 'car', 'house', 'job']
+		// g_CurrentAttribteOptions = {}
+		// g_liFigure = [];
+		// g_CurrentShowFigureIndex = -1
+		// currentGender = "1";
+		// resetOptions();
+
+		// console.log(" heeelo ");
+
+		// // Create a Paper.js Path to draw a line into it:
+		var canvas = document.getElementById('canvas2');
+		// Create an empty project and a view for the canvas:
+		paper.setup(canvas);
+		var path = new Path();
+		var canvasRect = document.getElementById('canvas2').getClientRects()[0]
+
+		// // Give the stroke a color
+		// var centerPos = {x: canvasRect.x + canvasRect.width * 0.5,
+		// 					y: canvasRect.y + canvasRect.height * 0.5}
+
+	 	paper.project.importSVG("{{static_url('./svg/10.svg')}}",
+        	function(item){
+        		g_Root = item;
+        		g_liText = []
+        		console.log('g_root', g_Root);
+
+        		//set basic figure invisible
+        		setBasicPathsVisible(false);
+        		
+        		//init button
+        		g_Root.children['pre_page_button'].onClick = function(){
+        			console.log(' pre page click! ');
+        			clearCurrentFigures();
+        			//TODO: draw new figures...
+        		}
+        		g_Root.children['next_page_button'].onClick = function(){
+        			console.log(' next page click! ');
+        			clearCurrentFigures();
+        			//TODO: draw new figures...
+
+        		}
+
+        		i = 0;
+        		drawFigure(i, 
+        			{'gender':'female',
+        			 'edu': 'primary',
+        			 'age': 'young',//young0~18; normal: 18-40; old: 41-60； older: > 60
+        			 'job': 'retired',//management','student', 'business', 'worker', 'technique', 'goverment'
+        			 'income': 1//1,2,3,4,5
+        			}, 1000)
+        		drawFigure(i + 1, 
+        			{'gender': 'male',
+        			 'edu': 'primary',
+        			 'age': 'normal',
+        			 'job': 'other',
+        			 'income': 2,
+        			 'house': 1,//has a house: 1, rent a house 0
+        			 'car': 1,//1 has a car, 
+        		}, 498)
+        		drawFigure(i + 2, 
+        			{'gender': 'male',
+        			 'edu': 'undergraduate',
+        			 'age': 'normal',
+        			 'job': 'student',
+        			 'income': 3,
+        			 'resident': 1, //1 for resident, 0 for outlier and temporary
+        			 'house': 1,//has a house: 1, rent a house 0
+        			 'car': 1,//1 has a car, 
+        		}, 300)
+        		drawFigure(i + 3, 
+        			{'gender': 'female',
+        			 'edu': 'graduate',
+        			 'age': 'old',
+        			 'job': 'business',
+        			 'income': 4,
+        			 'car': 1,//1 has a car, 
+        		}, 258)
+        		drawFigure(i + 4, 
+        			{'gender': 'male',
+        			 'edu': 'primary',
+        			 'age': 'older',
+        			 'job': 'management',
+        			 'income': 5,
+        			 'resident': 1, //1 for resident, 0 for outlier and 
+        		}, 230)
+        		drawFigure(i + 5, 
+        			{'gender': 'male',
+        			 'edu': 'graduate',
+        			 'age': 'old',
+        			 'job': 'business',
+        			 'income': 3,
+        			 'resident': 1, //1 for resident, 0 for outlier and 
+        			 'house': 1
+        		}, 180)
+        		drawFigure(i + 6, 
+        			{'gender': 'male',
+        			 'edu': 'graduate',
+        			 'age': 'old',
+        			 'job': 'business',
+        			 'income': 3,
+        			 'resident': 1, //1 for resident, 0 for outlier and 
+        			 'house': 1
+        		}, 100)
+
+        		i = 7;
+        		drawFigure(i, 
+        			{'gender':'female',
+        			 'edu': 'primary',
+        			 'age': 'young',//young0~18; normal: 18-40; old: 41-60； older: > 60
+        			 'job': 'retired',//management','student', 'business', 'worker', 'technique', 'goverment'
+        			 'income': 1//1,2,3,4,5
+        			}, 1000)
+        		drawFigure(i + 1, 
+        			{'gender': 'male',
+        			 'edu': 'primary',
+        			 'age': 'normal',
+        			 'job': 'other',
+        			 'income': 2,
+        			 'house': 1,//has a house: 1, rent a house 0
+        			 'car': 1,//1 has a car, 
+        		}, 498)
+        		drawFigure(i + 2, 
+        			{'gender': 'male',
+        			 'edu': 'undergraduate',
+        			 'age': 'normal',
+        			 'job': 'student',
+        			 'income': 3,
+        			 'resident': 1, //1 for resident, 0 for outlier and temporary
+        			 'house': 1,//has a house: 1, rent a house 0
+        			 'car': 1,//1 has a car, 
+        		}, 300)
+        		drawFigure(i + 3, 
+        			{'gender': 'female',
+        			 'edu': 'graduate',
+        			 'age': 'old',
+        			 'job': 'business',
+        			 'income': 4,
+        			 'car': 1,//1 has a car, 
+        		}, 258)
+        		drawFigure(i + 4, 
+        			{'gender': 'male',
+        			 'edu': 'primary',
+        			 'age': 'older',
+        			 'job': 'management',
+        			 'income': 5,
+        			 'resident': 1, //1 for resident, 0 for outlier and 
+        		}, 230)
+        		drawFigure(i + 5, 
+        			{'gender': 'male',
+        			 'edu': 'graduate',
+        			 'age': 'old',
+        			 'job': 'business',
+        			 'income': 3,
+        			 'resident': 1, //1 for resident, 0 for outlier and 
+        			 'house': 1
+        		}, 180)
+
+        		drawFigure(i + 6, 
+        			{'gender': 'male',
+        			 'edu': 'graduate',
+        			 'age': 'old',
+        			 'job': 'business',
+        			 'income': 3,
+        			 'resident': 1, //1 for resident, 0 for outlier and 
+        			 'house': 1
+        		}, 90)
+        })
+
+		function clearCurrentFigures(){
+			setBasicPathsVisible(false);
+			var libasePaths = g_Root.getItems({'name': 'temp'});
+			console.log(' pre page click! ', libasePaths.length);
+			for(var i = 0; i < libasePaths.length; i ++){
+				var path_temp = libasePaths[i];
+				path_temp.remove()
+			}
+			for(var i = 0; i < g_liText.length; i ++){
+				var path_temp = g_liText[i];
+				path_temp.remove()
+			}
+			g_liText = []
+		}
+
+	   function drawFigure(index, mapFeature, count){
+
+	   	var libasePaths = g_Root.getItems({'name': /^suser_base/});
+	   	libasePaths[index].visible = true
+	   	var pos = getBasePos(libasePaths[index]);
+	   	var boundaryBox = libasePaths[index].bounds;
+
+	   	console.log(" Boundary Box ", boundaryBox);
+
+	   	//gender
+	   	addGender(mapFeature['gender'], pos);	   	
+	   
+	   //education	
+	   addEdu(mapFeature['edu'], pos) 
+
+	   //age
+	   addAge(mapFeature['gender'], mapFeature['age'], pos);
+
+	   //job
+	   addJob(mapFeature['job'], pos);
+
+	   //income
+	   addIncome(mapFeature['income'], pos);
+
+	   //resident
+	   addResident(mapFeature['resident'], pos);
+
+	   //house
+	   addHouse(mapFeature['house'], pos);
+
+	   //car
+	   addCar(mapFeature['car'], pos);
+
+	   //count text
+	   addText(count, pos, boundaryBox);
+
+	   // var glassitem = g_Root.children[mapFeature['edu'] + '_glass']
+	   // var glass_copy = glassitem.clone();
+	   // glass_copy.visible = true;
+	   // glass_copy.position = pos + new Point(SHIFTBAG['glass'][0], SHIFTBAG['glass'][1]);
+	}
+
+	function setBasicPathsVisible(visible){
+		var libasePaths = g_Root.getItems({'name': /^suser_base/});
+		for(var i = 0; i < libasePaths.length; i ++){
+			var basePath = libasePaths[i];
+			basePath.visible = visible;
+		}
+	}
+
+	function addGender(gender, pos){		
+	   	var hairitem = g_Root.children[gender + '_hair']	   	
+	   	var hair_copy = hairitem.clone()
+	   	hair_copy.name = 'temp'	   
+	   	hair_copy.visible = true;
+	   	hair_copy.position = pos + new Point(SHIFTBAG['hair'][0], SHIFTBAG['hair'][1]);
+	}
+
+	function addHouse(house, pos){
+		var house = Number(house)
+		var liHouse = [1]
+		if(liHouse.indexOf(house) == -1){
+			return;
+		}
+		var houseItem = g_Root.children['house']
+		var house_copy = houseItem.clone()
+	    house_copy.name = 'temp';
+		house_copy.visible = true
+		house_copy.position = pos + new Point(SHIFTBAG['house'][0], SHIFTBAG['house'][1]);
+	}
+
+	function addCar(car, pos){
+		var car = Number(car)
+		var liCar = [1]
+		if(liCar.indexOf(car) == -1){
+			return;
+		}
+		var carItem = g_Root.children['car']
+		var car_copy = carItem.clone()
+	    car_copy.name = 'temp';
+		car_copy.visible = true
+		car_copy.position = pos + new Point(SHIFTBAG['car'][0], SHIFTBAG['car'][1]);
+	}
+
+	function addEdu(edu, pos){
+		var liEdu = ['highschool', 'graduate', 'undergraduate'];
+		if(liEdu.indexOf(edu) == -1){
+			console.log(" EMPAY ");
+			return;
+		}
+	   var glassitem = g_Root.children[edu+ '_glass']
+	   var glass_copy = glassitem.clone();
+	   glass_copy.name = 'temp';
+	   glass_copy.visible = true;
+	   glass_copy.position = pos + new Point(SHIFTBAG['glass'][0], SHIFTBAG['glass'][1]);
+	}
+
+	function addAge(gender, age, pos){		
+	   var liAge = ['young', 'old', 'older'];
+		if(liAge.indexOf(age) == -1){
+			console.log(" EMPAY ", age);
+			return;
+		}
+	   var ageitem = g_Root.children[gender + "_" + age + '_age']
+	   console.log(" age ", gender + "_" + age + '_age');
+	   var age_copy = ageitem.clone();
+	   age_copy.name = 'temp';
+	   age_copy.visible = true;
+	   age_copy.position = pos + new Point(SHIFTBAG[age + '_age'][0], SHIFTBAG[age + '_age'][1]);
+	}
+
+	function addJob(job, pos){
+		var liJob = ['management', 'student', 'business', 'worker', 'technique', 'goverment', 'retired', 'other']
+		if(liJob.indexOf(job) == -1){
+			console.log(" EMPAY ", job);
+			return;
+		}
+
+	   var jobitem = g_Root.children[job + '_job']
+	   // console.log(" age ", gender + "_" + age + '_age');
+	   var job_copy = jobitem.clone();
+	   job_copy.name = 'temp';
+	   job_copy.visible = true;
+	   if(job == 'technique'){
+	     	job_copy.position = pos + new Point(SHIFTBAG[job + '_job'][0], SHIFTBAG[job + '_job'][1]);
+	   }else
+	   		job_copy.position = pos + new Point(SHIFTBAG['job'][0], SHIFTBAG['job'][1]);
+	}
+
+	function addIncome(income, pos){
+		var income = Number(income);
+		var liIncome = [1,2,3,4,5]
+		if(liIncome.indexOf(income) == -1){
+			console.log(" EMPAY ", income);
+			return;
+		}
+		var incomeitem = g_Root.children['income']
+		var income_copy = incomeitem.clone();
+	    income_copy.visible = true;
+	    income_copy.name = 'temp';
+	    income_copy.scale(1 + income * 0.1);
+	    income_copy.position = pos + new Point(SHIFTBAG['income'][0], SHIFTBAG['income'][1]);
+	}
+
+	function addResident(resident, pos){
+		var resident = Number(resident)
+		var liResident = [1]
+		if(liResident.indexOf(resident)){
+			return;
+		}
+		var residentitem = g_Root.children['resident']
+		var resident_copy = residentitem.clone()
+		resident_copy.visible = true;
+		resident_copy.name = 'temp'
+		resident_copy.position = pos + new Point(SHIFTBAG['resident'][0], SHIFTBAG['resident'][1]);
+	}
+
+	function addText(count, pos, boundaryBox){
+	   var text = new PointText(pos + new Point(0, boundaryBox.height/2. + 13));
+		text.justification = 'center';
+		// text.name = 'temp'
+		g_liText.push(text);
+		text.fillColor = 'black';
+		text.content = count;
+	}
+
+   function getBasePos(basePath){
+	   	console.log(" basePath.position ", basePath.position)
+	   	var pos = basePath.position
+	   	return pos
+   }
+
+</script>
+	
+	<script type="text/javascript">
+		SHIFTBAG = {
+			'house': [-15, 7],
+			'car': [15, 7],
+			'hair': [0, -21],
+			'glass': [0, -6],
+			'young_age': [-5, -26],
+			'old_age': [0, -23],
+			'older_age': [0, -21],
+			'job': [0,23],
+			'technique_job': [0, 21],
+			'income': [13, 22],
+			'resident': [-13, 25],
+		}
+	</script>
+
+</body>
+
