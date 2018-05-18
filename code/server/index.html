@@ -93,6 +93,7 @@ dataPortrait = {};
 dataPortraitFromW2 = {};
 
 function drawWindow2(inp, judge){
+
 	d3.selectAll("#idPoint").remove();
 
     d3.json("{{static_url('./json/person.json')}}", function(data){
@@ -138,8 +139,58 @@ function drawWindow2(inp, judge){
 	             d3.select(this).style("stroke", "none");
 	         });
             console.log("dataPortrait got.");
+
+            //load 16 svg            
+            var canvas2 = document.getElementById('canvas3');
+            paper.setup(canvas2);
+            var path = new paper.Path();
+              paper.project.importSVG("{{static_url('./svg/10.svg')}}",
+                function(item){
+
+                  console.log(" LOAD SVG ");
+
+                  g_16Root = item;
+                  g_liText = [];
+
+                  //set basic figure invisible
+                  setBasicPathsVisible(false);
+
+                  //init button
+                  g_16Root.children['pre_page_button'].onClick = function(){
+                    console.log(' pre page click! ');
+                    clearCurrentFigures();
+                    //TODO: draw new figures...
+                  }
+                  g_16Root.children['next_page_button'].onClick = function(){
+                    console.log(' next page click! ');
+                    clearCurrentFigures();
+                    //TODO: draw new figures...
+                  }
+
+                  i = 0;
+                  drawFigure(i,[2,1,3,2,2,2,2,2],324);
+                  drawFigure(i+1,[2,2,2,1,4,2,2,2],269);
+                  drawFigure(i + 2,[2,1,2,1,5,2,2,2],261);
+                  drawFigure(i + 3,[2,2,3,1,4,2,2,2],249);
+                  drawFigure(i + 4,[2,2,3,1,9,2,2,2],237);
+                  drawFigure(i + 5,[2,2,2,1,9,2,2,2],232);
+                  drawFigure(i + 6,[2,1,3,1,5,2,2,2],218);
+
+                  i = 7;
+                  drawFigure(i,[2,1,3,1,2,2,2,2],216);
+                  drawFigure(i + 1,[2,2,3,2,4,2,2,2],212);
+                  drawFigure(i + 2,[2,1,3,2,4,2,2,2],192);
+                  drawFigure(i + 3,[2,1,3,2,5,2,2,2],158);
+                  drawFigure(i + 4,[2,1,3,1,7,2,2,2],148);
+                  drawFigure(i + 5,[2,2,1,1,9,2,2,2],145);
+                  drawFigure(i + 6,[2,2,2,1,5,2,2,2],145);
+                  drawFigure(i + 7,[2,1,2,1,4,2,2,2],142);
+                  drawFigure(i + 8,[2,2,3,2,2,2,2,2],142);
+
+                  drawWindow3(dataPortrait);
+              })
+
             dataPortraitFromW2 = {};
-            drawWindow3(dataPortrait);
             squareSelect(dataPortrait);
     });
 }
@@ -147,7 +198,7 @@ function drawWindow2(inp, judge){
 </script>
 <script>
 
-        SHIFTBAG = {
+    SHIFTBAG = {
 			'house': [-15, 7],
 			'car': [15, 7],
 			'hair': [0, -21],
@@ -161,52 +212,55 @@ function drawWindow2(inp, judge){
 			'resident': [-13, 25],
 		}
 
-		var canvas2 = document.getElementById('canvas2');
-		paper.setup(canvas2);
-		var path = new Path();
-		var canvasRect2 = document.getElementById('canvas2').getClientRects()[0]
+		// var canvas2 = document.getElementById('canvas2');
+		// paper.setup(canvas2);
+		// var path = new paper.Path();
+		// var canvasRect2 = document.getElementById('canvas2').getClientRects()[0]
 
-	paper.project.importSVG("{{static_url('./svg/10.svg')}}",
-        	function(item){
-        		g_Root = item;
-        		g_liText = [];
+	  // paper.project.importSVG("{{static_url('./svg/10.svg')}}",
+   //      	function(item){
 
-        		//set basic figure invisible
-        		setBasicPathsVisible(false);
+   //          console.log(" LOAD SVG ");
 
-        		//init button
-        		g_Root.children['pre_page_button'].onClick = function(){
-        			console.log(' pre page click! ');
-        			clearCurrentFigures();
-        			//TODO: draw new figures...
-        		}
-        		g_Root.children['next_page_button'].onClick = function(){
-        			console.log(' next page click! ');
-        			clearCurrentFigures();
-        			//TODO: draw new figures...
+   //      		g_Root = item;
+   //      		g_liText = [];
 
-        		}
+   //      		//set basic figure invisible
+   //      		setBasicPathsVisible(false);
 
-        		i = 0;
-        		drawFigure(i,[2,1,3,2,2,2,2,2],324);
-        		drawFigure(i+1,[2,2,2,1,4,2,2,2],269);
-        		drawFigure(i + 2,[2,1,2,1,5,2,2,2],261);
-        		drawFigure(i + 3,[2,2,3,1,4,2,2,2],249);
-        		drawFigure(i + 4,[2,2,3,1,9,2,2,2],237);
-        		drawFigure(i + 5,[2,2,2,1,9,2,2,2],232);
-        		drawFigure(i + 6,[2,1,3,1,5,2,2,2],218);
+   //      		//init button
+   //      		g_Root.children['pre_page_button'].onClick = function(){
+   //      			console.log(' pre page click! ');
+   //      			clearCurrentFigures();
+   //      			//TODO: draw new figures...
+   //      		}
+   //      		g_Root.children['next_page_button'].onClick = function(){
+   //      			console.log(' next page click! ');
+   //      			clearCurrentFigures();
+   //      			//TODO: draw new figures...
 
-        		i = 7;
-        		drawFigure(i,[2,1,3,1,2,2,2,2],216);
-        		drawFigure(i + 1,[2,2,3,2,4,2,2,2],212);
-        		drawFigure(i + 2,[2,1,3,2,4,2,2,2],192);
-        		drawFigure(i + 3,[2,1,3,2,5,2,2,2],158);
-        		drawFigure(i + 4,[2,1,3,1,7,2,2,2],148);
-        		drawFigure(i + 5,[2,2,1,1,9,2,2,2],145);
-        		drawFigure(i + 6,[2,2,2,1,5,2,2,2],145);
-        		drawFigure(i + 7,[2,1,2,1,4,2,2,2],142);
-        		drawFigure(i + 8,[2,2,3,2,2,2,2,2],142);
-        })
+   //      		}
+
+   //      		i = 0;
+   //      		drawFigure(i,[2,1,3,2,2,2,2,2],324);
+   //      		drawFigure(i+1,[2,2,2,1,4,2,2,2],269);
+   //      		drawFigure(i + 2,[2,1,2,1,5,2,2,2],261);
+   //      		drawFigure(i + 3,[2,2,3,1,4,2,2,2],249);
+   //      		drawFigure(i + 4,[2,2,3,1,9,2,2,2],237);
+   //      		drawFigure(i + 5,[2,2,2,1,9,2,2,2],232);
+   //      		drawFigure(i + 6,[2,1,3,1,5,2,2,2],218);
+
+   //      		i = 7;
+   //      		drawFigure(i,[2,1,3,1,2,2,2,2],216);
+   //      		drawFigure(i + 1,[2,2,3,2,4,2,2,2],212);
+   //      		drawFigure(i + 2,[2,1,3,2,4,2,2,2],192);
+   //      		drawFigure(i + 3,[2,1,3,2,5,2,2,2],158);
+   //      		drawFigure(i + 4,[2,1,3,1,7,2,2,2],148);
+   //      		drawFigure(i + 5,[2,2,1,1,9,2,2,2],145);
+   //      		drawFigure(i + 6,[2,2,2,1,5,2,2,2],145);
+   //      		drawFigure(i + 7,[2,1,2,1,4,2,2,2],142);
+   //      		drawFigure(i + 8,[2,2,3,2,2,2,2,2],142);
+   //      })
 </script>
 
 <script>
