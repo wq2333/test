@@ -1,4 +1,4 @@
-function squareSelect(dataPortrait){
+function squareSelect(uids){
          var clickTime = "";
          var startLoc = [];
          var endLoc = [];
@@ -9,7 +9,7 @@ function squareSelect(dataPortrait){
 	                   .style("fill", "rgba(22,22,22,0.3)")
 	                   .style("stroke", "#ccc")
 	                   .style("stroke-width", "2px")
-	                   .attr("id", "squareSelect");
+	                   .attr("id", "idSquareSelect");
 
 	          svg.on("mousedown", function(){
 	                 clickTime = (new Date()).getTime();
@@ -39,7 +39,6 @@ function squareSelect(dataPortrait){
                      if(flag == true){
                              flag = false;
                              endLoc = [d3.event.layerX, d3.event.layerY];
-                             console.log("end", endLoc);
                              var leftTop = [];
                              var rightBottom = []
                              if(endLoc[0]>=startLoc[0]){
@@ -61,20 +60,19 @@ function squareSelect(dataPortrait){
                          d3.selectAll("#idPoint")
                             .attr("temp", function(d){
                                   if(xScale(d.x)<rightBottom[0] && xScale(d.x)>leftTop[0] && yScale(d.y)>leftTop[1] && yScale(d.y)<rightBottom[1]){
-                                              for(var i=0;i<uids.length;i++){
-                                                   if(uids[i]==d.uid){
-                                                         console.log("selected");
-                                                         if(d.attr.toString() in dataPortrait){
-                                                              dataPortraitFromW2[d.attr.toString()] = dataPortraitFromW2[d.attr.toString()]+1;
-                                                         }else{
-                                                              dataPortraitFromW2[d.attr.toString()] = 1;
-                                                         }
-                                                   }
-                                              }
+                                          if(d.attr.toString() in dataPortrait){
+                                                if(d.attr.toString() in dataPortraitFromW2){
+                                                      dataPortraitFromW2[d.attr.toString()] = dataPortraitFromW2[d.attr.toString()]+1;
+                                                }else{
+                                                      dataPortraitFromW2[d.attr.toString()] = 1;
+                                                }
+                                                d3.select(this).style("fill", "purple");
+                                          }
                                   }
                          });
-              rect.attr("width",0).attr("height",0);
+              //rect.attr("width",0).attr("height",0);
             }
-            drawWindow3(dataPortraitFromW2);
+            current = 2;
+            drawWindow3(dataPortraitFromW2, page);
         });
 }
