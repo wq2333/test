@@ -75,6 +75,7 @@
                   inp[zu].splice(n,1);
               }
          }
-         drawWindow2(inp);
+         console.log("inp set", inp);
+         drawWindow2(inp, 1);
 	}
 

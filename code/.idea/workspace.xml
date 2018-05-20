@@ -12,26 +12,18 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="code" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="server.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/server.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="22" column="10" lean-forward="true" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
-              <caret line="141" column="38" lean-forward="true" selection-start-line="141" selection-start-column="38" selection-end-line="141" selection-end-column="38" />
+            <state relative-caret-position="493">
+              <caret line="198" column="58" lean-forward="true" selection-start-line="198" selection-start-column="58" selection-end-line="198" selection-end-column="58" />
               <folding>
                 <element signature="n#style#0;n#canvas#0;n#body#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#body#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#canvas#1;n#body#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#body#0;n#!!top" expanded="true" />
               </folding>
             </state>
@@ -41,8 +33,8 @@
       <file leaf-file-name="window1.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/window1.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="41" column="34" lean-forward="true" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="34" />
+            <state relative-caret-position="304">
+              <caret line="55" column="12" lean-forward="true" selection-start-line="55" selection-start-column="12" selection-end-line="55" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -50,46 +42,17 @@
       <file leaf-file-name="window2.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/window2.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="66" column="93" selection-start-line="66" selection-start-column="81" selection-end-line="66" selection-end-column="93" />
+            <state relative-caret-position="209">
+              <caret line="11" column="50" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="50" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="window3.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="window3.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/window3.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="589">
-              <caret line="219" column="1" lean-forward="true" selection-start-line="219" selection-start-column="1" selection-end-line="219" selection-end-column="1" />
-              <folding>
-                <element signature="e#0#417#0" />
-                <element signature="e#0#5669#0" />
-                <element signature="e#0#1684#0" />
-                <element signature="e#0#5435#0" />
-                <element signature="e#0#5439#0" />
-                <element signature="e#0#5439#0" />
-                <element signature="e#0#5424#0" />
-                <element signature="e#0#5401#0" />
-                <element signature="e#0#5222#0" />
-                <element signature="e#0#5439#0" />
-                <element signature="e#0#5439#0" />
-                <element signature="e#0#5439#0" />
-                <element signature="e#0#5439#0" />
-                <element signature="e#0#5945#0" />
-                <element signature="e#0#5760#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="window4.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/js/window4.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="108" column="38" lean-forward="true" selection-start-line="108" selection-start-column="38" selection-end-line="108" selection-end-column="38" />
-              <folding>
-                <element signature="e#0#14283#0" />
-              </folding>
+            <state relative-caret-position="396">
+              <caret line="133" column="34" lean-forward="true" selection-start-line="133" selection-start-column="34" selection-end-line="133" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -98,20 +61,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>liSingleOptionAttribute</find>
-      <find>12</find>
-      <find>amount</find>
-      <find>if(num==1)</find>
-      <find>orbit</find>
-      <find>ico</find>
-      <find>control</find>
-      <find>stats</find>
-      <find>65</find>
-      <find>favicon</find>
-      <find>schemeCategory10</find>
-      <find>color</find>
-      <find>clone</find>
-      <find>init</find>
       <find>resetOptions</find>
       <find>flag</find>
       <find>svg</find>
@@ -121,13 +70,27 @@
       <find>updateOptions</find>
       <find>addResident</find>
       <find>datasetPortrait</find>
-      <find>uids</find>
       <find>dataP</find>
       <find>path</find>
       <find>while</find>
       <find>mapFeature</find>
       <find>clear</find>
       <find>for</find>
+      <find>Object</find>
+      <find>drawWin</find>
+      <find>addGender</find>
+      <find>SHIFTBAGSHIFTBAG</find>
+      <find>shift</find>
+      <find>gender_</find>
+      <find>text</find>
+      <find>drawWindow2</find>
+      <find>judge</find>
+      <find>drawFigure</find>
+      <find>setBasicPathsVisible</find>
+      <find>clearCurrentFigures</find>
+      <find>right</find>
+      <find>uids</find>
+      <find>drawWindow3</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -148,11 +111,11 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="159" />
-    <option name="y" value="14" />
-    <option name="width" value="1236" />
-    <option name="height" value="1040" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="314" />
+    <option name="y" value="42" />
+    <option name="width" value="1249" />
+    <option name="height" value="1075" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -277,18 +240,18 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="159" y="14" width="1236" height="1040" extended-state="0" />
+    <frame x="717" y="53" width="1249" height="1075" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14098361" />
+      <window_info content_ui="combo" id="Project" order="0" side_tool="true" visible="true" weight="0.18579686" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.2937365" />
+      <window_info anchor="bottom" id="Python Console" order="7" weight="0.32890365" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.29235882" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="11" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32890365" />
+      <window_info id="Favorites" order="2" side_tool="true" weight="0.3295796" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.25701943" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -321,12 +284,102 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server/index.html">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3781">
+          <caret line="199" column="8" lean-forward="true" selection-start-line="199" selection-start-column="8" selection-end-line="199" selection-end-column="8" />
+          <folding>
+            <element signature="n#style#0;n#canvas#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#body#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/window1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="893">
+          <caret line="47" column="49" lean-forward="true" selection-start-line="47" selection-start-column="49" selection-end-line="47" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/window2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="35" selection-start-column="35" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/window4.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2356">
+          <caret line="124" column="69" lean-forward="true" selection-start-line="124" selection-start-column="69" selection-end-line="124" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/window3.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="29" column="15" lean-forward="true" selection-start-line="29" selection-start-column="15" selection-end-line="29" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="22" column="10" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2679">
+          <caret line="141" column="12" lean-forward="true" selection-start-line="141" selection-start-column="12" selection-end-line="141" selection-end-column="12" />
+          <folding>
+            <element signature="n#style#0;n#canvas#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#body#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/window1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="779">
+          <caret line="41" column="34" lean-forward="true" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/window2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1254">
+          <caret line="66" column="93" selection-start-line="66" selection-start-column="81" selection-end-line="66" selection-end-column="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/window3.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4161">
+          <caret line="219" column="1" lean-forward="true" selection-start-line="219" selection-start-column="1" selection-end-line="219" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/window4.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2052">
+          <caret line="108" column="38" lean-forward="true" selection-start-line="108" selection-start-column="38" selection-end-line="108" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="22" column="10" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/index.html">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1957">
           <caret line="103" selection-start-line="103" selection-end-line="103" />
           <folding>
             <element signature="n#style#0;n#canvas#0;n#body#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#body#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#canvas#1;n#body#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#body#0;n#!!top" expanded="true" />
           </folding>
         </state>
@@ -366,8 +419,6 @@
           <caret line="103" lean-forward="true" selection-start-line="103" selection-end-line="103" />
           <folding>
             <element signature="n#style#0;n#canvas#0;n#body#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#body#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#canvas#1;n#body#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#body#0;n#!!top" expanded="true" />
           </folding>
         </state>
@@ -407,8 +458,6 @@
           <caret line="61" column="7" lean-forward="true" selection-start-line="61" selection-start-column="7" selection-end-line="61" selection-end-column="7" />
           <folding>
             <element signature="n#style#0;n#canvas#0;n#body#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#body#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#canvas#1;n#body#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#body#0;n#!!top" expanded="true" />
           </folding>
         </state>
@@ -491,71 +540,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/window1.js">
+    <entry file="file://$PROJECT_DIR$/js/window4.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="41" column="34" lean-forward="true" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="34" />
+        <state relative-caret-position="62">
+          <caret line="97" column="37" selection-start-line="97" selection-start-column="37" selection-end-line="97" selection-end-column="37" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/svg/10.svg">
+      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/server/server.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
-          <caret line="22" column="10" lean-forward="true" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="141" column="38" lean-forward="true" selection-start-line="141" selection-start-column="38" selection-end-line="141" selection-end-column="38" />
-          <folding>
-            <element signature="n#style#0;n#canvas#0;n#body#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#body#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#canvas#1;n#body#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#body#0;n#!!top" expanded="true" />
-          </folding>
+          <caret line="22" column="10" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/window2.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="66" column="93" selection-start-line="66" selection-start-column="81" selection-end-line="66" selection-end-column="93" />
+        <state relative-caret-position="209">
+          <caret line="11" column="50" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/window1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="55" column="12" lean-forward="true" selection-start-line="55" selection-start-column="12" selection-end-line="55" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="198" column="58" lean-forward="true" selection-start-line="198" selection-start-column="58" selection-end-line="198" selection-end-column="58" />
+          <folding>
+            <element signature="n#style#0;n#canvas#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#body#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/window3.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
-          <caret line="219" column="1" lean-forward="true" selection-start-line="219" selection-start-column="1" selection-end-line="219" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#417#0" />
-            <element signature="e#0#5669#0" />
-            <element signature="e#0#1684#0" />
-            <element signature="e#0#5435#0" />
-            <element signature="e#0#5439#0" />
-            <element signature="e#0#5439#0" />
-            <element signature="e#0#5424#0" />
-            <element signature="e#0#5401#0" />
-            <element signature="e#0#5222#0" />
-            <element signature="e#0#5439#0" />
-            <element signature="e#0#5439#0" />
-            <element signature="e#0#5439#0" />
-            <element signature="e#0#5439#0" />
-            <element signature="e#0#5945#0" />
-            <element signature="e#0#5760#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/window4.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="108" column="38" lean-forward="true" selection-start-line="108" selection-start-column="38" selection-end-line="108" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#14283#0" />
-          </folding>
+        <state relative-caret-position="396">
+          <caret line="133" column="34" lean-forward="true" selection-start-line="133" selection-start-column="34" selection-end-line="133" selection-end-column="34" />
         </state>
       </provider>
     </entry>
