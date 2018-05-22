@@ -1,4 +1,25 @@
-\section{City-folding Visual Analytics}
+\section{System Design}
+
+
+This work we try to answer following questions:
+
+Problem to solve: 
+\begin{itemize}
+\item \textit{What flows of people with certain demographic characteristics}: multiple attributes, semantic understanding, loose attribute boundary
+\item \textit{What the Urban Dynamics of the Group}: where those people go and how they access the ... in a city. the patterns of behaviour classified by different social characteristics.  Including travel purpose, 
+\item \textit{Compare of moving patterns between different groups}: what the similar and difference between groups in their traveling behaviour
+\end{itemize}
+
+We derive the design considerations:
+
+\begin{itemize}
+\item \textbf{C1: semantic understanding of demographic cahracteristics}: since the concept of groups is vague to define directly quantitativily. The visual design needs to consider how to help end-users to pick desirable ones from the mass. 
+\item \textbf{C2: }
+\end{itemize}
+
+Classification method, flow clustering method, Semantic representation. 
+
+The key of our work is to align the analysis of urban dynamics with the available of individual characteristics. 
 
 Semantic understanding of social characteristics.
 
@@ -33,24 +54,25 @@ With the visual mapping, the profiles varies from individual to individual. Figu
  \label{fig:div_profile}
 \end{figure}
 
-\subsection{T-SNE Projection}
+\subsection{t-SNE Projection}
 
-Each individual is denoted as a vector with eight factors and projected as a dot into the 2D view by the T-SNE project~\cite{}. As 
-Figure~\ref{fig:mds} shows, the whole space of volunteers are plotted evenly in the 2D view, which idnicates the uniformly sampled. Cross-filter~\cite{} from 
+Each individual is denoted as a vector with eight factors and projected as a dot into the 2D view via t-SNE project~\cite{maaten2008visualizing}, which well suits high-dimensional data for visualization in a low-dimensional space of two dimensions. As Figure~\ref{fig:tsne}(a)shows, all volunteers are embedded evenly in the 2D view, indicating the uniformly sampling over demographical space. 
 
-Classification Updated. Automatic ensembling of diverse profiles. 
-
-Groups from demographics
+Multiple views of abstract view, t-SNE proection and semantic data driven profile visualization are coordinated in a Cross-filter machinesm~\cite{Weaver2010}. It allows end-users to interactive drill-dowm into individuals with interested characteristics from multiple perspectives. Starting from the abstract criterion constraints, the scope of interest is narrowed down to individuals with(out) certian properties. And then further cross-filtering with semantically visual profiles, to check the combination of 8 characteristical variables. Figure~\ref{fig:tsne}(b) examplifies four groups of interest. 
 
 \begin{figure}[htb!]
  \centering % avoid the use of \begin{center}...\end{center} and use \centering instead (more compact)
  \includegraphics[width=\columnwidth]{pictures/mds}
- \caption{Interactive Labelling and Classification}
- \label{fig:mds}
+ \caption{t-SNE project with four groups of the interest}
+ \label{fig:tsne}
 \end{figure}
 
 \subsection{2.5D Spatial Visualization}
 
-The space visualization is embedded in 2.5D space. TAZ is used as the .... The height of space is put as the occurrence of visiting. For each group of people, we adjust the DB-Scan Algorithm in the context of TAZ. 
+Embedding multiple variables in the spatial map is a challenging problem. Distortion technique 2D spatial, such as the partial route embedding~\cite{sun2016embedding}. However, when it comes to the global visualization, the trade-off between occlusion-free and the spatial perception. Follow the idea of 2.5D space design~\cite{Tominski2012_stacking}, the space visualization is embedded in 2.5D space, which also can smoothly transited back to the conventional 2D view.  
 
-Travel Purpose, Clustering, Small Multiple Comparison
+ Each TAZ is grown as a prism whose height encodes the occurrence of visiting. Brunch of TAZ with similar visiting pattern and purpose are grouped by an heuristic DB-Scan Algorithm in the context of TAZ. From a center TAZ, walk to neighbour TAZ to check whether aggregation or not. The aggregated TAZ brunch indicates the region visiting by the group of people in same purpose, which is often the popular traveling places. The TAZ brunch is visualized...
+
+ To compare the mobility patterns across different groups of people, a Small Multiple dock is used to reserve the ever explored interesting result. To simply the comparion over spatial distribution, the snapshot is rendered in the 2D space, which can be magnified to check for the details in the 2.5D space.
+
+ In this view, it supports end-users to direct manipulate the space, e.g., zooming, panning, etc. Also, detail information about the visiting can be checked by direct clicking on the TAZ. 
