@@ -6,7 +6,6 @@
 			var liOptionBar = childItem.getItems(
 				{'name': /^attr/});
 
-
 			for(var j = 0; j < liOptionBar.length; j ++){
 				var optionBar = liOptionBar[j]
 			    optionBar._AttrClick = true
@@ -75,7 +74,6 @@
                   inp[zu].splice(n,1);
               }
          }
-         console.log("inp set", inp);
          drawWindow2(inp, 1);
 	}
 

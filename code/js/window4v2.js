@@ -1,3 +1,33 @@
+function initPurpose(item){
+
+  for(var j=1;j<11;j++){
+            var a = "p"+String(j);
+            var pBar = item.children[a];
+
+
+            pBar._AttrClick = true
+			pBar.strokeWidth = 4;
+			pBar.strokeColor = 'black';
+		    pBar.onClick = function(){
+					this._AttrClick = !this._AttrClick;
+					if(this._AttrClick){
+						this.strokeColor = 'black';
+						this.strokeWidth = 4;
+					}else{
+						this.strokeColor = null;
+						this.strokeWidth = 1;
+					}
+			}
+			pBar.onMouseEnter = function(){
+					this.strokeColor = 'black';
+		    }
+			pBar.onMouseLeave = function(){
+					if(this._AttrClick == false)
+						this.strokeColor = null;
+			}
+        }
+}
+
 
  function d3threeD( exports ) {
         var DEGS_TO_RADS = Math.PI / 180, UNIT_SIZE = 100;
@@ -203,20 +233,21 @@
         }
     }
 
-  function init() {
-
-        var container = document.getElementById( 'window3' );
+  function init41() {
+        container = document.getElementById( 'window41' );
+        if(container.childNodes.length!=0){
+            container.removeChild(container.childNodes[0]);
+        }
 
         raycaster = new THREE.Raycaster();
         //
         scene = new THREE.Scene();
         scene.background = new THREE.Color( 0x8b8b8b );
 
-        //
-        camera = new THREE.PerspectiveCamera( 50, window.innerWidth*0.65 / window.innerHeight, 0.1, 100 );
-        camera.position.set( 0, 18, 0 );
-        //camera.position.set(8.278324114488553, 23.715105536749885, 5.334970045945842);
-        camera.up.set(0, 0.3, -0.3);
+        console.log(window.innerWidth, window.innerHeight);
+        camera = new THREE.OrthographicCamera( window.innerWidth*0.19/-260, window.innerWidth*0.19/260, window.innerHeight*0.3/260, window.innerHeight*0.3/-260, 1, 100 );
+        camera.lookAt(new THREE.Vector3(0,0,0));
+        camera.position.set(0,10,0);
 
         //
         var group = new THREE.Group();
@@ -226,32 +257,22 @@
         var directionalLight = new THREE.DirectionalLight( 0xffffff, 0.6 );
         directionalLight.position.set( 0.75, 0.75, 1.0 ).normalize();
         scene.add( directionalLight );
-        var ambientLight = new THREE.AmbientLight( 0xcccccc, 0.2 );
-        scene.add( ambientLight );
-
-        //
-        var helper = new THREE.GridHelper( 10, 10 );
-        helper.rotation.x = Math.PI / 2;
-        group.add( helper );
+        var ambientLight = new THREE.AmbientLight(0xcccccc, 1);
+        scene.add(ambientLight);
 
         //
         renderer = new THREE.WebGLRenderer( { antialias: true } );
         renderer.setPixelRatio( window.devicePixelRatio );
-        renderer.setSize( window.innerWidth*0.65, window.innerHeight );
+        renderer.setSize( window.innerWidth*0.19, window.innerHeight*0.3 );
+
         container.appendChild( renderer.domElement );
         //
 		controls = new THREE.OrbitControls( camera, renderer.domElement );
+		controls.zoom0 = 100;
 
-        //controls.minDistance = 10;
-        //controls.maxDistance = 50;
-
-        //
-        //stats = new Stats();
-        //container.appendChild( stats.dom );
-        //
         window.addEventListener( 'resize', onWindowResize, false );
-        document.addEventListener('mousemove', onDocumentMouseMove, false);
-        window.requestAnimationFrame(updateInfoBox);
+        //document.addEventListener('click', onDocumentMouseClick, false);
+        //window.requestAnimationFrame(updateInfoBox);
 
         positioning = new THREE.Matrix4();
 
@@ -260,31 +281,158 @@
         positioning.multiply(tmp.makeTranslation(-480, -250, 0));
     }
 
+  function init42() {
+        container = document.getElementById( 'window42' );
+        if(container.childNodes.length!=0){
+            container.removeChild(container.childNodes[0]);
+        }
+
+        scene = new THREE.Scene();
+        scene.background = new THREE.Color( 0x8b8b8b );
+
+        camera = new THREE.OrthographicCamera( window.innerWidth*0.19/-260, window.innerWidth*0.19/260, window.innerHeight*0.3/260, window.innerHeight*0.3/-260, 1, 10 );
+        camera.lookAt(new THREE.Vector3(0,0,0));
+        camera.position.set(0,1,0);
+
+        //
+        var group = new THREE.Group();
+        scene.add( group );
+
+        //
+        var directionalLight = new THREE.DirectionalLight( 0xffffff, 0.6 );
+        directionalLight.position.set( 0.75, 0.75, 1.0 ).normalize();
+        scene.add( directionalLight );
+        var ambientLight = new THREE.AmbientLight(0xcccccc, 1);
+        scene.add(ambientLight);
+
+        //
+        renderer = new THREE.WebGLRenderer( { antialias: true } );
+        renderer.setPixelRatio( window.devicePixelRatio );
+        renderer.setSize( window.innerWidth*0.19, window.innerHeight*0.3 );
+
+        container.appendChild( renderer.domElement );
+        //
+		controls = new THREE.OrbitControls( camera, renderer.domElement );
+		controls.zoom0 = 100;
+
+        window.addEventListener( 'resize', onWindowResize, false );
+        //document.addEventListener('click', onDocumentMouseClick, false);
+        //window.requestAnimationFrame(updateInfoBox);
+
+        positioning = new THREE.Matrix4();
+
+        var tmp = new THREE.Matrix4();
+        positioning.multiply(tmp.makeRotationX(Math.PI/2));
+        positioning.multiply(tmp.makeTranslation(-480, -250, 0));
+    }
+
+  function init43() {
+       container = document.getElementById( 'window43' );
+        if(container.childNodes.length!=0){
+            container.removeChild(container.childNodes[0]);
+        }
+
+        raycaster = new THREE.Raycaster();
+        //
+        scene = new THREE.Scene();
+        scene.background = new THREE.Color( 0x8b8b8b );
+
+        console.log(window.innerWidth, window.innerHeight);
+        camera = new THREE.OrthographicCamera( window.innerWidth*0.19/-260, window.innerWidth*0.19/260, window.innerHeight*0.3/260, window.innerHeight*0.3/-260, 1, 100 );
+        camera.lookAt(new THREE.Vector3(0,0,0));
+        camera.position.set(0,10,0);
+
+        //
+        var group = new THREE.Group();
+        scene.add( group );
+
+        //
+        var directionalLight = new THREE.DirectionalLight( 0xffffff, 0.6 );
+        directionalLight.position.set( 0.75, 0.75, 1.0 ).normalize();
+        scene.add( directionalLight );
+        var ambientLight = new THREE.AmbientLight(0xcccccc, 1);
+        scene.add(ambientLight);
+
+        //
+        renderer = new THREE.WebGLRenderer( { antialias: true } );
+        renderer.setPixelRatio( window.devicePixelRatio );
+        renderer.setSize( window.innerWidth*0.19, window.innerHeight*0.3 );
+
+        container.appendChild( renderer.domElement );
+        //
+		controls = new THREE.OrbitControls( camera, renderer.domElement );
+		controls.zoom0 = 100;
+
+        window.addEventListener( 'resize', onWindowResize, false );
+        //document.addEventListener('click', onDocumentMouseClick, false);
+        //window.requestAnimationFrame(updateInfoBox);
+
+        positioning = new THREE.Matrix4();
+
+        var tmp = new THREE.Matrix4();
+        positioning.multiply(tmp.makeRotationX(Math.PI/2));
+        positioning.multiply(tmp.makeTranslation(-480, -250, 0));
+    }
+
+  function init44(mode) {
+        container = document.getElementById('window44');
+         if(container.childNodes.length!=0){
+            container.removeChild(container.childNodes[0]);
+        }
+        raycaster = new THREE.Raycaster();
+        //
+        scene = new THREE.Scene();
+        scene.background = new THREE.Color( 0x8b8b8b );
+
+        camera = new THREE.PerspectiveCamera(35, window.innerWidth*0.65 / (window.innerHeight*0.7), 0.1, 500);
+        camera.position.set(0, 5, 3);  //x,左右倾斜；y,远近；z，正对xy平面
+        camera.up.set(0,0.3,-0.1);  //前两个数控制左右倾斜程度
+
+        //
+        var group = new THREE.Group();
+        scene.add( group );
+
+        //
+/*        var directionalLight = new THREE.DirectionalLight( 0xffffff, 0.6 );
+        directionalLight.position.set( 0.75, 0.75, 1.0 ).normalize();
+        scene.add( directionalLight );*/
+        var ambientLight = new THREE.AmbientLight(0xcccccc, 1);
+        scene.add(ambientLight);
+        var pointLight = new THREE.PointLight(0xff0000,1);
+        pointLight.position.set(0,-10,10);
+        scene.add(pointLight);
+
+        //
+        renderer = new THREE.WebGLRenderer( { antialias: true } );
+        renderer.setPixelRatio( window.devicePixelRatio );
+        renderer.setSize( window.innerWidth*0.65, window.innerHeight*0.7 );
+        container.appendChild( renderer.domElement );
+        //
+		controls = new THREE.OrbitControls( camera, renderer.domElement );
+		controls.zoom0 = 100;
+
+        window.addEventListener( 'resize', onWindowResize, false );
+        document.addEventListener('click', onDocumentMouseClick, false);
+        //window.requestAnimationFrame(updateInfoBox);
+
+        positioning = new THREE.Matrix4();
+
+        var tmp = new THREE.Matrix4();
+        positioning.multiply(tmp.makeRotationX(Math.PI/2));
+        positioning.multiply(tmp.makeTranslation(-480, -250, 0));
+    }
 
     function animate() {
         renderer.render( scene, camera );
-        //stats.update();
-        updateInfoBox();
         requestAnimationFrame( animate );
     }
 
-    function updateInfoBox(){
-        raycaster.setFromCamera( mouse, camera );
+    function initSVGObject(mode, uidnumber, max) {
 
-        var intersects = raycaster.intersectObjects(scene.children);
-
-        var html = '';
-
-        for (var i=0; i<intersects.length; i++) {
-            intersects[i].object.material.color.set(0x00ff00);
-            var bid = intersects[i].object.bid;
-            console.log("point at: ", bid);
+        if(scene.children.length>10){
+             clearObject();
         }
 
-    }
-
-
-    function initSVGObject() {
         var features = mapjson.features;
 
         var path = d3.geo.path().projection(d3.geo.mercator().center([114.16, 22.63]));
@@ -293,9 +441,8 @@
             var shape = $d3g.transformSVGPath(path(feature));
             var simpleShape = shape.toShapes(true);
             var bid = feature.properties.bid;
-            var amount = getNumber(bid)*(-50)/odsum;
-            var color = getColor(bid);
-            //var color = d3.hsl(105, 0.8, luminance).toString();
+            var amount = getAmount(bid, mode, uidnumber);
+            var color = getColor(bid, mode, uidnumber, max);
 
             var extrudeMaterial = new THREE.MeshLambertMaterial({color: color, emissive: color});
 
@@ -309,16 +456,17 @@
             mesh.bid = bid;
 
             mesh.applyMatrix(positioning);
-            //mesh.translateZ(-5);
-
             scene.add(mesh);
 
             return mesh;
-
         });
-
     }
 
+    function clearObject(){
+         for(var i=0;i<1070;i++){
+              scene.children.pop();
+         }
+    }
 
     function onWindowResize() {
         camera.aspect = window.innerWidth / window.innerHeight;
@@ -331,37 +479,121 @@
         mouse.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
     }
 
+    function getAmount(bid, m, n){
+        if((m==5)||(m==7)){
+            var a = -1*getNumber(bid)*20/n;
+            return a;
+        }else if(m==6){
+            p = 0;
+            for (var i=0;i<numberjson.length;i++){
+                if(numberjson[i].id==bid){
+                    p = numberjson[i].n;
+                }
+            }
+            return p/(-100);
+        }else{
+            return 1;
+        }
+    }
 
     function getNumber(bid){
-        var numberback = 1;
-        for (var i=0;i<numberjson.length;i++){
-            if(numberjson[i].id==bid){
-                numberback = numberjson[i].n;
+            var numberback = 0;
+            for (var i=0;i<numberjson.length;i++){
+                    if(numberjson[i].id==bid){
+                        numberback = numberjson[i].n;
+                    }
             }
-        }
-        return numberback;
+            return numberback;
     }
 
-    function getColor(bid){
-	    var colors = ['#FF2D2D', '#FF77FF', '#7D7DFF','#2894FF','#4DFFFF','#02F78E','#28FF28','#9AFF02','#F9F900',
-	    '#FF9224','#F75000','#AD5A5A','#AFAF61','#6FB7B7','#8080C0','#AE57A4', '#FF0080','#921AFF'];
-        var out;
-        var flag = 1;
+    function getColor(bid, m, uidnumber, max){
         var num = getNumber(bid);
-        if(num==1){
-            out = "rgb(100,100,100)";
-        }else{
-             for (var i=0;i<clusterjson.length;i++){
-                if(clusterjson[i].id==bid){
-                   flag = 2;
-                   out = colors[clusterjson[i].c];
-                   break;
+        if((m==41)||(m==42)||(m==43)){
+              if(num!=0){
+                   var g = 255-Math.round(255*Math.log(num)/Math.log(max));
+                   return "rgb(255,"+g+","+g+")";
+              }else{
+                   return "rgb(255,255,255)";
+              }
+
+        }else if(m==5){
+              var num = getNumber(bid);
+              if (num == 0) {
+                     return "rgb(0,0,0)";
+              } else {
+                     var a= Math.round(255*num/max);
+                     return "rgb("+a+",0,0)";
+              }
+        }else if(m==6){
+              var colors = ["rgba(70,30,230,0.3)", "rgba(20,20,255,0.3)", "rgba(0,140,0,0.3)", "rgba(240,240,0,1)", "rgba(210,60,0,1)",
+                            "rgba(0,220,220,1)", "rgba(255,0,0,1)","rgba(150,75,75,1)", "rgba(255,0,255,1)", "rgba(255,255,255,1)"];
+              for (var i=0;i<numberjson.length;i++){
+                if(numberjson[i].id==bid){
+                    return colors[numberjson[i].t-1];
                 }
-             }
-             if(flag ==1){
-                 out = "rgb(200,200,200)";
-             }
+            }
+        }else if(m==7){
+              var colors = ["#ff0000", "#4A4AFF", "#FF0080", "#00CACA", "#921AFF","#00DB00", "#FF8000","4F9D9D",  "#AD5A5A", "#82D900"];
+              var num =getNumber(bid);
+              if(num==0){
+                     return "rgb(0,0,0)";
+              }else{
+                     return colors[max-1];
+              }
         }
-        return out;
     }
 
+
+function initTimeSlider(){
+$(function() {
+        $( "#timeline" ).slider({
+                range: true,
+                min: 0,
+                max: 24,
+                values: [ 6, 12 ],
+                slide: function( event, ui ) {
+                    $( "#timeText" ).val( ui.values[ 0 ] + "-" + ui.values[ 1 ] );
+                }
+            });
+        });
+
+}
+
+
+  function onDocumentMouseClick(event) {
+        mouse.x = ( event.clientX / window.innerWidth*0.65 ) * 2 - 1;
+        mouse.y = -( event.clientY / (window.innerHeight*0.7) ) * 2 + 1;
+
+        raycaster.setFromCamera(mouse, camera);
+        var intersects = raycaster.intersectObjects(scene.children);
+
+        for (var i = 0; i < intersects.length; i++) {
+
+            var bid = intersects[i].object.bid;
+            if (bid) {
+                intersects[i].object.material.color.set(0x00ff00);
+
+                var self = this;
+                var formData = new FormData();
+	            formData.append('value', uids);
+	            formData.append('st', parseInt($( "#timeText" ).val().split("-")[0])*60);
+	            formData.append('et', parseInt($( "#timeText" ).val().split("-")[1])*60);
+	            formData.append('ebid', bid);
+	            var url = 'http://localhost:30030/chart';
+	            lSendUrl('POST', url, formData, drawchart);
+
+                function drawchart(response){
+                    numberjson = JSON.parse(response['number']);
+                    console.log(numberjson);
+                    updateChartInfo({
+                        title: 'purpose distribution',
+                        xLabel: 'purpose',
+                        yLabel: 'percent',
+                        maxY: 100,
+                        chartData: numberjson
+                    });
+                }
+            }
+
+        }
+  }

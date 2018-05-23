@@ -15,62 +15,38 @@ import json
 import subprocess
 
 
-class DataHandler(tornado.web.RequestHandler):
+class ChartHandler(tornado.web.RequestHandler):
     def post(self):
         va = self.get_argument('value');
         st = int(self.get_argument('st'));
         et = int(self.get_argument('et'));
-        m = int(self.get_argument('m'));
+        ebid = int(self.get_argument('ebid'));
         userId = va.split(',')
 
         ods = {}
         sumtrips = 0
-        ods, sumtrips = self.get_trips(userId, st, et, m)
-        ods2 = dict(sorted(ods.items(), key=lambda e: e[1], reverse=True))
-        avg = sumtrips // len(ods)
-        print("avg", avg)
-
-        clustered = self.clusterDBSCAN(ods2, avg)
-        print('clusters', len(clustered))
+        ods, sumtrips = self.getpurpose(userId, st, et, ebid)
 
         stringnumber = '['
         flag = 1
-        for key in ods2.keys():
+        for key in ods.keys():
             if flag==1:
-                stringnumber += "{\"id\":"+str(key)+", \"n\":"+str(ods2.get(key))+"}"
+                stringnumber += "{\"x\":"+str(key)+", \"y\":"+str(ods.get(key)*100//sumtrips)+"}"
                 flag = 2
             else:
-                stringnumber += ",{\"id\":" + str(key) + ", \"n\":" + str(ods2.get(key)) + "}"
+                stringnumber += ",{\"x\":" + str(key) + ", \"y\":" + str(ods.get(key)*100//sumtrips) + "}"
         stringnumber += "]"
 
-        stringcluster = '['
-        flag = 1
-        for i in range(len(clustered)):
-            for j in range(len(clustered[i])):
-                if flag==1:
-                    stringcluster += '{\"id\":'+str(clustered[i][j])+", \"c\":"+str(i)+'}'
-                    flag = 2
-                else:
-                    stringcluster += ',{\"id\":'+str(clustered[i][j])+", \"c\":"+str(i)+'}'
-        stringcluster += ']'
-
-        result = {'sum': sumtrips, 'number': stringnumber, 'cluster': stringcluster}
+        result = {'number': stringnumber}
         #print(result);
         self.set_header('Access-Control-Allow-Origin', '*');
         self.write(result);
 
-    def get_trips(self, uidsinput, time1, time2, mode):
+    def getpurpose(self, uidsinput, time1, time2, ebid):
 
-        mongo_url = "192.168.153.129:27017"
+        mongo_url = "192.168.153.139:27017"
         client = pymongo.MongoClient(mongo_url);
         db = client['wechat']
-
-        if mode == 1:
-            timeString = 'startminute'
-            bidString = 'sbid'
-        else:
-            timeString = 'endminute'
-            bidString = 'ebid'
 
         collection = db["od"]
         ods = {}
@@ -78,8 +54,83 @@ class DataHandler(tornado.web.RequestHandler):
             cursor = collection.find({"uid": uidsinput[j]})
 
             for item in cursor:
-                t = item[timeString]
-                bid = item[bidString]
+                t = item['endminute']
+                bid = item['ebid']
+                p = item['purpose']
+
+                if (t >= time1) and (t <= time2) and (bid == ebid):
+                    if (p in ods):
+                        temp = ods.get(p)
+                        ods[p] = temp + 1
+                    else:
+                        ods[p] = 1
+
+        sumod = 0
+        for value in ods.values():
+            sumod = sumod + value
+
+        return ods, round(sumod)
+
+
+
+class DataHandler(tornado.web.RequestHandler):
+    def post(self):
+        va = self.get_argument('value');
+        st = int(self.get_argument('st'));
+        et = int(self.get_argument('et'));
+        userId = va.split(',')
+
+        ods = {}
+        sumtrips = 0
+        ods, sumtrips, max = self.get_trips(userId, st, et)
+        #ods2 = dict(sorted(ods.items(), key=lambda e: e[1], reverse=True))
+        avg = sumtrips // len(ods)
+        #print("avg", avg)
+
+        #clustered = self.clusterDBSCAN(ods2, avg)
+        #print('clusters', len(clustered))
+
+        stringnumber = '['
+        flag = 1
+        for key in ods.keys():
+            if flag==1:
+                stringnumber += "{\"id\":"+str(key)+", \"n\":"+str(ods.get(key))+"}"
+                flag = 2
+            else:
+                stringnumber += ",{\"id\":" + str(key) + ", \"n\":" + str(ods.get(key)) + "}"
+        stringnumber += "]"
+
+        #stringcluster = '['
+        #flag = 1
+        #for i in range(len(clustered)):
+        #    for j in range(len(clustered[i])):
+        #        if flag==1:
+        #            stringcluster += '{\"id\":'+str(clustered[i][j])+", \"c\":"+str(i)+'}'
+        #            flag = 2
+        #        else:
+        #            stringcluster += ',{\"id\":'+str(clustered[i][j])+", \"c\":"+str(i)+'}'
+        #stringcluster += ']'
+
+        #result = {'sum': sumtrips, 'number': stringnumber, 'cluster': stringcluster}
+        result = {'sum': sumtrips, 'number': stringnumber, 'max':max}
+        #print(result);
+        self.set_header('Access-Control-Allow-Origin', '*');
+        self.write(result);
+
+    def get_trips(self, uidsinput, time1, time2, mode):
+
+        mongo_url = "192.168.153.139:27017"
+        client = pymongo.MongoClient(mongo_url);
+        db = client['wechat']
+        collection = db["od"]
+
+        ods = {}
+        for j in range(len(uidsinput)):
+            cursor = collection.find({"uid": uidsinput[j]})
+
+            for item in cursor:
+                t = item['endminute']
+                bid = item['ebid']
                 number = item['multiple']
 
                 if (t >= time1) and (t <= time2):
@@ -89,15 +140,18 @@ class DataHandler(tornado.web.RequestHandler):
                     else:
                         ods[bid] = number
 
+        max = 0;
         for key in ods.keys():
             temp = ods.get(key)
             ods[key] = round(temp)
+            if round(temp)> max :
+                max = round(temp)
 
         sumod = 0
         for value in ods.values():
             sumod = sumod + value
 
-        return ods, round(sumod)
+        return ods, round(sumod), max
 
     def clusterDBSCAN(self, counts, avg):
         clusters = []
@@ -164,3 +218,149 @@ def getNeighbor(bid, counts, avg):
                 if (n1 >= 0.9*avg) and (n2 >= 0.9*avg) and (abs(n1 - n2) <= beta):
                     neighbors.append(bidd)
     return neighbors
+
+
+
+class PurposeHandler(tornado.web.RequestHandler):
+    def post(self):
+        va = self.get_argument('value');
+        st = int(self.get_argument('st'));
+        et = int(self.get_argument('et'));
+        p = int(self.get_argument('p'));
+        userId = va.split(',')
+
+        ods = {}
+        sumtrips = 0
+        ods, sumtrips, max = self.getOne(userId, st, et, p)
+
+        stringnumber = '['
+        flag = 1
+        for key in ods.keys():
+            if flag==1:
+                stringnumber += "{\"id\":"+str(key)+", \"n\":"+str(ods.get(key))+"}"
+                flag = 2
+            else:
+                stringnumber += ",{\"id\":" + str(key) + ", \"n\":" + str(ods.get(key)) + "}"
+        stringnumber += "]"
+
+        result = {'sum': sumtrips, 'number': stringnumber, 'max' : max}
+        self.set_header('Access-Control-Allow-Origin', '*');
+        self.write(result);
+
+    def getOne(self, uidsinput, time1, time2, p):
+
+        mongo_url = "192.168.153.139:27017"
+        client = pymongo.MongoClient(mongo_url);
+        db = client['wechat']
+
+        collection = db["od"]
+        ods = {}
+        for j in range(len(uidsinput)):
+            cursor = collection.find({"uid": uidsinput[j], "purpose": p})
+
+            for item in cursor:
+                t = item['endminute']
+                bid = item['ebid']
+                number = item['multiple']
+
+                if (t >= time1) and (t <= time2):
+                    if (bid in ods):
+                        temp = ods.get(bid)
+                        ods[bid] = temp + number
+                    else:
+                        ods[bid] = number
+
+        max = 0;
+        for key in ods.keys():
+            temp = ods.get(key)
+            ods[key] = round(temp)
+            if round(temp)> max :
+                max = round(temp)
+
+        sumod = 0
+        for value in ods.values():
+            sumod = sumod + value
+
+        return ods, round(sumod), max
+
+class PClusterHandler(tornado.web.RequestHandler):
+        def post(self):
+            va = self.get_argument('value');
+            st = int(self.get_argument('st'));
+            et = int(self.get_argument('et'));
+            userId = va.split(',')
+
+            types = {}
+            ps = {}
+            ns = {}
+            types, ps, ns = self.getType(userId, st, et)
+
+            stringnumber = '['
+            flag = 1
+            for key in types.keys():
+                if flag == 1:
+                    stringnumber += "{\"id\":" + str(key) + ", \"t\":" + str(types.get(key)) + ", \"p\":" + str(ps.get(key))+", \"n\":" + str(ns.get(key))+"}"
+                    flag = 2
+                else:
+                    stringnumber += ",{\"id\":" + str(key) + ", \"t\":" + str(types.get(key)) + ", \"p\":" + str(ps.get(key))+", \"n\":" + str(ns.get(key))+"}"
+            stringnumber += "]"
+
+            result = {'number': stringnumber}
+            self.set_header('Access-Control-Allow-Origin', '*');
+            self.write(result);
+
+        def getType(self, uidsinput, time1, time2):
+
+            mongo_url = "192.168.153.139:27017"
+            client = pymongo.MongoClient(mongo_url);
+            db = client['wechat']
+
+            collection = db["od"]
+            ods = {}
+
+            for j in range(len(uidsinput)):
+                cursor = collection.find({"uid": uidsinput[j]})
+
+                for item in cursor:
+                    t = item['endminute']
+                    bid = item['ebid']
+                    p = item['purpose']
+                    n = item['multiple']
+
+                    if (t >= time1) and (t <= time2):
+                        if (bid in ods):
+                            temp = ods.get(bid)
+                            temp.append(p)
+                            ods[bid] = temp
+                        else:
+                            temp = [];
+                            temp.append(p);
+                            ods[bid] = temp;
+
+            bidtype = {}
+            bidpercent = {}
+            bidnumber = {}
+            for key in ods.keys():
+                pp = {}
+                temp = ods.get(key)
+                for i in range(len(temp)):
+                       if (temp[i] in pp):
+                           num = pp.get(temp[i])
+                           pp[temp[i]] = num + 1
+                       else:
+                           pp[temp[i]] = 1
+
+                max = 0;
+                sum = 0;
+                maxtype = 0;
+                for key2 in pp.keys():
+                    sum+=pp.get(key2)
+                    if(pp.get(key2)>max):
+                        max = pp.get(key2)
+                        maxtype = key2
+
+                bidtype[key] = maxtype
+                bidpercent[key] = max*100//sum
+                bidnumber[key] = sum
+
+            return bidtype, bidpercent, bidnumber

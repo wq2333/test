@@ -17,42 +17,83 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="198" column="58" lean-forward="true" selection-start-line="198" selection-start-column="58" selection-end-line="198" selection-end-column="58" />
+            <state relative-caret-position="122">
+              <caret line="25" column="103" selection-start-line="25" selection-start-column="103" selection-end-line="25" selection-end-column="103" />
               <folding>
                 <element signature="n#style#0;n#canvas#0;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#canvas#1;n#body#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#3;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#4;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#select#0;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#1;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#canvas#2;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#5;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#2;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#3;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#1;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#select#0;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#2;n#body#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="window1.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/window1.js">
+      <file leaf-file-name="url.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/url.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="55" column="12" lean-forward="true" selection-start-line="55" selection-start-column="12" selection-end-line="55" selection-end-column="12" />
+            <state relative-caret-position="247">
+              <caret line="13" column="22" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="window2.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/window2.js">
+      <file leaf-file-name="odhandler.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/handler/odhandler.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="11" column="50" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="50" />
+            <state relative-caret-position="398">
+              <caret line="323" column="35" lean-forward="true" selection-start-line="323" selection-start-column="35" selection-end-line="323" selection-end-column="35" />
+              <folding>
+                <element signature="e#253#1949#0" />
+                <element signature="e#2004#6207#0" />
+                <element signature="e#7177#9047#0" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="window3.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="window3.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/window3.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="133" column="34" lean-forward="true" selection-start-line="133" selection-start-column="34" selection-end-line="133" selection-end-column="34" />
+            <state relative-caret-position="483">
+              <caret line="112" column="17" lean-forward="true" selection-start-line="112" selection-start-column="17" selection-end-line="112" selection-end-column="17" />
+              <folding>
+                <element signature="e#0#9071#0" />
+                <element signature="e#0#9071#0" />
+                <element signature="e#0#9044#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="window4v2.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/window4v2.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="233">
+              <caret line="384" column="55" lean-forward="true" selection-start-line="384" selection-start-column="55" selection-end-line="384" selection-end-column="55" />
+              <folding>
+                <element signature="e#0#22684#0" />
+                <element signature="e#0#22684#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -61,49 +102,52 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>resetOptions</find>
-      <find>flag</find>
-      <find>svg</find>
-      <find>over</find>
-      <find>squareSelect</find>
-      <find>g_liAttrName</find>
-      <find>updateOptions</find>
-      <find>addResident</find>
-      <find>datasetPortrait</find>
-      <find>dataP</find>
-      <find>path</find>
-      <find>while</find>
-      <find>mapFeature</find>
-      <find>clear</find>
-      <find>for</find>
-      <find>Object</find>
-      <find>drawWin</find>
-      <find>addGender</find>
-      <find>SHIFTBAGSHIFTBAG</find>
-      <find>shift</find>
-      <find>gender_</find>
+      <find>console.log</find>
       <find>text</find>
-      <find>drawWindow2</find>
-      <find>judge</find>
-      <find>drawFigure</find>
-      <find>setBasicPathsVisible</find>
       <find>clearCurrentFigures</find>
-      <find>right</find>
-      <find>uids</find>
+      <find>addTo</find>
+      <find>set</find>
+      <find>setBasicPathsVisible</find>
+      <find>initButtons</find>
       <find>drawWindow3</find>
+      <find>li</find>
+      <find>g_liText</find>
+      <find>justForTest</find>
+      <find />
+      <find>getDataFor41</find>
+      <find>begintoDraw</find>
+      <find>mode</find>
+      <find>getAmount</find>
+      <find>ptest</find>
+      <find>add</find>
+      <find>begin</find>
+      <find>window</find>
+      <find>init43</find>
+      <find>groupAttr</find>
+      <find>init41</find>
+      <find>inits</find>
+      <find>initSVGObject</find>
+      <find>color</find>
+      <find>submit</find>
+      <find>submitTime</find>
+      <find>44</find>
+      <find>init</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/server/url.py" />
         <option value="$PROJECT_DIR$/lib/d3.v5.min.js" />
-        <option value="$PROJECT_DIR$/server/handler/odhandler.py" />
-        <option value="$PROJECT_DIR$/js/window4.js" />
-        <option value="$PROJECT_DIR$/js/window1.js" />
         <option value="$PROJECT_DIR$/js/window2.js" />
-        <option value="$PROJECT_DIR$/server/index.html" />
+        <option value="$PROJECT_DIR$/js/chart.js" />
+        <option value="$PROJECT_DIR$/server/url.py" />
+        <option value="$PROJECT_DIR$/js/window1.js" />
+        <option value="$PROJECT_DIR$/js/window4.js" />
+        <option value="$PROJECT_DIR$/js/window4v2.js" />
+        <option value="$PROJECT_DIR$/server/handler/hwhandler.py" />
+        <option value="$PROJECT_DIR$/server/handler/odhandler.py" />
         <option value="$PROJECT_DIR$/js/window3.js" />
+        <option value="$PROJECT_DIR$/server/index.html" />
       </list>
     </option>
   </component>
@@ -112,16 +156,16 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="314" />
-    <option name="y" value="42" />
-    <option name="width" value="1249" />
-    <option name="height" value="1075" />
+    <option name="x" value="189" />
+    <option name="width" value="1498" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -132,7 +176,18 @@
             <path>
               <item name="code" type="b2602c69:ProjectViewProjectNode" />
               <item name="code" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="code" type="b2602c69:ProjectViewProjectNode" />
+              <item name="code" type="462c0819:PsiDirectoryNode" />
               <item name="server" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="code" type="b2602c69:ProjectViewProjectNode" />
+              <item name="code" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="handler" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="code" type="b2602c69:ProjectViewProjectNode" />
@@ -143,21 +198,20 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="HbShouldOpenHtmlAsHb" value="" />
-    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/pythonWorkspace/code/js/window1.js" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/pythonWorkspace/code/js/window4.js" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../code_16pic" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../code_v3" />
     <property name="recentsLimit" value="5" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\pythonWorkspace\code\js" />
-      <recent name="D:\pythonWorkspace\code\lib" />
       <recent name="D:\pythonWorkspace\code\server\handler" />
+      <recent name="D:\pythonWorkspace\code\lib" />
       <recent name="D:\pythonWorkspace\code" />
       <recent name="D:\pythonWorkspace\code\server\json" />
     </key>
@@ -240,15 +294,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="717" y="53" width="1249" height="1075" extended-state="0" />
+    <frame x="587" y="89" width="1498" height="1040" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" side_tool="true" visible="true" weight="0.18579686" />
+      <window_info content_ui="combo" id="Project" order="0" side_tool="true" visible="true" weight="0.13767123" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.32890365" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.29235882" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.29014397" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32890365" />
       <window_info id="Favorites" order="2" side_tool="true" weight="0.3295796" />
@@ -275,6 +329,75 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/js/window3.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3857">
+          <caret line="203" column="30" lean-forward="true" selection-start-line="203" selection-start-column="30" selection-end-line="203" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#9071#0" />
+            <element signature="e#0#9071#0" />
+            <element signature="e#0#9044#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/window3.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2375">
+          <caret line="125" column="12" lean-forward="true" selection-start-line="125" selection-start-column="12" selection-end-line="125" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3762">
+          <caret line="198" column="58" selection-start-line="198" selection-start-column="58" selection-end-line="198" selection-end-column="58" />
+          <folding>
+            <element signature="n#style#0;n#canvas#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#canvas#1;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#1;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#canvas#2;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#5;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#2;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#3;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#1;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#2;n#body#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/window1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1045">
+          <caret line="55" column="12" lean-forward="true" selection-start-line="55" selection-start-column="12" selection-end-line="55" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/window2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="50" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/window3.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2318">
+          <caret line="122" column="31" lean-forward="true" selection-start-line="122" selection-start-column="31" selection-end-line="122" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/server/server.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
@@ -288,7 +411,25 @@
           <caret line="199" column="8" lean-forward="true" selection-start-line="199" selection-start-column="8" selection-end-line="199" selection-end-column="8" />
           <folding>
             <element signature="n#style#0;n#canvas#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#canvas#1;n#body#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#1;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#canvas#2;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#5;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#2;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#3;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#1;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#2;n#body#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -334,7 +475,25 @@
           <caret line="141" column="12" lean-forward="true" selection-start-line="141" selection-start-column="12" selection-end-line="141" selection-end-column="12" />
           <folding>
             <element signature="n#style#0;n#canvas#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#canvas#1;n#body#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#1;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#canvas#2;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#5;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#2;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#3;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#1;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#2;n#body#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -380,7 +539,25 @@
           <caret line="103" selection-start-line="103" selection-end-line="103" />
           <folding>
             <element signature="n#style#0;n#canvas#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#canvas#1;n#body#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#1;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#canvas#2;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#5;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#2;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#3;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#1;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#2;n#body#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -419,7 +596,25 @@
           <caret line="103" lean-forward="true" selection-start-line="103" selection-end-line="103" />
           <folding>
             <element signature="n#style#0;n#canvas#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#canvas#1;n#body#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#1;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#canvas#2;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#5;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#2;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#3;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#1;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#2;n#body#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -458,7 +653,25 @@
           <caret line="61" column="7" lean-forward="true" selection-start-line="61" selection-start-column="7" selection-end-line="61" selection-end-column="7" />
           <folding>
             <element signature="n#style#0;n#canvas#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#canvas#1;n#body#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#1;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#canvas#2;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#5;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#2;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#3;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#1;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#2;n#body#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -481,20 +694,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret line="22" column="10" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/application.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/url.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -526,66 +725,143 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/handler/odhandler.py">
+    <entry file="file://$PROJECT_DIR$/lib/jquery-ui.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="838">
-          <caret line="158" column="33" selection-start-line="158" selection-start-column="33" selection-end-line="158" selection-end-column="33" />
+        <state relative-caret-position="285">
+          <caret line="10" column="2435" selection-start-line="10" selection-start-column="2429" selection-end-line="10" selection-end-column="2435" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/json/person.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="53" selection-start-line="13" selection-start-column="53" selection-end-line="13" selection-end-column="53" />
+        <state relative-caret-position="114">
+          <caret line="6" column="5" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/window4.js">
+    <entry file="file://$PROJECT_DIR$/js/chart.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
-          <caret line="97" column="37" selection-start-line="97" selection-start-column="37" selection-end-line="97" selection-end-column="37" />
+        <state relative-caret-position="915">
+          <caret line="175" column="33" selection-start-line="175" selection-start-column="33" selection-end-line="175" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/svg/10.svg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/server.py">
+    <entry file="file://$PROJECT_DIR$/server/application.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="22" column="10" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
+        <state relative-caret-position="57">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/window2.js">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/server.py">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
-          <caret line="11" column="50" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="50" />
+          <caret line="11" column="14" lean-forward="true" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+          <folding>
+            <element signature="e#37#58#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/window1.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="55" column="12" lean-forward="true" selection-start-line="55" selection-start-column="12" selection-end-line="55" selection-end-column="12" />
+        <state relative-caret-position="228">
+          <caret line="12" column="47" lean-forward="true" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/index.html">
+    <entry file="file://$PROJECT_DIR$/js/window4.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="198" column="58" lean-forward="true" selection-start-line="198" selection-start-column="58" selection-end-line="198" selection-end-column="58" />
+        <state relative-caret-position="95">
+          <caret line="5" column="48" lean-forward="true" selection-start-line="5" selection-start-column="48" selection-end-line="5" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/handler/hwhandler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="473">
+          <caret line="110" column="40" selection-start-line="110" selection-start-column="28" selection-end-line="110" selection-end-column="40" />
           <folding>
-            <element signature="n#style#0;n#canvas#0;n#body#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#body#0;n#!!top" expanded="true" />
+            <element signature="e#250#2418#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/url.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="22" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/handler/odhandler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="398">
+          <caret line="323" column="35" lean-forward="true" selection-start-line="323" selection-start-column="35" selection-end-line="323" selection-end-column="35" />
+          <folding>
+            <element signature="e#253#1949#0" />
+            <element signature="e#2004#6207#0" />
+            <element signature="e#7177#9047#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/window4v2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="384" column="55" lean-forward="true" selection-start-line="384" selection-start-column="55" selection-end-line="384" selection-end-column="55" />
+          <folding>
+            <element signature="e#0#22684#0" />
+            <element signature="e#0#22684#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/window3.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="133" column="34" lean-forward="true" selection-start-line="133" selection-start-column="34" selection-end-line="133" selection-end-column="34" />
+        <state relative-caret-position="483">
+          <caret line="112" column="17" lean-forward="true" selection-start-line="112" selection-start-column="17" selection-end-line="112" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#9071#0" />
+            <element signature="e#0#9071#0" />
+            <element signature="e#0#9044#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="25" column="103" selection-start-line="25" selection-start-column="103" selection-end-line="25" selection-end-column="103" />
+          <folding>
+            <element signature="n#style#0;n#canvas#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#canvas#1;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#1;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#canvas#2;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#5;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#2;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#3;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#1;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#2;n#body#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
