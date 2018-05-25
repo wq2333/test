@@ -9,25 +9,33 @@
 			for(var j = 0; j < liOptionBar.length; j ++){
 				var optionBar = liOptionBar[j]
 			    optionBar._AttrClick = true
-				optionBar.strokeWidth = 4;
-				optionBar.strokeColor = 'blue';
+				optionBar.strokeWidth = 1;
+				optionBar.opacity = 1.
+				// optionBar.strokeColor = 'blue';
 				optionBar.onClick = function(){
 					this._AttrClick = !this._AttrClick;
 					if(this._AttrClick){
-						this.strokeColor = 'blue';
-						this.strokeWidth = 4;
+						this.opacity = 1.;
+						// this.strokeColor = 'blue';
+						this.strokeWidth = 1;
 					}else{
+						this.opacity = 0.1;
 						this.strokeColor = null;
-						this.strokeWidth = 2;
+						// this.strokeWidth = 2;
 					}
                     get8dDataset(this._name, this._AttrClick);
 				}
 				optionBar.onMouseEnter = function(){
-					this.strokeColor = 'blue';
+					this.opacity = 1.;
+					this.strokeColor = 'gray';
+					this.strokeWidth = 0.5
 				}
 				optionBar.onMouseLeave = function(){
-					if(this._AttrClick == false)
-						this.strokeColor = null;
+
+					this.strokeColor = null;
+					// this.strokeWidth = 0.5
+					// if(this._AttrClick == false)
+						// this.strokeColor = null;
 				}
 			}
 		}

@@ -22,8 +22,8 @@
 
 <body>
 <canvas id="canvas1" style="position: absolute;top: 0; left: 0; width: 43%;  height: 35%; background: white;"></canvas>
-<canvas id="canvas3" style="position: absolute;top: 38%; left: 0; width: 43%;  height: 65%; background: white; "></canvas>
-<div id='window2' style="position: absolute; width: 10%;height: 20%;top: 47%; left: 0; background:white;"></div>
+<canvas id="canvas3" style="position: absolute;top: 38%; left: 0; width: 43%;  height: 65%; background: none; "></canvas>
+<div id='window2' style="position: absolute; width: 10%;height: 20%;top: 47%; left: 0; background:none;"></div>
 
 <div id="window41" style="position: absolute;background-color:#eeeeee; width: 19%;height: 30%;top: 0;left: 41%; border:solid #0000FF"></div>
 <div id="window42" style="position: absolute;background-color:#eeeeee; width: 19%;height: 30%;top: 0;left: 60.2%; border:solid #0000FF"></div>
@@ -99,6 +99,7 @@
 	 	paper.project.importSVG("{{static_url('./svg/window2.svg')}}",
         	function(item){
         		g_Root = item;
+            initDecoration(item);
         		drawWindow2(inp, 0);
         		initEvent(item);
         });
@@ -132,6 +133,14 @@ var yScale = d3.scale.linear().domain([-75, 75]).range([h - padding * 2, 2*paddi
 dataPortrait = {};
 dataPortraitFromW2 = {};
 current = 1;
+
+function initDecoration(item){
+  console.log(' init decoration ');
+  var childItem = item.children['deco_circle'];
+  // childItem.strokeColor = 'black'
+  setInterval(function(){ childItem.rotate(1);console("Hello"); }, 200);
+  
+}
 
 function drawWindow2(inp, judge){
 
@@ -207,7 +216,7 @@ function drawWindow2(inp, judge){
             var canvas2 = document.getElementById('canvas3');
             paper.setup(canvas2);
             var path = new paper.Path();
-            paper.project.importSVG("{{static_url('./svg/103.svg')}}",function(item){
+            paper.project.importSVG("{{static_url('./svg/103_new.svg')}}",function(item){
 
                   g_16Root = item;
                   g_liText = [[],[],[],[]];
