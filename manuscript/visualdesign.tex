@@ -1,20 +1,23 @@
 \section{System Design}
 
+The system design is task-driven. Before diving into the design of system, we introduce  the couple of tasks the system works for. 
 
-This work we try to answer a couple of questions:
-
-Problem to solve: 
 \begin{itemize}
-\item \textit{What flows of people with certain demographic characteristics}: multiple attributes, semantic understanding, loose attribute boundary
-\item \textit{What the Urban Dynamics of the Group}: where those people go and how they access the ... in a city. the patterns of behaviour classified by different social characteristics.  Including travel purpose, 
-\item \textit{Compare of moving patterns between different groups}: what the similar and difference between groups in their traveling behaviour
+\item \textit{Identify the group of people with specific individual characteristics (T1)}: multiple attributes, semantic understanding, loose attribute boundary
+\item \textit{Explore the mobility patterns of a group (T2)}: where those people go and how they access the ... in a city. the patterns of behaviour classified by different social characteristics, including travel demands. 
+\item \textit{Compare mobility patterns among multiple groups (T3)}: what the similar and difference between groups in their traveling behaviour
 \end{itemize}
 
-We derive the design considerations:
+Based on tasks, we derive the design considerations:
 
 \begin{itemize}
-\item \textbf{C1: semantic understanding of demographic cahracteristics}: since the concept of groups is vague to define directly quantitativily. The visual design needs to consider how to help end-users to pick desirable ones from the mass. 
-\item \textbf{C2: multivariate comparison in the constraint of spatial space}: 
+\item \textit{C1: multivarible filter of individual characteristics}: Cross filter...
+\textbf{C3: referrable transpotation}: TAZ
+\item \textit{C2: intuitive understanding/combination understanding of individual characteristics}: since the concept of groups is vague to define directly quantitativily. The visual design needs to consider how to help end-users to pick desirable ones from the mass. 
+\item \textit{C3: conventional travel analysis}: TAZ based
+\item \textit{C4: multivariate analysis of mobility patterns in the constraint of spatial space}: the analysis of mobility patterns include multivariables, including the conventional spatial and temporal dimensions, as well as travel demands, frequency, etc.
+\item \textit{C5: knowledgable, not too fractional findings}
+\item \textit{C6: easy comparison}: 
 \end{itemize}
 
 Classification method, flow clustering method, Semantic representation. 
