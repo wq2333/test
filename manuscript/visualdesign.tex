@@ -27,7 +27,7 @@ With those design considerations, we develop a visual analytics system as Figure
 
 \subsection{Data-driven Profile Visualization}
 
-Glyph-based visualization~\cite{borgo2013glyph} is the form of visual design to compose multivaribles into a collection of unified visual symbols, known as glyph. Glyph is intended for quick understanding and aligned comparison. Among glyph design, Chernoff Face~\cite{chernoff1973use} represents data variabules by the different features of a cartoon face. Following the idea of Chernoff Face~\cite{chernoff1973use}, we design a type of glyph, a graphical representation of people with specific demographic characteristics. The idea behind using faces is that humans easily recognize faces and notice small changes without difficulty. Those visual profiles are intended for intutive visual understanding and clustering, to abstract to concrete and semantic understanding, to help users clues to target the interested individual groups effectively.
+Glyph-based visualization~\cite{borgo2013glyph} is the form of visual design to compose multivaribles into a collection of unified visual symbols, known as glyph. Glyph is intended for quick understanding and aligned comparison. Among glyph design, Chernoff Face~\cite{chernoff1973use} represents data variabules by the different features of a cartoon face. Following the idea of Chernoff Face~\cite{chernoff1973use}, we design a type of glyph, a graphical representation of people with specific demographic characteristics. The idea behind using faces is that humans easily recognize faces and notice small changes without difficulty (\textit{C3}). Those visual profiles are intended for intutive visual understanding and clustering, to abstract to concrete and semantic understanding, to help users clues to target the interested individual groups effectively.
 
 Figure~\ref{fig:design_profile} shows the legend for the user profile. Those design dimensions are driven by data.The eight demographic dimensions are systematically designed into different visual symbols. Considering there are two types of variables, i.e., the numeric attributes and categorical attributes. By different composition, stimulus pattern which has the abstract deomgraphic measurement of individuals.
 
@@ -47,13 +47,21 @@ Figure~\ref{fig:design_profile} shows the legend for the user profile. Those des
  \label{fig:design_profile}
 \end{figure}
 
-With the visual mapping, the profiles varies from individual to individual. Figure~\ref{fig:div_profile} shows some examples. By concretizing the attributes which otherwise is too abstract to percept, users can scan and search for interesting target organically in figures.
+With the visual mapping, the profiles varies from individual to individual. By concretizing the attributes which otherwise is too abstract to percept, users can scan and search for interesting target organically in figures. For example, Figure~\ref{fig:div_example} lists the top profiles filtered by jobs, in descending order. Textual number beneath the profile is the number of individual with same characteristics. It is found that the majority of workmen earn low and have no residential license. For the officers, all of them have residential licensemost and most of them has house. Some of retired people are in old age. Most of managers are at undergraduates, even graduates. 
 
+% \begin{figure}[htb!]
+%  \centering % avoid the use of \begin{center}...\end{center} and use \centering instead (more compact)
+%  \includegraphics[width=\columnwidth]{pictures/design_div}
+%  \caption{Diverse Profile}
+%  \label{fig:div_profile}
+% \end{figure}
+
+ 
 \begin{figure}[htb!]
  \centering % avoid the use of \begin{center}...\end{center} and use \centering instead (more compact)
- \includegraphics[width=\columnwidth]{pictures/design_div}
- \caption{Diverse Profile}
- \label{fig:div_profile}
+ \includegraphics[width=\columnwidth]{pictures/design_example}
+ \caption{Top filtered profiles categoriesd job}
+ \label{fig:div_example}
 \end{figure}
 
 \subsection{t-SNE Projection}
