@@ -2,7 +2,6 @@
 
 The advent of mobile sensing techniques makes it possible to develop urban geography from social media source. Complementary to the conventional census, social media brings the benefit of larger sampling frequency and higher disaggregate in terms of space and time. It is possible to reach a wide range of individuals and collect the movement in human inactive time, such as the mid-night.
 
-In this work, we perform the census survey in Shenzhen, which is one of the most modern metropolis in China. The experiment is deployed on Wechat, a widely used social media application. Figure~\ref{fig:app} shows the data collecting interfaces. Each individual hands in his or her personal characteristics from social, economic and deomgraphic aspects. For privacy issue, all detailed personal information are desensitized to categorical levels (Figure~\ref{fig:app}(a)). Besides to those static features, each individual can upload dynamic traveling trips (Figure~\ref{fig:app}(b)). Each trip requires the information of start/end location and time, the traveling purpose and modes. To encourage the trip uploading, a credit system retains the contribution of individuals on trips and rewards those with the top credits (Figure~\ref{fig:app}(c)). 
 
 \begin{figure}[htb!]
  \centering % avoid the use of \begin{center}...\end{center} and use \centering instead (more compact)
@@ -11,18 +10,27 @@ In this work, we perform the census survey in Shenzhen, which is one of the most
  \label{fig:app}
 \end{figure}
 
-Figure~\ref{fig:data_over} lists the 8 domains, which give a generalized description of the individual characteristics. The profile will serve as the ingredients for the analysis of mobility patterns over diverse individuals. 
+In this work, we perform the census survey in Shenzhen, which is one of the most modern metropolis in China. The experiment is deployed on Wechat, a widely used social media application. Figure~\ref{fig:app} shows the data collecting interfaces. Each individual hands in his or her personal characteristics. For privacy issue, all detailed personal information are desensitized to categorical levels (Figure~\ref{fig:app}(a)). 
+
+
+\textbf{Individual Characteristics} Figure~\ref{fig:data_over} lists the \textit{eight domains}, including social, economic and deomgraphic aspects, to give a generalized description of the individual characteristics. The profile will serve as the ingredients for the analysis of mobility patterns over diverse individuals. 
+
 
 \begin{figure}[htb!]
  \centering % avoid the use of \begin{center}...\end{center} and use \centering instead (more compact)
  \includegraphics[width=\columnwidth]{pictures/data_over}
- \caption{Profile of Individual: 8 domains about individual characteristics enrich the analysis of mobility patterns}
+ \caption{Profile of Individual: eight individual characteristics enrich the analysis of mobility patterns}
  \label{fig:data_over}
 \end{figure}
 
+\textbf{Traveling Trips} Besides to those individual characteristics, each individual can upload dynamic traveling trips (Figure~\ref{fig:app}(b)). Each trip requires the information of \textit{start/end location}, \textit{start/end time}, \textit{traveling purpose}. 
+
+To encourage the trip uploading, a credit system retains the contribution of individuals on trips and rewards the volunteers with the top credits (Figure~\ref{fig:app}(c)). 
+
+
 \subsection{Basic Statistics of Data}
 
-Over the releasing time period from \m{2016-11 to 2018-01}, 25481 individules (48\% females and 52\% males) were reached and \m{229155} trips are collected. The majority of our 25481 volunteers contribute \m{9} trips averagly. 
+Over the releasing time period from \m{2016-11 to 2018-01}, 21435 individules (48\% females and 52\% males) were reached and \m{229155} trips are collected. The majority of our 25481 volunteers contribute \m{11} trips averagly. 
 
 Our case-study data is confined to a small proportion of Wechat users who opt to contribute their information and trips.
 Considering the caveat that self-selecting individuals are most unlikely to represent any clearly defined population~\cite{Longley2015}, we performed a series of preliminary statistics to check whether it is rich enough to represent a wide range of individuals in the city. 
@@ -34,32 +42,29 @@ Figure~\ref{fig:data_age_edu} gives the distribution of age and education over t
 \begin{figure}[htb!]
  \centering % avoid the use of \begin{center}...\end{center} and use \centering instead (more compact)
  \includegraphics[width=\columnwidth]{pictures/data1}
- \caption{Evenly Distributed Age and Education: (a) age distribution; (b) education distribution}
+ \caption{Age and Education Distribution: (a) age; (b) education}
  \label{fig:data_age_edu}
 \end{figure}
 
-As Figure~\ref{fig:data_job_inc} shows, the job types of sampling individuals includes the workers, officers, bussinessmen, which is very diverse. The yearly income various from the range from low to high.
+Figure~\ref{fig:data_job_inc}(a) shows the job types of sampled individuals, who are servants, workers, officers, bussinessmen. The covering of jobs is pretty wide. Figure~\ref{fig:data_job_inc}(b) gives the radar diagram of the annual pay. The majority get paid below 200 000. Some individuals with higher salary are also reached in our census.
 
 \begin{figure}[htb!]
  \centering % avoid the use of \begin{center}...\end{center} and use \centering instead (more compact)
  \includegraphics[width=\columnwidth]{pictures/data2}
- \caption{Diverse Job and Income Distribution: (a) job types; (b) income portion}
+ \caption{Job and Income Distribution: (a) job; (b) income}
  \label{fig:data_job_inc}
 \end{figure}
 
+Figure~\ref{fig:data_geometry} shows the basic statistics related to trips. In Figure~\ref{fig:data_geometry}(a), the active traveling time (here, we take the start time as the representative of active time) follows the common sense of urban life. There are obvious morning and late afternoon peaks. Figure~\ref{fig:data_geometry}(b) gives the counting of different traveling purposes. 95\% trips are tagged with traveling purpose in the data. 33\% are going home and 37\% are going to work. Besides this kind of routine traveling, there are also substantial trips such as going shopping, going hospital, etc. Figure~\ref{fig:data_geometry}(c) shows the spatial distribution of the origins and destinations spot. It is found that more trips uploaded by volunteers located in Futian and Nanshan districts, the city's heart part of than the surrounding outer areas. This is consistent to Batty's exposition of the focus of city networks and interaction patterns~\cite{batty2013new}. 
 
-Figure~\ref{fig:data_geometry} shows the statistics of spatial related activity. In Figure~\ref{fig:data_geometry}(a), ...The activity time distribution in traveling obeys the commen sense. Morning and late afternoon peaks are detected in the data. Figure~\ref{fig:data_geometry}(b) shows the map of the origins and destinations spot by volunteers in Shenzhen. It shows that more trips uploaded by volunteers located in Futian and Nanshan districts, the city's heart part of than the surrounding outer areas. This is consistent to Batty's exposition of the focus of city networks and interaction patterns~\cite{batty2013new}. 
-
-Trips are uploaded in a wide range of purpose in addition to home, work, but also includes XX entertainment, visiting, etc. The diverse purposes make it possible to characterize the flows across the city between different functional places. 
+% Trips are uploaded in a wide range of purpose in addition to home, work, but also includes XX entertainment, visiting, etc. The diverse purposes make it possible to characterize the flows across the city between different functional places. 
 
 \begin{figure}[htb!]
  \centering % avoid the use of \begin{center}...\end{center} and use \centering instead (more compact)
  \includegraphics[width=\columnwidth]{pictures/data3}
- \caption{Statistical Overview of Social Characteristics}
+ \caption{Statistics of Trips: (a) start time of trips; (b) purpose of trips; (c) distribution of origins/destinations }
  \label{fig:data_geometry}
 \end{figure}
 
-While there is unevitable bias inherent in fully representing the ground true of society awide, the distribution shows positive sign in even indication. 
-
-We takes it as a step into the social-spatial dynamics exploration in the context of big social media data and align it with the avaliable of individual characteristics. We believe this work to be one of the nature steps into research of social understanding of the city.
+Because there is always unevitable bias inherent in fully representing the ground true of society awide, the prelimeary statistical analysis shows positive sign of a relatively even sampling of the population. 
 % As a note, although it is a subset of all people with 
