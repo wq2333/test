@@ -1,30 +1,29 @@
-\section{System Design}
+\section{Visual Design}
 
-The system design is task-driven. Before diving into the design of system, we introduce  the couple of tasks the system works for. 
-
-\begin{itemize}
-\item \textit{Identify the group of people with specific individual characteristics (T1)}: multiple attributes, semantic understanding, loose attribute boundary
-\item \textit{Explore the mobility patterns of a group (T2)}: where those people go and how they access the ... in a city. the patterns of behaviour classified by different social characteristics, including travel demands. 
-\item \textit{Compare mobility patterns among multiple groups (T3)}: what the similar and difference between groups in their traveling behaviour
-\end{itemize}
-
-Based on tasks, we derive the design considerations:
+The design of system is driven by tasks, to align the analysis of mobility patterns with individual characteristics characteristics. Before diving into the design of system, we introduce the couple of specifical tasks the system intended for. 
 
 \begin{itemize}
-\item \textit{C1: multivarible filter of individual characteristics}: Cross filter...
-\textbf{C3: referrable transpotation}: TAZ
-\item \textit{C2: intuitive understanding/combination understanding of individual characteristics}: since the concept of groups is vague to define directly quantitativily. The visual design needs to consider how to help end-users to pick desirable ones from the mass. 
-\item \textit{C3: conventional travel analysis}: TAZ based
-\item \textit{C4: multivariate analysis of mobility patterns in the constraint of spatial space}: the analysis of mobility patterns include multivariables, including the conventional spatial and temporal dimensions, as well as travel demands, frequency, etc.
-\item \textit{C5: knowledgable, not too fractional findings}
-\item \textit{C6: easy comparison}: 
+\item \textit{Task 1: Identify the group with specific individual characteristics}: to get groups of people with common or close attributes, to explore the correlation among individual characteristics.
+\item \textit{Task 2: Explore the mobility patterns of a group}: to explore where, how and why an interested group go in city. 
+\item \textit{Task 3: Compare mobility patterns among multiple groups}: to know the similarities and differences between different groups in their mobility patterns, to investigate the relationship between movement and individual characteristics.
 \end{itemize}
 
-Classification method, flow clustering method, Semantic representation. 
+\subsection{Design Considerations}
 
-The key of our work is to align the analysis of urban dynamics with the available of demographic characteristics. 
+With these three tasks, we derive following design considerations:
 
-Semantic understanding of social characteristics.
+\begin{itemize}
+\item \textit{Effective multivarible cross-filter for individual characteristics (C1)}: there are eight domains to describe an individual. The system is supposed to provide a straright-forward way for easy filtering by the eight criteria.
+\item \textit{Good overview of the multivarible individuals (C2)}: following the visual analytics manta by Shneiderman~\cite{RN459}, it is very important to provide a good overview of all the individuals then the users know where to explore. 
+\item \textit{Intuitive perception of an individual as an organic complex (C3)}: the system should make use of users' daily life experience in knowing people to provide intuitive visualization, instead of the lifeless representation by number. The visual design needs to help end-users to pick desirable ones from the mass.  
+\item \textit{Compact visualization of mobility patterns in the constraint of spatial space (C4)}: the analysis of mobility patterns include multivariables, including the conventional spatial and temporal dimensions, as well as other dimensions, e.g., travel demands, frequency, etc. The system should handle a compact layout to make the correlation between spatial and abstract information easily. 
+\item \textit{Flexible interactions to explore the mobility patterns within one group or between groups (C5)}: since the system needs to support the comparison among groups, \textit{Task 3} \m{TO BE WRITTEN...}
+\end{itemize}
+
+% Classification method, flow clustering method, Semantic representation. 
+
+With those design considerations, we develop a visual analytics system as Figure~\ref{fig:teaser} shows. It composes of individual panel to explore and identify groups (\textit{Task 1}) and spatial panel to explore and compare the mobility pattern (\textit{Task 2 and 3}). 
+% Semantic understanding of social characteristics.
 
 \subsection{Data-driven Profile Visualization}
 
