@@ -22,7 +22,9 @@ With these three tasks, we derive following design considerations:
 
 % Classification method, flow clustering method, Semantic representation. 
 
-With those design considerations, we develop a visual analytics system as Figure~\ref{fig:teaser} shows. It composes of individual panel to explore and identify groups (\textit{Task 1}) and spatial panel to explore and compare the mobility pattern (\textit{Task 2 and 3}). \m{EXPAND..., it gives an infographical overview of the data. Encode information but also allow users to set multiple criteria (\textit{C1}). Support users to slice the data by different domains.}
+With those design considerations, we develop a visual analytics system as Figure~\ref{fig:teaser} shows. It composes of individual panel (the left part) for individuals (\textit{Task 1}) and spatial panel (the right part) for the mobility pattern (\textit{Task 2 and 3}). In the individual panel, an interactive inforgraphics, t-SNE visualization and data-driven profiles support users to narrow the scope down to groups of individuals with interested characteristics. With the chosen group of individuals, its moving related information is visualized and explored in an 2.5D spatio-temporal view.
+
+% overview of the data. Encode information but also allow users to set multiple criteria (\textit{C1}). Support users to slice the data by different domains.}
 % Semantic understanding of social characteristics.
 
 
@@ -99,13 +101,13 @@ where $\alpha_i$ is the variance of the Gaussian that is centered on $x_i$. Spec
 % \end{matrix}\right
 % \end{equation}
 
-As Figure~\ref{fig:tsne}(a)shows, all 21435 volunteers are embedded in the 2D view, where the closer two dots are, the more similar they are in the eight characteristics. Figure~\ref{fig:tsne}(b-e) examplifies four groups of dots in neighbour. In the visual profiles, it is found that they are the group of \m{XX} ((b)), \m{XX} ((c)). 
+As Figure~\ref{fig:tsne}shows, all 21435 volunteers are embedded in the 2D view, where the closer two dots are, the more similar they are in the eight characteristics. Figure~\ref{fig:tsne} examplifies four features groups of dots in neighbour. 
 
 Multiple views of abstract view, t-SNE proection and semantic data driven profile visualization are coordinated in a Cross-filter machinesm~\cite{Weaver2010}. It allows end-users to interactive drill-down into individuals with interested characteristics from multiple perspectives(\textit{C3}). Starting from the abstract criterion constraints, the scope of interest is narrowed down to individuals with(out) certian characteristics. And then further cross-filtering with semantically visual profiles can be performed, to check the combination of 8 characteristical variables. 
 
 \begin{figure}[htb!]
  \centering % avoid the use of \begin{center}...\end{center} and use \centering instead (more compact)
- \includegraphics[width=\columnwidth]{pictures/mds}
+ \includegraphics[width=\columnwidth]{pictures/tsne}
  \caption{t-SNE project with four groups of the interest: (a) t-SNE project }
  \label{fig:tsne}
 \end{figure}
@@ -115,20 +117,21 @@ Multiple views of abstract view, t-SNE proection and semantic data driven profil
 
 Embedding multiple variables in the spatial map is a challenging problem. Distorting 2D spatial for better space usage, such as the partial route embedding~\cite{sun2016embedding} is an effective where there are a few local focis. When it comes to the global visualization, there is always a trade-off between occlusion-free and the compact spatial perception. Following the idea of stacking 2.5D space design~\cite{Tominski2012_stacking}, the space in this work is embedded in 2.5D space, to relax the z-axis for addtional abstract information encoding.
 
-Figure~\ref{fig:2.5D}(a) shows the 2.5D visualization. The spatial map is consisted of Traffic Analysis Zone (TAZ), which is the unit of geography holding a certain number of people. For the 2.5D, each TAZ is grown as a prism whose height and color are developed to encode abstract information, e.g., the occurrence of visiting. With difference encoding choices, it is capable to visualize the colleration between spatial and different attributes (\textit{C4}). For example, in Figure~\ref{fig:2.5D}(a), prisms' height and color both encode the ratio of none-routine trips (such as go entertainment, go hosptial, etc.) in the whole. For better 3D visual perception, lighting is turned on. Also, a lid is laid over for each prism to clear bound its extent at the z-axis.   
+Figure~\ref{fig:2.5D}(a) shows the 2.5D visualization. The spatial map is consisted of Traffic Analysis Zone (TAZ), which is the unit of geography holding a certain number of people. For the 2.5D, each TAZ is grown as a prism whose height and color are developed to encode abstract information, e.g., the occurrence of visiting. With difference encoding choices, it is capable to visualize the colleration between spatial and different attributes (\textit{C4}). For example, in Figure~\ref{fig:2.5D}(a), prisms' height and color both encode the ratio of none-routine trips (such as go entertainment, go hosptial, etc.) in the whole. For better 3D visual perception, lighting is turned on. Also, a lid is laid on the top of each prism to clearly bound its extent at the z-axis. 
 
-Brunch of TAZ with similar visiting pattern and purpose are grouped by an heuristic DB-Scan Algorithm in the context of TAZ. From a center TAZ, walk to neighbour TAZ to check whether aggregation or not. The aggregated TAZ brunch indicates the region visiting by the group of people in same purpose, which is often the popular traveling places. The TAZ brunch is visualized...
-
- To compare the mobility patterns across different groups of people, a Small Multiple dock is used to reserve the ever explored interesting result. To simply the comparion over spatial distribution, the snapshot is rendered in the 2D space, which can be magnified to check for the details in the 2.5D space.
-
- In this view, it supports end-users to direct manipulate the space, e.g., zooming, panning, etc. Also, detail information about the visiting can be checked by direct clicking on the TAZ. 
-
-\begin{figure}
+\begin{figure}[htb!]
 \centering
 \subfigure[]{
 \resizebox*{9cm}{!}{\includegraphics{pictures/space1.eps}}}\hspace{5pt}
 \subfigure[]{
 \resizebox*{9cm}{!}{\includegraphics{pictures/space2.eps}}}\hspace{5pt}
-\caption{2.5D Spatial Visualization for Mobility Patterns}
+\caption{2.5D Spatial Visualization: (a) 2.5D spatial visualization with z-axis to encode addition information; (b) detail slicing in 2.5D space.}
 \label{fig:2.5D}
 \end{figure}
+
+Several interaction are integrated in the spatial view to alleviate the occlusion problem (\textit{C5}). The manipuation of 2.5D view supports users with rotate, zoom, pan operations, which are so continously flexible that users probably find a suitable observing point. In the cases where occlusion is inevitable, an interaction named as \textit{Detail Slicing} is developed, as Figure~\ref{fig:2.5D}(b) shows. Detail Slicing is the operation to put a cross-section in the 2.5D space to expose the TAZ inside. To contextualize the cross-section, TAZs are visually adapted according to the intersection by ray casting. The TAZ in foreground will be hidden, the intersected TAZs will be fully visualized and the ones in the background will be in semi-transparency.
+% Brunch of TAZ with similar visiting pattern and purpose are grouped by an heuristic DB-Scan Algorithm in the context of TAZ. From a center TAZ, walk to neighbour TAZ to check whether aggregation or not. The aggregated TAZ brunch indicates the region visiting by the group of people in same purpose, which is often the popular traveling places. The TAZ brunch is visualized...
+
+ To compare the mobility patterns across different groups of people, a Small Multiple dock is used to reserve the ever explored interesting result (Figure~\ref{fig:teaser}(f)). To simply the comparion over spatial distribution, the snapshot is also rendered in the 2.5D space, which maintains the same interactions as the main 2.5D space does.
+
+ % In this view, it supports end-users to direct manipulate the space, e.g., zooming, panning, etc. Also, detail information about the visiting can be checked by direct clicking on the TAZ. 
