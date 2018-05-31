@@ -22,14 +22,15 @@ With these three tasks, we derive following design considerations:
 
 % Classification method, flow clustering method, Semantic representation. 
 
-With those design considerations, we develop a visual analytics system as Figure~\ref{fig:teaser} shows. It composes of individual panel to explore and identify groups (\textit{Task 1}) and spatial panel to explore and compare the mobility pattern (\textit{Task 2 and 3}). \m{EXPAND...}
+With those design considerations, we develop a visual analytics system as Figure~\ref{fig:teaser} shows. It composes of individual panel to explore and identify groups (\textit{Task 1}) and spatial panel to explore and compare the mobility pattern (\textit{Task 2 and 3}). \m{EXPAND..., it gives an infographical overview of the data. Encode information but also allow users to set multiple criteria (\textit{C1}). Support users to slice the data by different domains.}
 % Semantic understanding of social characteristics.
+
 
 \subsection{Data-driven Profile Visualization}
 
 Glyph-based visualization~\cite{borgo2013glyph} is the form of visual design to compose multivaribles into a collection of unified visual symbols, known as glyph. Glyph is intended for quick understanding and aligned comparison. Among glyph design, Chernoff Face~\cite{chernoff1973use} represents data variabules by the different features of a cartoon face. Following the idea of Chernoff Face, we design a type of glyph, a graphical representation of people with specific individual characteristics. The idea behind using faces is that humans easily recognize faces and notice small changes without difficulty (\textit{C3}). Those visual profiles are intended for intutive visual understanding, from abstract to concrete and semantic understanding, to support users to target the interested individual groups effectively.
 
-Figure~\ref{fig:design_profile} shows the legend for the user profile. The eight domains are encoded by visual symbols and organically organized in a human figure. There are bascially three types of variables to drive the figure, i.e., the numeric, categorical and boolean ones. For numeric attributes such as income and education levels, visual symbol keeps consistent design but with changing visual variation, such as size, thickness. For the categorical attributes such as job, visual symbols are designed seperately for better semantic meaning. For the boolean attribute like car, house, a symbol is designed to indicate its existence. With this consideration, the eight domains are designed as following:
+Figure~\ref{fig:design_profile} shows the legend for the user profile. The eight domains are encoded by visual symbols and organically organized in a human figure. There are bascially three types of variables to drive the figure, i.e., the numeric, categorical and boolean ones. For numeric attributes such as income and education levels, visual symbol keeps consistent design but with changing visual variation, such as size, thickness. For the categorical attributes such as job, visual symbols are designed seperately for better semantic meaning. For the boolean attribute like car, house, a symbol is designed to indicate its existence. With this consideration, the domains are designed as following:
 
 % For numeric attributes. 
 
@@ -68,11 +69,32 @@ With the visual mapping, the profile varies from individual to individual. By co
  \label{fig:div_example}
 \end{figure}
 
-\subsection{t-SNE Projection}
+\subsection{t-SNE Projection of Individuals}
 
-Each individual is denoted as a vector with eight factors and projected as a dot into the 2D view via t-SNE project~\cite{maaten2008visualizing}, which well suits high-dimensional data for visualization in a low-dimensional space of two dimensions. As Figure~\ref{fig:tsne}(a)shows, all volunteers are embedded evenly in the 2D view, indicating the uniformly sampling over demographical space. 
 
-Multiple views of abstract view, t-SNE proection and semantic data driven profile visualization are coordinated in a Cross-filter machinesm~\cite{Weaver2010}. It allows end-users to interactive drill-dowm into individuals with interested characteristics from multiple perspectives. Starting from the abstract criterion constraints, the scope of interest is narrowed down to individuals with(out) certian properties. And then further cross-filtering with semantically visual profiles, to check the combination of 8 characteristical variables. Figure~\ref{fig:tsne}(b) examplifies four groups of interest. 
+
+% \begin{figure}[htb!]
+%  \centering % avoid the use of \begin{center}...\end{center} and use \centering instead (more compact)
+%  \includegraphics[width=0.7\columnwidth]{pictures/data_overview}
+%  \caption{Overview of Multiple Variables}
+%  \label{fig:figoverview}
+% \end{figure}
+
+In our case, each individual can be denoted as a vector $x_i$ with eight factors, and we get high dimensional data set $X={x_1, x_2, ..., x_n}$. The dimensionality reduction techniques are to preserve the local structure of high dimensional data in low dimensional space, which are efficient approaches to provide a good overview of the multivarible individuals. We adapt t-SNE project~\cite{maaten2008visualizing} to project $X$ as two-dimensional dots $Y={y_1, y_2, ..., y_n}$. 
+
+t-SNE computes the conditional probabilities to represent the similarity based on the distance between high dimenional datapoints. The conditional probability $p_{j\mid i}$ between $x_j$ and $x_i$ is given by:
+
+\begin{equation}
+p_{j\mid i} = \frac{exp({\left \| x_i - x_j \right \|}^2/2\alpha_i ^{2})}{\sum _{k\neq i}exp({\left \| x_i - x_k \right \|}^2/2\alpha_i ^{2})}
+\end{equation}
+
+
+
+ which well suits high-dimensional data for visualization in a low-dimensional space of two dimensions (\textit{C2}). 
+
+As Figure~\ref{fig:tsne}(a)shows, all volunteers are embedded evenly in the 2D view, indicating the uniformly sampling over demographical space. 
+
+Multiple views of abstract view, t-SNE proection and semantic data driven profile visualization are coordinated in a Cross-filter machinesm~\cite{Weaver2010}. It allows end-users to interactive drill-down into individuals with interested characteristics from multiple perspectives. Starting from the abstract criterion constraints, the scope of interest is narrowed down to individuals with(out) certian properties. And then further cross-filtering with semantically visual profiles, to check the combination of 8 characteristical variables. Figure~\ref{fig:tsne}(b) examplifies four groups of interest. 
 
 \begin{figure}[htb!]
  \centering % avoid the use of \begin{center}...\end{center} and use \centering instead (more compact)
@@ -80,6 +102,7 @@ Multiple views of abstract view, t-SNE proection and semantic data driven profil
  \caption{t-SNE project with four groups of the interest}
  \label{fig:tsne}
 \end{figure}
+
 
 \subsection{2.5D Spatial Visualization}
 
