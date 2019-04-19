@@ -1,0 +1,76 @@
+%%%%%%%%%%%%%%%%%%%%%%% answer list.tex %%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% For answering the review comments of JOV.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%
+
+\documentclass[UTF8]{article}
+\usepackage{geometry}
+\geometry{left=1.0cm}
+
+
+\usepackage{epstopdf}
+\usepackage{mathptmx}
+\usepackage{algpseudocode}% http://ctan.org/pkg/algorithmicx
+\usepackage{verbatim}
+
+\usepackage{color}
+\newcommand{\m}{\textcolor{red}}
+
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{tabularx}
+
+\usepackage{algpseudocode}
+\usepackage{natbib}
+\usepackage[misc]{ifsym}
+
+\begin{document}
+
+\begin{table}[h]
+\centering
+\caption{focus on}
+    \begin{tabular}{|p{4cm}|p{9cm}|p{4cm}|}
+    \hline
+    Question & Details & Answer\\
+    \hline
+    Techniques & (R1)The techniques presented in this paper, the glyph visualization, the Tsne, and the 2.5D spatial view, are not novel. They are inappropriately combined without any design rationale or considerations.\newline & A:\color{red}{Modifying.}\\
+  
+    The glyph design & (R1)The cartoon-style glyph visualization is particularly inefficiently designed. I had hard time to use this view to differentiate profile attributes for a moderate number of people. Basically it was too distracted and difficult to recall and concentrate. I would strongly suggest using simpler glyph designs or even textual labels to represent and compare multi-attributes for groups of targets.\newline & A:\color{red}{Add a radar chart for groups.}\\
+
+    The TSNE & (R1)The Tsne view is a routine for multidimensional exploration and seems useful, but the usefulness is never mentioned in the case studies.\newline & A:\color{red}{Modifying.}\\
+
+    2.5D view & (R1)The 2.5D spatial view is neither effective. It does not make sense to directly reuse the 2.5D-design in this application domain. (R2)The 2.5D design for visualizing geo data is really ineffective.\newline & A:\color{red}{Modifying.}\\
+
+    Case studies to demonstrate its usefulness & (R1)I hardly found any interesting points or unexpected findings from the studies. Many conclusions have been studied and discussed in previous visual analytics papers  (R2)I don't how the system will be used in practice. The authors make this clear and conduct interview studies with the users to further demonstrate the effectiveness of the visualization.\newline & A:\color{red}{Modifying.}\\
+
+    Case studies & (R1)There even lacks a brief description about any ``individual" characteristics. How would you explore and compare the mobility- characteristics-correlation at the individual level (as claimed as a major contribution of this paper)?\newline & A:\color{red}{Modifying.}\\
+
+    The relationships among tasks, considerations and designs. & (R2)It is unclear how these tasks were obtained. It is unclear who will be the end-users. These are missing links between the tasks and the design considerations. These tasks and design considerations are unlinked to the design of the system.\newline  & A:\color{red}{Adding experts discussion to rewrite these parts.}\\
+    
+    Case studies & (R1)There even lacks a brief description about any ``individual" characteristics. How would you explore and compare the mobility- characteristics-correlation at the individual level (as claimed as a major contribution of this paper)?\newline & A: \\
+    \hline
+    \end{tabular}
+\end{table}
+
+
+\begin{table}[h]
+\centering
+\caption{not so important}
+    \begin{tabular}{|p{3cm}|p{9cm}|p{5cm}|}
+    \hline
+    Question & Details & Answer \\
+    \hline
+    Writing & (R1)The paper is not well written. Typos, awkward sentences, and grammatical errors are throughout the paper.\newline & A: \\
+
+    Related work & (R1)The related work is insufficiently discussed and is not well organized.\newline & A: \\
+
+    \hline
+    \end{tabular}
+\end{table}
+
+\end{document}
+% end of file template.tex
+
