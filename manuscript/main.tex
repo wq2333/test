@@ -55,6 +55,20 @@
 \algnewcommand{\IIf}[1]{\State\algorithmicif\ #1\ \algorithmicthen}
 \algnewcommand{\EndIIf}{\unskip\ \algorithmicend\ \algorithmicif}
 
+
+\definecolor{darkg}{rgb}{0,0.6,0}
+\definecolor{lgreen}{rgb}{0,0.8,0}
+\definecolor{purple}{rgb}{0.93,0.48,0.03}
+\definecolor{orange}{rgb}{0.43,0.48,0.03}
+% \ifdraft
+%Our comments:
+\newcommand{\lmc}[1]{{\color{lgreen}[LM: #1]}}
+\newcommand{\wqc}[1]{{\color{orange}[WQ: #1]}}
+
+%Noticable new adds:
+\newcommand{\wq}[1]{{\color{blue}#1}}
+\newcommand{\lm}[1]{{\color{darkg}#1}}
+
 %\usepackage[demo]{graphicx}
 
 %% We encourage the use of mathptmx for consistent usage of times font
@@ -185,9 +199,9 @@ In this work, we contextualize the analysis of mobility pattern in the backcloth
 
 \input{relatedwork}
 \input{data}
-% \input{overview}
+\input{overview}
 \input{visualdesign}
-% \input{visualsys}
+\input{visualsys}
 \input{case12}
 
 \section{Conclusion}
