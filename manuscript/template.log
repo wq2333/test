@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2019.3.19)  21 APR 2019 16:33
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2019.3.19)  22 APR 2019 23:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -259,18 +259,6 @@ Document Style - pseudocode environments for use with the `algorithmicx' style
 \Urlmuskip=\muskip10
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-(d:/texlive/texlive/2018/texmf-dist/tex/generic/ulem/ulem.sty
-\UL@box=\box32
-\UL@hyphenbox=\box33
-\UL@skip=\skip52
-\UL@hook=\toks20
-\UL@height=\dimen118
-\UL@pe=\count119
-\UL@pixel=\dimen119
-\ULC@box=\box34
-Package: ulem 2012/05/18
-\ULdepth=\dimen120
-)
 (d:/texlive/texlive/2018/texmf-dist/tex/latex/graphics/color.sty
 Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
 
@@ -298,135 +286,135 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 )
 (d:/texlive/texlive/2018/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2019/01/01 v2.4 Span multiple rows of a table
-\multirow@colwidth=\skip53
-\multirow@cntb=\count120
-\multirow@dima=\skip54
-\bigstrutjot=\dimen121
+\multirow@colwidth=\skip52
+\multirow@cntb=\count119
+\multirow@dima=\skip53
+\bigstrutjot=\dimen118
 )
 (d:/texlive/texlive/2018/texmf-dist/tex/latex/tools/tabularx.sty
 Package: tabularx 2016/02/03 v2.11b `tabularx' package (DPC)
 
 (d:/texlive/texlive/2018/texmf-dist/tex/latex/tools/array.sty
 Package: array 2018/12/30 v2.4k Tabular extension package (FMi)
-\col@sep=\dimen122
-\ar@mcellbox=\box35
-\extrarowheight=\dimen123
-\NC@list=\toks21
-\extratabsurround=\skip55
-\backup@length=\skip56
-\ar@cellbox=\box36
+\col@sep=\dimen119
+\ar@mcellbox=\box32
+\extrarowheight=\dimen120
+\NC@list=\toks20
+\extratabsurround=\skip54
+\backup@length=\skip55
+\ar@cellbox=\box33
 )
-\TX@col@width=\dimen124
-\TX@old@table=\dimen125
-\TX@old@col=\dimen126
-\TX@target=\dimen127
-\TX@delta=\dimen128
-\TX@cols=\count121
-\TX@ftn=\toks22
+\TX@col@width=\dimen121
+\TX@old@table=\dimen122
+\TX@old@col=\dimen123
+\TX@target=\dimen124
+\TX@delta=\dimen125
+\TX@cols=\count120
+\TX@ftn=\toks21
 )
 (d:/texlive/texlive/2018/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
-\bibhang=\skip57
-\bibsep=\skip58
+\bibhang=\skip56
+\bibsep=\skip57
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count122
+\c@NAT@ctr=\count121
 )
 (d:/texlive/texlive/2018/texmf-dist/tex/latex/ifsym/ifsym.sty
 Package: ifsym 2000/04/18 I.Kloeckl
 
 (d:/texlive/texlive/2018/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count123
-\calc@Bcount=\count124
-\calc@Adimen=\dimen129
-\calc@Bdimen=\dimen130
-\calc@Askip=\skip59
-\calc@Bskip=\skip60
+\calc@Acount=\count122
+\calc@Bcount=\count123
+\calc@Adimen=\dimen126
+\calc@Bdimen=\dimen127
+\calc@Askip=\skip58
+\calc@Bskip=\skip59
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count125
-\calc@Cskip=\skip61
+\calc@Ccount=\count124
+\calc@Cskip=\skip60
 )
-\c@ifsymcnt=\count126
+\c@ifsymcnt=\count125
 ) (./template.aux)
 \openout1 = `template.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Try loading font information for TU+ptm on input line 97.
-LaTeX Font Info:    No file TUptm.fd. on input line 97.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Try loading font information for TU+ptm on input line 84.
+LaTeX Font Info:    No file TUptm.fd. on input line 84.
 
 LaTeX Font Warning: Font shape `TU/ptm/m/n' undefined
-(Font)              using `TU/lmr/m/n' instead on input line 97.
+(Font)              using `TU/lmr/m/n' instead on input line 84.
 
 Unknown journal: specify \journalname{<name of your journal>} in preambel
 
-\big@size=\dimen131
+\big@size=\dimen128
 SVJour3 warning: Missing \journalname
 
 LaTeX Font Warning: Font shape `TU/ptm/bx/n' undefined
-(Font)              using `TU/ptm/m/n' instead on input line 125.
+(Font)              using `TU/ptm/m/n' instead on input line 112.
 
 
-Package mathptmx Warning: There are no bold math fonts on input line 125.
+Package mathptmx Warning: There are no bold math fonts on input line 112.
 
-LaTeX Font Info:    Calculating math sizes for size <9.5> on input line 125.
-LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 12
-5.
+LaTeX Font Info:    Calculating math sizes for size <9.5> on input line 112.
+LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 11
+2.
 (d:/texlive/texlive/2018/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 12
-5.
+LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 11
+2.
 
 (d:/texlive/texlive/2018/texmf-dist/tex/latex/psnfss/omlztmcm.fd
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 12
-5.
+LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 11
+2.
 
 (d:/texlive/texlive/2018/texmf-dist/tex/latex/psnfss/omsztmcm.fd
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 12
-5.
+LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 11
+2.
 
 (d:/texlive/texlive/2018/texmf-dist/tex/latex/psnfss/omxztmcm.fd
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 125.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 112.
 
 
 (d:/texlive/texlive/2018/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9.5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 125.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 112.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.03004> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 125.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 112.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5.70006> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 125.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 112.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 125.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 112.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 125.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 112.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 125.
-LaTeX Font Info:    Try loading font information for U+ifsym on input line 125.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 112.
+LaTeX Font Info:    Try loading font information for U+ifsym on input line 112.
 
 
 (d:/texlive/texlive/2018/texmf-dist/tex/latex/ifsym/uifsym.fd)
@@ -435,204 +423,166 @@ SVJour3 Warning: Title too long for running head.
 Please supply a shorter form with \titlerunning prior to \maketitle
 
 LaTeX Font Warning: Font shape `TU/ptm/m/it' undefined
-(Font)              using `TU/ptm/m/n' instead on input line 138.
+(Font)              using `TU/ptm/m/n' instead on input line 133.
 
 [1]
-Overfull \hbox (1.52661pt too wide) in paragraph at lines 153--154
+Overfull \hbox (1.52661pt too wide) in paragraph at lines 148--149
 \TU/ptm/bx/n/9.5 This work concerns the research topic of spatial data visual a
 nalytics. Spatio-temporal
  []
 
 [2] [3]
-Invalid UTF-8 byte or sequence at line 167 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 167 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 167 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 167 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 167 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 167 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 167 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 167 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 162 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 162 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 162 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 162 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 162 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 162 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 162 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 162 replaced by U+FFFD.
 File: pictures/survey_app.eps Graphic file (type eps)
 <pictures/survey_app.eps>
-Invalid UTF-8 byte or sequence at line 176 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 176 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 176 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 176 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 176 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 176 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 176 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 171 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 171 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 171 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 171 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 171 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 171 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 171 replaced by U+FFFD.
 File: pictures/data_over.eps Graphic file (type eps)
 <pictures/data_over.eps>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [4]
-Invalid UTF-8 byte or sequence at line 198 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 198 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 198 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 198 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 198 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 198 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 198 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 193 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 193 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 193 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 193 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 193 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 193 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 193 replaced by U+FFFD.
 File: pictures/data1.eps Graphic file (type eps)
 <pictures/data1.eps>
 
 [5]
-Invalid UTF-8 byte or sequence at line 207 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 207 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 207 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 207 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 207 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 207 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 202 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 202 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 202 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 202 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 202 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 202 replaced by U+FFFD.
 File: pictures/data2.eps Graphic file (type eps)
 <pictures/data2.eps>
-Invalid UTF-8 byte or sequence at line 216 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 216 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 216 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 216 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 216 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 216 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 216 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 211 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 211 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 211 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 211 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 211 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 211 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 211 replaced by U+FFFD.
 File: pictures/data3.eps Graphic file (type eps)
 <pictures/data3.eps>
  [6]
-Underfull \vbox (badness 1215) has occurred while \output is active []
+Underfull \hbox (badness 10000) in paragraph at lines 230--231
 
- [7]
+ []
+
+[7]
 File: pictures/interfaceDraft.pdf Graphic file (type pdf)
 <use pictures/interfaceDraft.pdf>
 
 
-LaTeX Warning: Reference `' on page 8 undefined on input line 277.
+LaTeX Warning: Reference `' on page 8 undefined on input line 286.
 
-[8]
-
-LaTeX Warning: Reference `fig:design_profile' on page 9 undefined on input line
- 293.
-
-[9]
-Invalid UTF-8 byte or sequence at line 310 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 310 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 310 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 310 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 310 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 310 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 310 replaced by U+FFFD.
+[8] [9]
+Invalid UTF-8 byte or sequence at line 306 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 306 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 306 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 306 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 306 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 306 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 306 replaced by U+FFFD.
+File: pictures/design_profile.eps Graphic file (type eps)
+<pictures/design_profile.eps>
+ [10]
+Invalid UTF-8 byte or sequence at line 326 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 326 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 326 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 326 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 326 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 326 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 326 replaced by U+FFFD.
 File: pictures/design_example.eps Graphic file (type eps)
 <pictures/design_example.eps>
-Invalid UTF-8 byte or sequence at line 323 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 323 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 323 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 323 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 323 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 323 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 323 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 323 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 339 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 339 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 339 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 339 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 339 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 339 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 339 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 339 replaced by U+FFFD.
 File: pictures/tsne.eps Graphic file (type eps)
 <pictures/tsne.eps>
- [10]
-Overfull \hbox (0.13963pt too wide) in paragraph at lines 339--340
+ [11]
+Overfull \hbox (0.13963pt too wide) in paragraph at lines 355--356
 \TU/ptm/m/it/9.5 file visualization are coordinated in a Cross-filter machinesm
  (Weaver, 2010). It allows
  []
 
-[11]
-Invalid UTF-8 byte or sequence at line 350 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 350 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 350 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 350 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 350 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 350 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 350 replaced by U+FFFD.
-File: pictures/space1.eps Graphic file (type eps)
-<pictures/space1.eps>
-Invalid UTF-8 byte or sequence at line 352 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 352 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 352 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 352 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 352 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 352 replaced by U+FFFD.
-File: pictures/space2.eps Graphic file (type eps)
-<pictures/space2.eps>
- [12]
-
-LaTeX Warning: Reference `fig:teaser' on page 13 undefined on input line 365.
-
-Invalid UTF-8 byte or sequence at line 394 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 394 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 394 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 394 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 394 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 394 replaced by U+FFFD.
+[12]
+Invalid UTF-8 byte or sequence at line 432 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 432 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 432 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 432 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 432 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 432 replaced by U+FFFD.
 File: pictures/case1_1.eps Graphic file (type eps)
 <pictures/case1_1.eps>
-[13]
-Underfull \vbox (badness 1189) has occurred while \output is active []
+ [13]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [14]
-Invalid UTF-8 byte or sequence at line 410 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 410 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 410 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 410 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 410 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 410 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 410 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 410 replaced by U+FFFD.
-File: pictures/case1_2.eps Graphic file (type eps)
-<pictures/case1_2.eps>
-Invalid UTF-8 byte or sequence at line 421 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 421 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 421 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 421 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 421 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 421 replaced by U+FFFD.
-File: pictures/case1_3.eps Graphic file (type eps)
-<pictures/case1_3.eps>
+File: pictures/case1draft.pdf Graphic file (type pdf)
+<use pictures/case1draft.pdf>
 Missing character: There is no （ in font [lmroman10-regular]:mapping=tex-text;!
 Missing character: There is no ） in font [lmroman10-regular]:mapping=tex-text;!
+File: pictures/case2draft.pdf Graphic file (type pdf)
+<use pictures/case2draft.pdf>
+
+Overfull \hbox (48.9121pt too wide) in paragraph at lines 482--489
+[]\TU/ptm/m/it/9.5 As Figure 12[] shows, in view3, glyph represents $[]$ and $[
+]$.
+ []
 
 [15]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Warning: Text page 16 contains only floats.
-
-[16]
-Invalid UTF-8 byte or sequence at line 434 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 434 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 434 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 434 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 434 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 434 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 434 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 434 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 434 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 434 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 434 replaced by U+FFFD.
-File: pictures/case2.eps Graphic file (type eps)
-<pictures/case2.eps>
- [17]
-Missing character: There is no （ in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no ） in font [lmroman10-regular]:mapping=tex-text;!
-Invalid UTF-8 byte or sequence at line 458 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 458 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 458 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 458 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 458 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 458 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 458 replaced by U+FFFD.
+ [16]
+Invalid UTF-8 byte or sequence at line 494 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 494 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 494 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 494 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 494 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 494 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 494 replaced by U+FFFD.
 File: pictures/case3.eps Graphic file (type eps)
 <pictures/case3.eps>
-Invalid UTF-8 byte or sequence at line 467 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 467 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 467 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 467 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 467 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 467 replaced by U+FFFD.
-File: pictures/case3_2.eps Graphic file (type eps)
-<pictures/case3_2.eps>
- [18] [19] (./template.bbl
-Underfull \vbox (badness 1590) has occurred while \output is active []
+File: pictures/case3draft.pdf Graphic file (type pdf)
+<use pictures/case3draft.pdf>
 
- [20]
+Overfull \hbox (77.90607pt too wide) in paragraph at lines 516--523
+[]\TU/ptm/m/it/9.5 As Figure 15[] shows, in view3, glyph represents $[]$ and $[
+]$
+ []
+
+
+Overfull \hbox (94.389pt too wide) in paragraph at lines 516--523
+\TU/ptm/m/it/9.5 and $[]$. in view4, show $[]$ and $[]$
+ []
+
+[17] [18] (./template.bbl [19]
 LaTeX Font Info:    Try loading font information for TU+pcr on input line 89.
 LaTeX Font Info:    No file TUpcr.fd. on input line 89.
 
@@ -660,23 +610,26 @@ t;!
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [21])
-[22] (./template.aux)
+ [20])
+[21] (./template.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  )
 (\end occurred when \ifx on line 161 was incomplete) 
 Here is how much of TeX's memory you used:
- 4176 strings out of 492933
- 60522 string characters out of 6133145
- 136564 words of memory out of 5000000
- 8087 multiletter control sequences out of 15000+600000
- 20209 words of font info for 57 fonts, out of 8000000 for 9000
+ 4091 strings out of 492933
+ 59774 string characters out of 6133145
+ 134691 words of memory out of 5000000
+ 8008 multiletter control sequences out of 15000+600000
+ 20103 words of font info for 56 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 42i,9n,35p,1625b,327s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,9n,35p,1625b,312s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on template.pdf (22 pages).
+Output written on template.pdf (21 pages).

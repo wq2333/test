@@ -57,7 +57,6 @@ grestore
 \usepackage{algpseudocode}% http://ctan.org/pkg/algorithmicx
 
 \usepackage{url}
-\usepackage{ulem}
 
 \usepackage{color, xcolor}
 \definecolor{darkg}{rgb}{0,0.6,0}
@@ -68,8 +67,6 @@ grestore
 %Our comments:
 \newcommand{\lmc}[1]{{\color{lgreen}[LM: #1]}}
 \newcommand{\wqc}[1]{{\color{orange}[WQ: #1]}}
-
-%Noticable new adds:
 \newcommand{\wq}[1]{{\color{blue}#1}}
 \newcommand{\lm}[1]{{\color{darkg}#1}}
 
@@ -81,22 +78,12 @@ grestore
 \usepackage{algpseudocode}
 \usepackage{natbib}
 \usepackage[misc]{ifsym}
-%
-% \usepackage{mathptmx}      % use Times fonts if available on your TeX system
-%
-% insert here the call for the packages your document requires
-%\usepackage{latexsym}
-% etc.
-%
-% please place your own definitions here and don't use \def but
-% \newcommand{}{}
-%
-% Insert the name of "your journal" with
-% \journalname{myjournal}
-%
+
+
+
 \begin{document}
 
-\title{Unfolding the City: \wq{Exploring Urban Spatial Attractiveness with Social Characteristics}}
+\title{Unfolding the City: \wq{Exploring Urban Spatial Attractiveness with Individual Characteristics}}
 %\thanks{Grants or other notes
 %about the article that should go on the front page should be
 %placed here. General acknowledgments should be placed at the end of the article.}
@@ -133,8 +120,16 @@ A city is shaped not only by its assembled infrastructures but also the people l
 \end{abstract}
 
 \section{Introduction}
+\iffalse
+What is it that makes some places, regions or nations appear more attractive than others to live in, visit or invest in? Does it depend on the particular characteristics or situation of the persons considering the attractiveness, in what phase in life the persons find themselves, or are there some common features, perhaps place characteristics that are viewed positively by all, independently of context?
+
+
+
+\fi
+
+
 \label{intro}
-\wqc{change mobility pattern to spatial attractiveness}
+\wqc{change mobility pattern to spatial attractiveness}\\
 The science fiction \textit{Folding Beijing}~\citep{hao2016_foldingbeijing} depicts a world where three classes of people live in independent spatial-temporal patterns, though sharing the same earth surface. This is an artistical metaphor for one potential fact that people make different decisions in visiting places according to individual determinants, such as social, economic, educational factors, etc. This phenomenon has attracted the research interest for a long time in the sociological field. Back to 1970, Pahl~\citep{pahl1975whose} posed the question `whose city` and interest in understanding the territorial inequalities. Contemporary contestation also continually raise the banner `The City Belongs to All!'~\citep{Mayer2017_whosecity}. Having a good understanding of how the mobility patterns relate to characterized individuals sheds light on region utilization, diversity mix-up, and opportunities promotion.
 
 In the past decades, the power of visual analytics in exploring spatial-temporal data has been recognized and well developed. Transportation problems are answered by various movement data, such as traffic jams in taxi GPS trajectoires~\citep{wang2013visual}, interchanging flows in public transportation~\citep{zeng2013visualizing}, etc. The presence of social media applications fuels the spatial analysis with rich semantic texts, so researchers get the chances to explore the thematic meaning of the moving behavior, such as events~\citep{chen2017map} or topics~\citep{bosch2013scatterblogs2}. Those works essentially contribute in deepening the contextual understanding of moving activity. But they rarely combine the mobility with individuals' characteristics because which cannot be 100\% inferred from social media profiles. There is still a research gap in exploring the relationship between mobility pattern and characteristics.
@@ -222,7 +217,6 @@ Figure~\ref{fig:data_geometry} shows the basic statistics related to trips. In F
 
 % Trips are uploaded in a wide range of purpose in addition to home, work, but also includes XX entertainment, visiting, etc. The diverse purposes make it possible to characterize the flows across the city between different functional places.
 
-
 Because there is always inevitable bias inherent in fully representing the ground truth of the population, the preliminary statistical analysis shows positive sign of a relatively even sampling of the population.
 
 
@@ -230,16 +224,29 @@ Because there is always inevitable bias inherent in fully representing the groun
 \wqc{Adding a background. Expert discussion. Summarize the tasks below.-0419}
 \lmc{Add a paragraph to introduce the motivation of this work, where we derive the tasks via the interview with domain exports.-0420}
 
+A discussion with experts in GIS. We summarize the analytic tasks identified from the interviews of domain experts. Then the workflow of the proposed visual analytics system.
 
+\subsection{Goal}
 \wqc{Common human mobility indicators: travel distance, travel time, travel frequency, radius of gyration and movement entropy. }\\
-\wq{Spatial attractiveness is an important concept in GIS. Explain why. To derive the details, we interview the expert in GIS. Some questions like, how citizens live in the city, where they live, work and entertain? Which place is popular? For different citizens, whether a place has the same attraction? ... With these questions, we summarize them into the tasks below, which need to be answered by our system.}
 
-\sout{The design of the system is driven by tasks, to align the analysis of mobility patterns with individual characteristics. Before diving into the design of the system, introduce the couple of specifical tasks the system intended for.}
+Spatial attractiveness is an important concept to evaluate ... in commercial activity, tourism and urban research. We interview the expert in GIS.  There are some core research concerns derived from domain exports.
 
 \begin{itemize}
-\item \textit{Task 1: Identify the group with specific individual characteristics}: to get groups of people with common or close attributes, to explore the correlation among individual characteristics.
-\item \textit{Task 2: Explore the mobility patterns of a group}: to explore where, how and why an interested group go in the city.
-\item \textit{Task 3: Compare mobility patterns among multiple groups}: to know the similarities and differences between different groups in their mobility patterns, to investigate the relationship between movement and individual characteristics.
+  \item \textit{Diversity of spatial attractiveness} Two types of diversity: diversity of the attracted persons, and diversity of attractiveness indicators. \wqc{cannot find this concept in papers, and, i am not sure about ``indicator"}
+  \item \textit{Magnitude of spatial attractiveness} How many persons could be attracted and how much the difficulty they overcome. \wqc{there is equation in related paper to support this.}
+\end{itemize}
+With these questions, we summarize them into the tasks below, which need to be answered by our system.
+
+\subsection{Tasks}
+\lm{The exploration of core concepts above are resolved further with following tasks... to align the analysis of mobility patterns with individual characteristics. Before diving into the design of the system, introduce the couple of specifical tasks the system intended for.}
+
+%The design of the system is driven by tasks, to align the analysis of mobility patterns with individual characteristics. Before diving into the design of the system, introduce the couple of specifical tasks the system intended for.
+
+\begin{itemize}
+\item \textit{Task 1: Identify the group with specific individual characteristics\wqc{What kind of citizens tend to be attracted?}}: to get groups of people with common or close attributes, to explore the correlation among individual characteristics.
+\item \textit{Task 2: Why the attracted citizens are attracted?}: to explore ...
+\item \textit{Task 3: How many citizens are extracted?}: to express ...
+\item \textit{Task 4: Where do the attracted citizens come from?}: City has different function areas. Some areas meet all the basic requirements of citizens' living activities, while some cannot. ... to know the similarities and differences between different groups in their mobility patterns, to investigate the relationship between movement and individual characteristics.
 \end{itemize}
 
 \subsection{Design Considerations}
@@ -273,10 +280,11 @@ With these three tasks, we derive following design considerations:
 \end{figure}
 
 
-\section{Visual Design}
-\lm{With the design consideration (introduced in Section~\ref{}), we design a visual analytic system...} \lm{Show a overview figure, to introduce the relationship between multiple views}
 
-With those design considerations, we develop a visual analytics system as \wq{Figure~\ref{fig:interfaceDraft} shows.} \wqc{instead of fig. teaser} It composes of individual panel (the left part) for individuals (\textit{Task 1}) and spatial panel (the right part) for the mobility pattern (\textit{Task 2 and 3}). In the individual panel, interactive infographics, t-SNE visualization, and data-driven profiles support users to narrow the scope down to groups of individuals with interested characteristics. With the chosen group of individuals, its moving related information is visualized and explored in a 2.5D spatio-temporal view.
+\section{Visual Design}
+
+With those design considerations (introduced in Section~\ref{}), we develop a visual analytics system as Figure~\ref{fig:interfaceDraft} shows. It composes of individual panel (the left part) for individuals (\textit{Task 1}) and spatial panel (the right part) for the mobility pattern (\textit{Task 2 and 3}). In the individual panel, interactive infographics, t-SNE visualization, and data-driven profiles support users to narrow the scope down to groups of individuals with interested characteristics. With the chosen group of individuals, its moving related information is visualized and explored in a 2.5D spatio-temporal view. \lmc{Show a overview figure, to introduce the relationship between multiple views}
+
 
 % overview of the data. Encode information but also allow users to set multiple criteria (\textit{C1}). Support users to slice the data by different domains.}
 % Semantic understanding of social characteristics.
@@ -286,11 +294,19 @@ With those design considerations, we develop a visual analytics system as \wq{Fi
 
 Glyph-based visualization~\cite{borgo2013glyph} is the form of visual design to compose multivariable into a collection of unified visual symbols, known as a glyph. A glyph is intended for quick understanding and aligned comparison. \lm{Dual glyphs are designed, to illustrate the information of individual from two different perspectives, i.e., detailed inspection of individuals and efficient comparsion over multiple individuals.}
 
-\paragraph{Star-like Glyph} \lm{To compare over multiple individuals, a star-like glyph is designed to summary each individual, to ease the comparison by common cooridnating configurations....}
+\paragraph{Star-like Glyph} \lm{To compare over multiple individuals, a star-like glyph is designed to summary each individual, to ease the comparison by common coordination configurations....}
+
 
 \paragraph{Cartoon Glyph} ... Among glyph design, Chernoff Face~\cite{chernoff1973use} represents data variables by the different features of a cartoon face. Following the idea of Chernoff Face, we design a type of glyph, a graphical representation of people with specific individual characteristics. The idea behind using faces is that humans easily recognize faces and notice small changes without difficulty (\textit{C1}). Those visual profiles are intended for intuitive visual understanding, from abstract to concrete and semantic understanding, to support users to target the interested individual groups effectively.
 
 Figure~\ref{fig:design_profile} shows the legend for the user profile. The eight domains are encoded by visual symbols and organically organized in a human figure. There are basically three types of variables to drive the figure, i.e., the numeric, categorical and boolean ones. For numeric attributes such as income and education levels, visual symbol keeps consistent design but with changing visual variation, such as size, thickness. For the categorical attributes such as job, visual symbols are designed separately for better semantic meaning. For the boolean attribute like car, house, a symbol is designed to indicate its existence. With this consideration, the domains are designed as follows:
+
+\begin{figure}[htb!]
+ \centering % avoid the use of \begin{center}...\end{center} and use \centering instead (more compact)
+ \includegraphics[width=\columnwidth]{pictures/design_profile}
+ \caption{Design Profile: the eight characteritical domains are encoded and organized in an organic human figure.}
+ \label{fig:design_profile}
+\end{figure}
 
 % For numeric attributes.
 
@@ -312,11 +328,11 @@ Figure~\ref{fig:design_profile} shows the legend for the user profile. The eight
  \label{fig:div_example}
 \end{figure}
 
-
 With the visual mapping, the profile varies from individual to individual. By concretizing the attributes which otherwise is too abstract to percept, users can scan and search for interesting target effectively. Figure~\ref{fig:div_example} lists the figures with the top 10 largest population in some job. The textual number beneath indicates the population. It is found that the majority of workmen earn a low salary and most of them have no residential license. On the contrary, for the officers, all of them have the residential license and most of them have a house. Some of the retired people are in old age. Most of the managers are at undergraduates, even graduates.
 
+
 \wq{\subsection{XXXX Projection of Individuals}}
-\wqc{A octagon radar graph to position all citizens. A clustering algorithm for commend similar persons into a new group.(maybe: interactions to set the weight of each characteristic)}
+\wqc{A octagon radar graph to position all citizens. A clustering algorithm for commend similar persons into a new group.(maybe: interactions to set the weight of each characteristic)} \lmc{Yes, I think an interactive weight adjustment is good.}
 
 \begin{figure}[htb!]
  \centering % avoid the use of \begin{center}...\end{center} and use \centering instead (more compact)
@@ -338,10 +354,8 @@ As Figure~\ref{fig:tsne}shows, all 21435 volunteers are embedded in the 2D view,
 
 Multiple views of abstract view, t-SNE protection, and semantic data-driven profile visualization are coordinated in a Cross-filter machinesm~\citep{Weaver2010}. It allows end-users to interactive drill-down into individuals with interested characteristics from multiple perspectives(\textit{C3}). Starting from the abstract criterion constraints, the scope of interest is narrowed down to individuals with(out) certain characteristics. And then further cross-filtering with semantically visual profiles can be performed to check the combination of 8 characteristical variables.
 
-
+\iffalse
 \subsection{2.5D Spatial Visualization}
-\wqc{this part may be deleted.}
-
 \label{subsec:25D}
 
 \begin{figure}[htb!]
@@ -363,29 +377,53 @@ Several interactions are integrated into the spatial view to alleviating the occ
 
 
 To compare the mobility patterns across different groups of people, a Small Multiple dock is used to reserve the ever explored interesting result (Figure~\ref{fig:teaser}(f)). To simply the comparison over spatial distribution, the snapshot is also rendered in the 2.5D space, which maintains the same interactions as the main 2.5D space does.
-
-\wq{\subsection{A glyph design details (in view3)}
-We design a kind of glyph to express a high-dimensional travel indicators. It will be embeded in the map view\wqc{for case1}.}
+\fi
 
 
-\wq{\subsection{Ranking or comparison method (in view4)}
-\wqc{for case3}We design ranking/comparison method with different weight of different purpose or different groups.}
+
+\wq{\subsection{A glyph design to show travel indicator (in view3, in case1)}
+We design a kind of glyph to express a high-dimensional travel indicators. It will be embeded in the map view\wqc{for case1}.
+The elements may be included in the glyph:
+\begin{itemize}
+  \item (home-work distance)
+  \item travel distance
+  \item travel radius
+  \item travel frequency
+\end{itemize}}
+
+
+\wq{\subsection{A glyph design to show attractiveness (in view3, in case2)}
+We design a kind of glyph to express spatial attractiveness.
+The elements may be included in the glyph:
+\begin{itemize}
+  \item quantity
+  \item distance
+\end{itemize}}
+
+\wq{\subsection{A glyph design to show attractiveness diversity(in view3, in case3)}
+We design a kind of glyph to express spatial attractiveness.
+The elements may be included in the glyph:
+\begin{itemize}
+  \item how many kinds of purpose?
+  \item the percentage of each purpose?
+\end{itemize}
+
+(if comparison between groups, the glyph up, show the diversity of multiple groups at the same time.)}
 
 
 \section{Experts Feedback}
 
 \lmc{Add a section to introduce the domain experts' feedback}
 
-
 \lm{We interview XX domain experts from the GIS field. XX of them are with ... The procedure went as following. We first introduce them the system an...}
-
 
 \section{Case study}
 
 In this section, we apply the method described above to study the case of Shenzhen. We introduce the several cases to demonstrate the usage and effectiveness of the system.
 
-\subsection{Case 1: Work-life Balance VS Income/Education}
-\wqc{Aim1: use view1 and view2 for groups. Aim2: show their basic activity spaces.}
+
+\wq{\subsection{Case 1: find diversity of citizens based on social characteristics}}
+\wqc{Aim1: use view1 and view2 for groups. Aim2: show their basic activity spaces in view3 and view4. text no changes yet.}
 
 This work is inspired and motivated by the implication in science fiction~\textit{Folding Beijing}, which is that people are categorized into three classes and behave in the parallel spatial-temporal patterns. The first cast explores whether the folding city exists in reality or not.
 
@@ -403,8 +441,19 @@ As Figure~\ref{case11} shows, taking income and education as the two dimensions,
 
 Figure~\ref{case11} shows the top 12 profiles with the maximum population in each group. In each group, other characteristics surprisingly demonstrate the high correlation to income and education. For example, almost all of the \textit{top aristocracy} is with the residential license,  house, and car. On the contrary, \textit{underclass} do not have the residential license residence, neither the house nor the car. Most of \textit{New rich} has a house and work in the service industry.
 
-Before diving into the complex mobility pattern analysis, we explore the home distribution of the four groups. As Figure~\ref{case12} shows, \textit{top aristocracy} and most of \textit{new rich} live concentrated in the downtown area of Shenzhen, where the living cost is higher, especially the housing cost. A small part of \textit{new rich} lives far away from the downtown, maybe because they don't have to work in downtown. The \textit{underclass} distribute more dispersively all over the whole city. Compared to the rich, they prefer the outer space because of the lower living cost. Lots of \textit{antizen} live in Nanshan District, where there are many universities and high-tech industrial parks full of well educated people. \wq{The glyphs on the map means the travel distance(even differentiate home-work distance(which is an important in mobility research), and extended travel distance), travel radius.} \wqc{the 3rd design in Section.design, a kind of glyph for high-dimensional mobility indicator}
+Before diving into the complex mobility pattern analysis, we explore the home distribution of the four groups. As Figure~\ref{case1draft} shows, \textit{top aristocracy} and most of \textit{new rich} live concentrated in the downtown area of Shenzhen, where the living cost is higher, especially the housing cost. A small part of \textit{new rich} lives far away from the downtown, maybe because they don't have to work in downtown. The \textit{underclass} distribute more dispersively all over the whole city. Compared to the rich, they prefer the outer space because of the lower living cost. Lots of \textit{antizen} live in Nanshan District, where there are many universities and high-tech industrial parks full of well educated people.
 
+\wq{The glyphs on the map means the travel distance, travel radius..., which is an important in mobility research. Describe the difference.}\\
+\wqc{the 3rd design in Section.design, a kind of glyph for high-dimensional mobility indicator.}
+
+\begin{figure}[htb!]
+ \centering % avoid the use of \begin{center}...\end{center} and use \centering instead (more compact)
+ \includegraphics[width=\columnwidth]{pictures/case1draft}
+ \caption{Home Distributions of the Four Groups}
+ \label{case1draft}
+\end{figure}
+
+\iffalse
 \begin{figure}[htb!]
  \centering % avoid the use of \begin{center}...\end{center} and use \centering instead (more compact)
  \includegraphics[width=\columnwidth]{pictures/case1_2}
@@ -412,7 +461,6 @@ Before diving into the complex mobility pattern analysis, we explore the home di
  \label{case12}
 \end{figure}
 
-\wqc{paragraph below may be deleted. It is about attractiveness entropy, which in case3}
 To have a better knowledge of mobility patterns of the four groups, trips are categorized into three categories, ``home", ``work'' for regular trips with the purpose of going home, work (or school for students), ``other'' for irregular trips with the purpose of shopping, visiting friends. Figure~\ref{case13}(a) shows the 2.5D overview of the three kinds of traveling categories. Each TAZ is grown to the same height, i.e., the unit one, and the height proportion of each traveling categories encodes the percentage of certain purpose in the whole, pink for ``others'', blue for ``work'' and green for ``home''. Although inside TAZ prisms are blocked in the Figure~\ref{case13}, our attention is drawn to the lifestyle of \textit{New Rich}. It is founded that the \textit{New Rich} travel for ``other'' purpose a lot, compared to other groups. To explore further, the detail slicing (introduced in Section~\ref{subsec:25D}) is applied to the four groups. Figure~\ref{case13}(b) shows three slices. It can be seen that individuals with low income (\textit{underclass} and \textit{antizen}) spend relatively more time on work, especially the \textit{underclass}. Working percentage is very small in-group \textit{new rich}. They live a more diverse lifestyle because they do many other things (the pink ones) except working.
 
 
@@ -422,13 +470,59 @@ To have a better knowledge of mobility patterns of the four groups, trips are ca
  \caption{Mobility Patterns of ``work", ``home" and ``not essential" of the Four Groups: (a) the overview of the three pecentage; (b) three slices for detailed comparison.}
  \label{case13}
 \end{figure}
+\fi
 
 
-\subsection{Case 2: Spatial Attractiveness Based on One Purpose}
-\wqc{aim: select one purpose; View3 shows spatial attractiveness, including: quantity, distance, （direction）; View4 shows ranking of origins, (or others); (add a interaction in view5 for citizens in selected grid.)}
 
-\wq{Due to the various functions of the areas, for different space, the attractiveness for different aims differs. Therefore, in this case, we demonstrate the use of the system for exploring the spatial attractiveness for one purpose.}
+\subsection{Case 2: Diversity of spatial attractiveness of indicators}
+\wqc{aim: with mixed purposes, show attractiveness quantity and entropy. View3 shows spatial attractiveness, including: quantity, distance, （direction）; View4 shows ranking of origins, (or others); (add a interaction in view5 for citizens in selected grid.)}
 
+\wq{Due to the various functions of the areas, for different space, the attractiveness indicators differs. Therefore, in this case, we demonstrate the use of the system for exploring diversity of spatial attractiveness indicators. }
+
+\wq{As Figure~\ref{case2draft} shows, in view3, glyph represents $\textbf{the quantity}$ and $\textbf{value of mixture of purposes}$. \wqc{(if we decide to give a computing equation to define it.)} in view4, ranking of each grid based on the quantity of each purpose.}
+\begin{figure}[htb!]
+ \centering % avoid the use of \begin{center}...\end{center} and use \centering instead (more compact)
+ \includegraphics[width=\columnwidth]{pictures/case2draft}
+ \caption{Trip purposes distribution of four groups with different jobs}
+ \label{case2draft}
+\end{figure}
+
+In this case, we explore the correlation between mobility patterns with the job, to see whether the job has an impact on the movement. Officer, workman, student, and businessman are selected as examples and the population of trips for certain purposes is shown In Figure~\ref{case3}. The height of bars encodes the amount of visit to each TAZ, and color encodes the traveling purpose. There are 10 different kinds of traveling purposes. For quick linking between color and purposes, the regular trips such as go to work, school and home are dyed in cold color, and the irregular trips such as go shopping, hospital, etc, are dyed in the warm color. As Figure~\ref{case3} shows, for officers, the TAZs changes dramatically in height. Some TAZs have much more visiting than others because officers are more constrained to work in some buildings than individuals with other jobs. The relative percentage of irregular activity differs for the four groups. For Workman, about 80 percent of movements are the regular purpose, either go to work or go back home. For students, the percentage becomes to be about 50 percentage. Compared to them, officer and businessman have more flexible and diversified lifestyle.
+
+\begin{figure}[htb!]
+ \centering % avoid the use of \begin{center}...\end{center} and use \centering instead (more compact)
+ \includegraphics[width=\columnwidth]{pictures/case3}
+ \caption{Trip purposes distribution of four groups with different jobs}
+ \label{case3}
+\end{figure}
+
+Next, we concentrated on one purpose to see whether it is related to jobs. Here we use ``dinner or entertainment" as the example. As Fig \ref{case32} shows, the height of TAZ bars represents the visiting amount of trips for dinner or entertainment. Color stands for moving distance to reach this TAZ. As we can see, officers prefer to entertain in the downtown area, while workmen cover a larger area. Students tend to concentrate on Nanshan district, probably near schools. For the businessmen, they go lots of places for dinner or entertainment. The biggest difference with other groups is that they would travel a long distance to go somewhere far from downtown areas.
+
+\iffalse
+\begin{figure}[htb!]
+ \centering % avoid the use of \begin{center}...\end{center} and use \centering instead (more compact)
+ \includegraphics[width=\columnwidth]{pictures/case3_2}
+ \caption{The ``dinner or entertain" purpose of four groups with different jobs}
+ \label{case32}
+\end{figure}
+\fi
+
+\subsection{Case 3: Magnitude of Spatial Attractiveness}
+\wqc{aim: select one purpose to show how many and where and how long. Use View3 and view4.}
+
+\wq{When zooming in to explore with only one purpose, we demonstrate the use of the system for exploring the magnitude of spatial attractiveness.}
+
+
+\wq{As Figure~\ref{case3draft} shows, in view3, glyph represents $\textbf{the quantity}$ and $\textbf{how many grids are linked(i.e. area)}$ and $\textbf{distribution of distances}$. in view4, show $\textbf{where are the linked grids}$ and $\textbf{the quantity of each linked grid}$ and $\textbf{distance}$. \wqc{not sure the form in view4, map or chart? if map, 1D or 2.5D?}}
+\begin{figure}[htb!]
+ \centering % avoid the use of \begin{center}...\end{center} and use \centering instead (more compact)
+ \includegraphics[width=\columnwidth]{pictures/case3draft}
+ \caption{Home-work distances of different groups: (a) with different salary levels; (b) with or without house.}
+ \label{case3draft}
+\end{figure}
+
+
+\iffalse
 \begin{figure}[htb!]
  \centering % avoid the use of \begin{center}...\end{center} and use \centering instead (more compact)
  \includegraphics[width=\columnwidth]{pictures/case2}
@@ -443,31 +537,7 @@ Considering income potentially determines where people live, we use income as th
 
 We explore the home-work distance of groups with and without a house.
 Figure~\ref{case2}(b) shows the close-up views. It is found that the Nanshan District has a shorter home-work distance for individuals without a house, while Futian District has shorter for those with a house. Nanshan is relatively newer to Futian so that there might be more easily-accessible houses to be rent.
-
-
-
-\subsection{Case 3: Spatial Attractiveness Based on Mixed Purposes}
-\wqc{aim: with mixed purposes, show attractiveness quantity and entropy. View3 shows spatial attractiveness, including: quantity, distance, （direction）; View4 shows ranking of origins, (or others); (add a interaction in view5 for citizens in selected grid.)}
-
-\wq{Due to the various functions of the areas, for different space, the attractiveness for different aims differs. Therefore, in this case, we demonstrate the use of the system for exploring the spatial attractiveness for one purpose.}
-
-In this case, we explore the correlation between mobility patterns with the job, to see whether the job has an impact on the movement. Officer, workman, student, and businessman are selected as examples and the population of trips for certain purposes is shown In Figure~\ref{case3}. The height of bars encodes the amount of visit to each TAZ, and color encodes the traveling purpose. There are 10 different kinds of traveling purposes. For quick linking between color and purposes, the regular trips such as go to work, school and home are dyed in cold color, and the irregular trips such as go shopping, hospital, etc, are dyed in the warm color. As Figure~\ref{case3} shows, for officers, the TAZs changes dramatically in height. Some TAZs have much more visiting than others because officers are more constrained to work in some buildings than individuals with other jobs. The relative percentage of irregular activity differs for the four groups. For Workman, about 80 percent of movements are the regular purpose, either go to work or go back home. For students, the percentage becomes to be about 50 percentage. Compared to them, officer and businessman have more flexible and diversified lifestyle.
-
-\begin{figure}[htb!]
- \centering % avoid the use of \begin{center}...\end{center} and use \centering instead (more compact)
- \includegraphics[width=\columnwidth]{pictures/case3}
- \caption{Trip purposes distribution of four groups with different jobs}
- \label{case3}
-\end{figure}
-
-Next, we concentrated on one purpose to see whether it is related to jobs. Here we use ``dinner or entertainment" as the example. As Fig \ref{case32} shows, the height of TAZ bars represents the visiting amount of trips for dinner or entertainment. Color stands for moving distance to reach this TAZ. As we can see, officers prefer to entertain in the downtown area, while workmen cover a larger area. Students tend to concentrate on Nanshan district, probably near schools. For the businessmen, they go lots of places for dinner or entertainment. The biggest difference with other groups is that they would travel a long distance to go somewhere far from downtown areas.
-
-\begin{figure}[htb!]
- \centering % avoid the use of \begin{center}...\end{center} and use \centering instead (more compact)
- \includegraphics[width=\columnwidth]{pictures/case3_2}
- \caption{The ``dinner or entertain" purpose of four groups with different jobs}
- \label{case32}
-\end{figure}
+\fi
 
 \section{Conclusion}
 \label{sec:conclusion}
