@@ -1,4 +1,4 @@
-\begin{thebibliography}{30}
+\begin{thebibliography}{28}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{{#1}}
 \providecommand{\urlprefix}{URL }
@@ -134,17 +134,6 @@ Peddinti ST, Ross KW, Cappos J (2014) On the internet, nobody knows you're a
 Shneiderman B (1996) The eyes have it: a task by data type taxonomy for
   information visualizations. In: Proceedings 1996 IEEE Symposium on Visual
   Languages, pp 336--343, \doi{10.1109/VL.1996.545307}
-
-\bibitem[{Sun et~al.(2017)Sun, Liang, Qu, and Wu}]{sun2016embedding}
-Sun G, Liang R, Qu H, Wu Y (2017) Embedding spatio-temporal information into
-  maps by route-zooming. IEEE Transactions on Visualization and Computer
-  Graphics 23(5):1506--1519
-
-\bibitem[{Tominski et~al.(2012)Tominski, Schumann, Andrienko, and
-  Andrienko}]{Tominski2012_stacking}
-Tominski C, Schumann H, Andrienko G, Andrienko N (2012) Stacking-based
-  visualization of trajectory attribute data. IEEE Transactions on
-  Visualization and Computer Graphics 18(12):2565--2574
 
 \bibitem[{Wang et~al.(2013)Wang, Lu, Yuan, Zhang, and Van
   De~Wetering}]{wang2013visual}

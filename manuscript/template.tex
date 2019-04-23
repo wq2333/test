@@ -79,8 +79,6 @@ grestore
 \usepackage{natbib}
 \usepackage[misc]{ifsym}
 
-
-
 \begin{document}
 
 \title{Unfolding the City: \wq{Exploring Urban Spatial Attractiveness with Individual Characteristics}}
@@ -229,11 +227,14 @@ A discussion with experts in GIS. We summarize the analytic tasks identified fro
 \subsection{Goal}
 \wqc{Common human mobility indicators: travel distance, travel time, travel frequency, radius of gyration and movement entropy. }\\
 
-Spatial attractiveness is an important concept to evaluate ... in commercial activity, tourism and urban research. We interview the expert in GIS.  There are some core research concerns derived from domain exports.
+Spatial attractiveness is an important concept to evaluate ... in commercial activity, tourism and urban research. We interview the expert in GIS. \lm{They identify \textit{Spatial Attractiveness}, and their correlation with individual social characteristics as the core research concern. Furthermore, they want to explore the space diversity according to its attractiveness to individuals.} \lmc{I think first we introduce spatial attractivenss, which is well defined by previous work. Then we explain the diversity of lands in attractivess (we need to find a better term), which we define. I think it is ok.}
 
 \begin{itemize}
-  \item \textit{Diversity of spatial attractiveness} Two types of diversity: diversity of the attracted persons, and diversity of attractiveness indicators. \wqc{cannot find this concept in papers, and, i am not sure about ``indicator"}
-  \item \textit{Magnitude of spatial attractiveness} How many persons could be attracted and how much the difficulty they overcome. \wqc{there is equation in related paper to support this.}
+
+  \item \textit{Magnitude of spatial attractiveness} How many persons could be attracted and how much the difficulty they overcome. \wqc{there is equation in related paper to support this.} \lmc{can you expand the spatial attractivenss, such as citing existing paper, explaining the concept, maybe with the equation is better.}
+
+  \item \textit{Diversity of spatial attractiveness} Two types of diversity: diversity of the attracted persons, and diversity of attractiveness indicators. \wqc{cannot find this concept in papers, and, i am not sure about ``indicator"} \lmc{I defined this?}
+
 \end{itemize}
 With these questions, we summarize them into the tasks below, which need to be answered by our system.
 
@@ -244,9 +245,15 @@ With these questions, we summarize them into the tasks below, which need to be a
 
 \begin{itemize}
 \item \textit{Task 1: Identify the group with specific individual characteristics\wqc{What kind of citizens tend to be attracted?}}: to get groups of people with common or close attributes, to explore the correlation among individual characteristics.
-\item \textit{Task 2: Why the attracted citizens are attracted?}: to explore ...
-\item \textit{Task 3: How many citizens are extracted?}: to express ...
-\item \textit{Task 4: Where do the attracted citizens come from?}: City has different function areas. Some areas meet all the basic requirements of citizens' living activities, while some cannot. ... to know the similarities and differences between different groups in their mobility patterns, to investigate the relationship between movement and individual characteristics.
+\item \textit{Task 2: What is the correlation between space and citizens? (Spatial Attractiveness)} to understand... group of citizens are attracted to different places, e.g., to know the similarities and differences between different groups in their mobility patterns, to investigate the relationship between movement and individual characteristics.
+
+\item \textit{Task 3: What is the detailed properties of attractive differences?} ... How many citizens are extracted, the origins (Where do the attracted citizens come from?) What is the attractive differences over groups? 
+
+% City has different function areas. Some areas meet all the basic requirements of citizens' living activities, while some cannot. ... 
+
+% \item \textit{Task 2: Why the attracted citizens are attracted?}: to explore ... \lmc{I don't think we can explain why...}
+% \item \textit{Task 3: How many citizens are extracted?}: to express ... \lmc{I think it is just numbers, too weak to be a task}
+% \item \textit{Task 4: Where do the attracted citizens come from?}: \lmc{also here}. City has different function areas. Some areas meet all the basic requirements of citizens' living activities, while some cannot. ... to know the similarities and differences between different groups in their mobility patterns, to investigate the relationship between movement and individual characteristics.
 \end{itemize}
 
 \subsection{Design Considerations}
@@ -274,7 +281,7 @@ With these three tasks, we derive following design considerations:
 
 \begin{figure}[htb!]
  \centering % avoid the use of \begin{center}...\end{center} and use \centering instead (more compact)
- \includegraphics[width=\linewidth]{pictures/interfaceDraft.pdf}
+ \includegraphics[width=\linewidth]{pictures/interfaceDraft.eps}
  \caption{\wq{System Interface: (a) an interactive infographics provides the basic statistic facets of individuals; (b) View1: a XXXX visualization gives an overview of individuals, where the similarity in high dimensional space is preserved in 2D space; (c) View2: data-driven profiles support users with organic individual perception; (d) View3: map view for movement of the chosen group; (e) View4: for ranking or comparison; (g) View5: top N kinds of citizens with social characteristics.}}
  \label{fig:interfaceDraft}
 \end{figure}
@@ -382,7 +389,7 @@ To compare the mobility patterns across different groups of people, a Small Mult
 
 
 \wq{\subsection{A glyph design to show travel indicator (in view3, in case1)}
-We design a kind of glyph to express a high-dimensional travel indicators. It will be embeded in the map view\wqc{for case1}.
+We design a kind of glyph to express a high-dimensional travel indicators. It will be embeded in the map view\wqc{for case1}. \lmc{This is great! more indicators, the better. }
 The elements may be included in the glyph:
 \begin{itemize}
   \item (home-work distance)
@@ -394,7 +401,7 @@ The elements may be included in the glyph:
 
 \wq{\subsection{A glyph design to show attractiveness (in view3, in case2)}
 We design a kind of glyph to express spatial attractiveness.
-The elements may be included in the glyph:
+The elements may be included in the glyph: \lmc{We can explain each of the indicator a bit. But do it later after the implementation.}
 \begin{itemize}
   \item quantity
   \item distance
@@ -402,10 +409,10 @@ The elements may be included in the glyph:
 
 \wq{\subsection{A glyph design to show attractiveness diversity(in view3, in case3)}
 We design a kind of glyph to express spatial attractiveness.
-The elements may be included in the glyph:
+The elements may be included in the glyph: \lmc{we need to find terms similar to above}
 \begin{itemize}
-  \item how many kinds of purpose?
-  \item the percentage of each purpose?
+  \item \lm{Purpose Number} how many kinds of purpose?
+  \item  the percentage of each purpose?
 \end{itemize}
 
 (if comparison between groups, the glyph up, show the diversity of multiple groups at the same time.)}
@@ -479,7 +486,7 @@ To have a better knowledge of mobility patterns of the four groups, trips are ca
 
 \wq{Due to the various functions of the areas, for different space, the attractiveness indicators differs. Therefore, in this case, we demonstrate the use of the system for exploring diversity of spatial attractiveness indicators. }
 
-\wq{As Figure~\ref{case2draft} shows, in view3, glyph represents $\textbf{the quantity}$ and $\textbf{value of mixture of purposes}$. \wqc{(if we decide to give a computing equation to define it.)} in view4, ranking of each grid based on the quantity of each purpose.}
+\wq{As Figure~\ref{case2draft} shows, in view3, glyph represents $\textbf{the quantity}$ and $\textbf{value of mixture of purposes}$. \wqc{(if we decide to give a computing equation to define it.)}\lmc{I think we can define a equation to compute it.} in view 4, ranking of each grid based on the quantity of each purpose.}
 \begin{figure}[htb!]
  \centering % avoid the use of \begin{center}...\end{center} and use \centering instead (more compact)
  \includegraphics[width=\columnwidth]{pictures/case2draft}
@@ -508,7 +515,8 @@ Next, we concentrated on one purpose to see whether it is related to jobs. Here 
 \fi
 
 \subsection{Case 3: Magnitude of Spatial Attractiveness}
-\wqc{aim: select one purpose to show how many and where and how long. Use View3 and view4.}
+\wqc{aim: select one purpose to show how many and where and how long. Use View3 and view4.} 
+\lmc{So as far as I understand, in this case, we focus on exploring the attributes or properties of spatial attratctiveness, right? such as the number, distance, origins, etc.}
 
 \wq{When zooming in to explore with only one purpose, we demonstrate the use of the system for exploring the magnitude of spatial attractiveness.}
 

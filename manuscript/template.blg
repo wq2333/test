@@ -1,5 +1,49 @@
-This is BibTeX, Version 0.99dThe top-level auxiliary file: template.aux
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: template.aux
 The style file: spbasic.bst
 Database file #1: main.bib
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Warning--missing publisher in pahl1975whose
+You've used 28 entries,
+            3269 wiz_defined-function locations,
+            849 strings with 10436 characters,
+and the built_in function-call counts, 33772 in all, are:
+= -- 3087
+> -- 966
+< -- 20
++ -- 346
+- -- 306
+* -- 2997
+:= -- 4521
+add.period$ -- 27
+call.type$ -- 28
+change.case$ -- 256
+chr.to.int$ -- 28
+cite$ -- 29
+duplicate$ -- 2951
+empty$ -- 3117
+format.name$ -- 380
+if$ -- 7170
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 311
+newline$ -- 94
+num.names$ -- 112
+pop$ -- 691
+preamble$ -- 1
+purify$ -- 214
+quote$ -- 0
+skip$ -- 603
+stack$ -- 0
+substring$ -- 3910
+swap$ -- 763
+text.length$ -- 9
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 246
+warning$ -- 1
+while$ -- 257
+width$ -- 0
+write$ -- 329
 (There was 1 warning)
