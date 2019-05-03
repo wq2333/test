@@ -81,7 +81,7 @@ grestore
 
 \begin{document}
 
-\title{Unfolding the City: \wq{Exploring Urban Spatial Attractiveness with Individual Characteristics}}
+\title{Unfolding the City: \wq{Exploring Urban Spatial Attractiveness with Individual Social Characteristics}}
 %\thanks{Grants or other notes
 %about the article that should go on the front page should be
 %placed here. General acknowledgments should be placed at the end of the article.}
@@ -121,8 +121,6 @@ A city is shaped not only by its assembled infrastructures but also the people l
 \iffalse
 What is it that makes some places, regions or nations appear more attractive than others to live in, visit or invest in? Does it depend on the particular characteristics or situation of the persons considering the attractiveness, in what phase in life the persons find themselves, or are there some common features, perhaps place characteristics that are viewed positively by all, independently of context?
 
-
-
 \fi
 
 
@@ -151,9 +149,10 @@ This work concerns the research topic of spatial data visual analytics. Spatio-t
 \subsection{Geo-tagged Social Media Data Analysis}
 As the presence of social media services, social media data with geo-tags are collected to track people's movements in daily lives. As an analog of remote sensing data in social science research, the geospatial big data has been proposed as social sensing ~\citep{liu2015social}. Hence, analyzing movement information along with rich text has become a hot research area in recent years. Those works infer thematic information from the semantic texts. Cao et al.~\citep{cao2012whisper} propose \textit{Whisper} for tracing the pathways of tweets on a spatial hierarchical layout, to investigate how information flow among multiple places. Krueger et al.~\citep{krueger2014visual} used GPS and location-based service data to support the analysis of movement behaviors. Chen et al.~\citep{chen2016interactive} present a visual analytics system to support the exploration of sparsely sampled trajectory from social media. Some other researchers tend to infer real information, such as names, gender, etc, from social media data~\citep{peddinti2014internet}, to break down the demographic characteristics of social media users. Luo et al.~\citep{luo2016explore} derive race, gender, and age as three demographics dimensions to analyze its impact on the urban human mobility patterns. Since real information is not enforced in social media, the wrong inferring is inevitable. Longley et al.~\citep{Longley2015}~\citep{Paul2016_twitter} identifies and assess the biases inherent in social media usage in social research and evaluate the deployment of social media data in research applications.
 
+
+
 \section{Online Census}
 The advent of mobile sensing techniques and social media applications makes it possible to collect spatial data from the social media source. Complementary to the conventional census, it brings the benefit of larger sampling frequency and a broader range in terms of space and time. It is possible to reach a wide range of individuals and collect the movement in human inactive time, such as the mid-night.
-
 
 \begin{figure}[htb!]
  \centering % avoid the use of \begin{center}...\end{center} and use \centering instead (more compact)
@@ -219,8 +218,6 @@ Because there is always inevitable bias inherent in fully representing the groun
 
 
 \section{Overview}
-\wqc{Adding a background. Expert discussion. Summarize the tasks below.-0419}
-\lmc{Add a paragraph to introduce the motivation of this work, where we derive the tasks via the interview with domain exports.-0420}
 
 A discussion with experts in GIS. We summarize the analytic tasks identified from the interviews of domain experts. Then the workflow of the proposed visual analytics system.
 
@@ -230,13 +227,12 @@ A discussion with experts in GIS. We summarize the analytic tasks identified fro
 Spatial attractiveness is an important concept to evaluate ... in commercial activity, tourism and urban research. We interview the expert in GIS. \lm{They identify \textit{Spatial Attractiveness}, and their correlation with individual social characteristics as the core research concern. Furthermore, they want to explore the space diversity according to its attractiveness to individuals.} \lmc{I think first we introduce spatial attractivenss, which is well defined by previous work. Then we explain the diversity of lands in attractivess (we need to find a better term), which we define. I think it is ok.}
 
 \begin{itemize}
-
-  \item \textit{Magnitude of spatial attractiveness} How many persons could be attracted and how much the difficulty they overcome. \wqc{there is equation in related paper to support this.} \lmc{can you expand the spatial attractivenss, such as citing existing paper, explaining the concept, maybe with the equation is better.}
+  \item \textit{Spatial attractiveness} How many persons could be attracted and how much the difficulty they overcome. \wqc{there is equation in related paper to support this.} \lmc{can you expand the spatial attractivenss, such as citing existing paper, explaining the concept, maybe with the equation is better.}
 
   \item \textit{Diversity of spatial attractiveness} Two types of diversity: diversity of the attracted persons, and diversity of attractiveness indicators. \wqc{cannot find this concept in papers, and, i am not sure about ``indicator"} \lmc{I defined this?}
-
 \end{itemize}
 With these questions, we summarize them into the tasks below, which need to be answered by our system.
+
 
 \subsection{Tasks}
 \lm{The exploration of core concepts above are resolved further with following tasks... to align the analysis of mobility patterns with individual characteristics. Before diving into the design of the system, introduce the couple of specifical tasks the system intended for.}
@@ -247,9 +243,9 @@ With these questions, we summarize them into the tasks below, which need to be a
 \item \textit{Task 1: Identify the group with specific individual characteristics\wqc{What kind of citizens tend to be attracted?}}: to get groups of people with common or close attributes, to explore the correlation among individual characteristics.
 \item \textit{Task 2: What is the correlation between space and citizens? (Spatial Attractiveness)} to understand... group of citizens are attracted to different places, e.g., to know the similarities and differences between different groups in their mobility patterns, to investigate the relationship between movement and individual characteristics.
 
-\item \textit{Task 3: What is the detailed properties of attractive differences?} ... How many citizens are extracted, the origins (Where do the attracted citizens come from?) What is the attractive differences over groups? 
+\item \textit{Task 3: What is the detailed properties of attractive differences?} ... How many citizens are extracted, the origins (Where do the attracted citizens come from?) What is the attractive differences over groups?
 
-% City has different function areas. Some areas meet all the basic requirements of citizens' living activities, while some cannot. ... 
+% City has different function areas. Some areas meet all the basic requirements of citizens' living activities, while some cannot. ...
 
 % \item \textit{Task 2: Why the attracted citizens are attracted?}: to explore ... \lmc{I don't think we can explain why...}
 % \item \textit{Task 3: How many citizens are extracted?}: to express ... \lmc{I think it is just numbers, too weak to be a task}
@@ -281,7 +277,7 @@ With these three tasks, we derive following design considerations:
 
 \begin{figure}[htb!]
  \centering % avoid the use of \begin{center}...\end{center} and use \centering instead (more compact)
- \includegraphics[width=\linewidth]{pictures/interfaceDraft.eps}
+ \includegraphics[width=\linewidth]{pictures/interface53}
  \caption{\wq{System Interface: (a) an interactive infographics provides the basic statistic facets of individuals; (b) View1: a XXXX visualization gives an overview of individuals, where the similarity in high dimensional space is preserved in 2D space; (c) View2: data-driven profiles support users with organic individual perception; (d) View3: map view for movement of the chosen group; (e) View4: for ranking or comparison; (g) View5: top N kinds of citizens with social characteristics.}}
  \label{fig:interfaceDraft}
 \end{figure}
@@ -299,10 +295,16 @@ With those design considerations (introduced in Section~\ref{}), we develop a vi
 
 \subsection{Data-driven Profile Visualization}
 
-Glyph-based visualization~\cite{borgo2013glyph} is the form of visual design to compose multivariable into a collection of unified visual symbols, known as a glyph. A glyph is intended for quick understanding and aligned comparison. \lm{Dual glyphs are designed, to illustrate the information of individual from two different perspectives, i.e., detailed inspection of individuals and efficient comparsion over multiple individuals.}
+Glyph-based visualization~\cite{borgo2013glyph} is the form of visual design to compose multivariable into a collection of unified visual symbols, known as a glyph. A glyph is intended for quick understanding and aligned comparison. \lm{Dual glyphs are designed, to illustrate the information of individual from two different perspectives, i.e., detailed inspection of individuals and efficient comparison over multiple individuals.}
 
 \paragraph{Star-like Glyph} \lm{To compare over multiple individuals, a star-like glyph is designed to summary each individual, to ease the comparison by common coordination configurations....}
 
+\begin{figure}[htb!]
+ \centering % avoid the use of \begin{center}...\end{center} and use \centering instead (more compact)
+ \includegraphics[width=\linewidth]{pictures/star53}
+ \caption{\wq{star-like glyph for a group of citizens.}}
+ \label{fig:interfaceDraft}
+\end{figure}
 
 \paragraph{Cartoon Glyph} ... Among glyph design, Chernoff Face~\cite{chernoff1973use} represents data variables by the different features of a cartoon face. Following the idea of Chernoff Face, we design a type of glyph, a graphical representation of people with specific individual characteristics. The idea behind using faces is that humans easily recognize faces and notice small changes without difficulty (\textit{C1}). Those visual profiles are intended for intuitive visual understanding, from abstract to concrete and semantic understanding, to support users to target the interested individual groups effectively.
 
@@ -338,8 +340,7 @@ Figure~\ref{fig:design_profile} shows the legend for the user profile. The eight
 With the visual mapping, the profile varies from individual to individual. By concretizing the attributes which otherwise is too abstract to percept, users can scan and search for interesting target effectively. Figure~\ref{fig:div_example} lists the figures with the top 10 largest population in some job. The textual number beneath indicates the population. It is found that the majority of workmen earn a low salary and most of them have no residential license. On the contrary, for the officers, all of them have the residential license and most of them have a house. Some of the retired people are in old age. Most of the managers are at undergraduates, even graduates.
 
 
-\wq{\subsection{XXXX Projection of Individuals}}
-\wqc{A octagon radar graph to position all citizens. A clustering algorithm for commend similar persons into a new group.(maybe: interactions to set the weight of each characteristic)} \lmc{Yes, I think an interactive weight adjustment is good.}
+\subsection{T-SNE Projection}
 
 \begin{figure}[htb!]
  \centering % avoid the use of \begin{center}...\end{center} and use \centering instead (more compact)
@@ -361,61 +362,17 @@ As Figure~\ref{fig:tsne}shows, all 21435 volunteers are embedded in the 2D view,
 
 Multiple views of abstract view, t-SNE protection, and semantic data-driven profile visualization are coordinated in a Cross-filter machinesm~\citep{Weaver2010}. It allows end-users to interactive drill-down into individuals with interested characteristics from multiple perspectives(\textit{C3}). Starting from the abstract criterion constraints, the scope of interest is narrowed down to individuals with(out) certain characteristics. And then further cross-filtering with semantically visual profiles can be performed to check the combination of 8 characteristical variables.
 
-\iffalse
-\subsection{2.5D Spatial Visualization}
-\label{subsec:25D}
 
-\begin{figure}[htb!]
-\centering
-\subfigure[]{
-\resizebox*{9cm}{!}{\includegraphics{pictures/space1.eps}}}\hspace{5pt}
-\subfigure[]{
-\resizebox*{9cm}{!}{\includegraphics{pictures/space2.eps}}}\hspace{5pt}
-\caption{2.5D Spatial Visualization: (a) 2.5D spatial visualization with z-axis to encode addition information; (b) detail slicing in 2.5D space.}
-\label{fig:2.5D}
-\end{figure}
+\subsection{HAVE NO TILE FOR THIS}
+We design a kind of glyph to express a high-dimensional travel indicators. It will be embeded in the map view. \wqc{lack of a FIGURE}
 
-
-Embedding multiple variables in the spatial map is a challenging problem. Distorting 2D spatial for better space usage, such as the partial route embedding~\citep{sun2016embedding} is an effective method when there are a few local foci. When it comes to the global visualization, there is always a trade-off between occlusion-free and the compact spatial perception. Following the idea of stacking 2.5D space design~\citep{Tominski2012_stacking}, the space in this work is embedded in 2.5D space, to relax the z-axis for additional abstract information encoding.
-
-Figure~\ref{fig:2.5D}(a) shows the 2.5D visualization. The spatial map consists of Traffic Analysis Zone (TAZ), which is the unit of geography holding a certain number of people. For the 2.5D, each TAZ is grown as a prism whose height and color are developed to encode abstract information, e.g., the occurrence of visiting. With difference encoding choices, it is capable to visualize the correlation between spatial and different attributes (\textit{C4}). For example, in Figure~\ref{fig:2.5D}(a), prisms' height and color both encode the ratio of none-routine trips (such as go entertainment, go hospital, etc.) in the whole. For better 3D visual perception, lighting is turned on. Also, a lid is laid on the top of each prism to clearly bound its extent at the z-axis.
-
-Several interactions are integrated into the spatial view to alleviating the occlusion problem (\textit{C5}). The manipulation of 2.5D view supports users with rotate, zoom, pan operations, which are so continuously flexible that users probably find a suitable observing point. In the cases where occlusion is inevitable, an interaction named as \textit{Detail Slicing} is developed, as Figure~\ref{fig:2.5D}(b) shows. Detail Slicing is the operation to put a cross-section in the 2.5D space to expose the TAZ inside. To contextualize the cross-section, TAZs are visually adapted according to the intersection by ray casting. The TAZ in the foreground will be hidden, the intersected TAZs will be fully visualized and the ones in the background will be in semi-transparency.
-
-
-To compare the mobility patterns across different groups of people, a Small Multiple dock is used to reserve the ever explored interesting result (Figure~\ref{fig:teaser}(f)). To simply the comparison over spatial distribution, the snapshot is also rendered in the 2.5D space, which maintains the same interactions as the main 2.5D space does.
-\fi
-
-
-
-\wq{\subsection{A glyph design to show travel indicator (in view3, in case1)}
-We design a kind of glyph to express a high-dimensional travel indicators. It will be embeded in the map view\wqc{for case1}. \lmc{This is great! more indicators, the better. }
-The elements may be included in the glyph:
+The elements can be represented in the glyph:
 \begin{itemize}
-  \item (home-work distance)
-  \item travel distance
-  \item travel radius
-  \item travel frequency
-\end{itemize}}
-
-
-\wq{\subsection{A glyph design to show attractiveness (in view3, in case2)}
-We design a kind of glyph to express spatial attractiveness.
-The elements may be included in the glyph: \lmc{We can explain each of the indicator a bit. But do it later after the implementation.}
-\begin{itemize}
-  \item quantity
-  \item distance
-\end{itemize}}
-
-\wq{\subsection{A glyph design to show attractiveness diversity(in view3, in case3)}
-We design a kind of glyph to express spatial attractiveness.
-The elements may be included in the glyph: \lmc{we need to find terms similar to above}
-\begin{itemize}
-  \item \lm{Purpose Number} how many kinds of purpose?
-  \item  the percentage of each purpose?
+  \item value
+  \item distribution
+  \item proportion
 \end{itemize}
 
-(if comparison between groups, the glyph up, show the diversity of multiple groups at the same time.)}
 
 
 \section{Experts Feedback}
@@ -455,7 +412,7 @@ Before diving into the complex mobility pattern analysis, we explore the home di
 
 \begin{figure}[htb!]
  \centering % avoid the use of \begin{center}...\end{center} and use \centering instead (more compact)
- \includegraphics[width=\columnwidth]{pictures/case1draft}
+ \includegraphics[width=\columnwidth]{pictures/c1-s3-53}
  \caption{Home Distributions of the Four Groups}
  \label{case1draft}
 \end{figure}
@@ -480,8 +437,50 @@ To have a better knowledge of mobility patterns of the four groups, trips are ca
 \fi
 
 
+\subsection{Case 2: Spatial Attractiveness}
+\wqc{aim: select one purpose to show how many and where and how long.}
+\lmc{So as far as I understand, in this case, we focus on exploring the attributes or properties of spatial attratctiveness, right? such as the number, distance, origins, etc.}
 
-\subsection{Case 2: Diversity of spatial attractiveness of indicators}
+\wq{When zooming in to explore with only one purpose, we demonstrate the use of the system for exploring the magnitude of spatial attractiveness.}
+
+
+\wq{As Figure~\ref{case3draft} shows, in view3, glyph represents $\textbf{the quantity}$ and $\textbf{how many grids are linked(i.e. area)}$ and $\textbf{distribution of distances}$. }
+\begin{figure}[htb!]
+ \centering % avoid the use of \begin{center}...\end{center} and use \centering instead (more compact)
+ \includegraphics[width=\columnwidth]{pictures/c2-s2-53}
+ \caption{For purpose of shopping: (a) the rich; (b) the poor.}
+ \label{case3draft}
+\end{figure}
+
+
+\wq{After clicking a target grid, show $\textbf{where are the linked grids}$ and $\textbf{the quantity of each linked grid}$ and $\textbf{distance}$. Compare two grid which have similar quantity, the distributions differ.}
+\begin{figure}[htb!]
+ \centering % avoid the use of \begin{center}...\end{center} and use \centering instead (more compact)
+ \includegraphics[width=\columnwidth]{pictures/c2-click-s2-53}
+ \caption{For purpose of shopping: (a) spatial attractiveness of the poor; (b) Grid1; (c) Grid2.}
+ \label{case3draft}
+\end{figure}
+
+
+
+\iffalse
+\begin{figure}[htb!]
+ \centering % avoid the use of \begin{center}...\end{center} and use \centering instead (more compact)
+ \includegraphics[width=\columnwidth]{pictures/case2}
+ \caption{Home-work distances of different groups: (a) with different salary levels; (b) with or without house.}
+ \label{case2}
+\end{figure}
+
+
+Home-work distance is an essential metric in economics, geography, and sociology. It refers to the distance between house and workplace. It is influenced by many factors like transportation, housing, land use, etc. Understanding the home-work distance of a region helps to evaluate whether the region is well planned or not. In this case, we demonstrate our system's help in home-work distance understanding.
+
+Considering income potentially determines where people live, we use income as the characteristics to select three groups, the group over 500K, the group during 200-300K and the group less than 100K. In Figure~\ref{case2}, the height of the bar stands for visiting frequency of the TAZ and its color encodes the average home-work distance, red for close and yellow for far. As Figure~\ref{case2}(a) shows, for all the three groups in different income levels, most of the TAZs have dark red or red color which indicates the home-work distance is generally short, especially in downtown. Only those with less than 100K salary work outside the center, such as the space in the green circle. When comparing the three groups in the downtown area, it is seen that it takes more time to go to work in Futian District as the decrease of the income.
+
+We explore the home-work distance of groups with and without a house.
+Figure~\ref{case2}(b) shows the close-up views. It is found that the Nanshan District has a shorter home-work distance for individuals without a house, while Futian District has shorter for those with a house. Nanshan is relatively newer to Futian so that there might be more easily-accessible houses to be rent.
+\fi
+
+\subsection{Case 3: Diversity of spatial attractiveness of indicators}
 \wqc{aim: with mixed purposes, show attractiveness quantity and entropy. View3 shows spatial attractiveness, including: quantity, distance, （direction）; View4 shows ranking of origins, (or others); (add a interaction in view5 for citizens in selected grid.)}
 
 \wq{Due to the various functions of the areas, for different space, the attractiveness indicators differs. Therefore, in this case, we demonstrate the use of the system for exploring diversity of spatial attractiveness indicators. }
@@ -489,7 +488,7 @@ To have a better knowledge of mobility patterns of the four groups, trips are ca
 \wq{As Figure~\ref{case2draft} shows, in view3, glyph represents $\textbf{the quantity}$ and $\textbf{value of mixture of purposes}$. \wqc{(if we decide to give a computing equation to define it.)}\lmc{I think we can define a equation to compute it.} in view 4, ranking of each grid based on the quantity of each purpose.}
 \begin{figure}[htb!]
  \centering % avoid the use of \begin{center}...\end{center} and use \centering instead (more compact)
- \includegraphics[width=\columnwidth]{pictures/case2draft}
+ \includegraphics[width=\columnwidth]{pictures/c3-53}
  \caption{Trip purposes distribution of four groups with different jobs}
  \label{case2draft}
 \end{figure}
@@ -514,38 +513,6 @@ Next, we concentrated on one purpose to see whether it is related to jobs. Here 
 \end{figure}
 \fi
 
-\subsection{Case 3: Magnitude of Spatial Attractiveness}
-\wqc{aim: select one purpose to show how many and where and how long. Use View3 and view4.} 
-\lmc{So as far as I understand, in this case, we focus on exploring the attributes or properties of spatial attratctiveness, right? such as the number, distance, origins, etc.}
-
-\wq{When zooming in to explore with only one purpose, we demonstrate the use of the system for exploring the magnitude of spatial attractiveness.}
-
-
-\wq{As Figure~\ref{case3draft} shows, in view3, glyph represents $\textbf{the quantity}$ and $\textbf{how many grids are linked(i.e. area)}$ and $\textbf{distribution of distances}$. in view4, show $\textbf{where are the linked grids}$ and $\textbf{the quantity of each linked grid}$ and $\textbf{distance}$. \wqc{not sure the form in view4, map or chart? if map, 1D or 2.5D?}}
-\begin{figure}[htb!]
- \centering % avoid the use of \begin{center}...\end{center} and use \centering instead (more compact)
- \includegraphics[width=\columnwidth]{pictures/case3draft}
- \caption{Home-work distances of different groups: (a) with different salary levels; (b) with or without house.}
- \label{case3draft}
-\end{figure}
-
-
-\iffalse
-\begin{figure}[htb!]
- \centering % avoid the use of \begin{center}...\end{center} and use \centering instead (more compact)
- \includegraphics[width=\columnwidth]{pictures/case2}
- \caption{Home-work distances of different groups: (a) with different salary levels; (b) with or without house.}
- \label{case2}
-\end{figure}
-
-
-Home-work distance is an essential metric in economics, geography, and sociology. It refers to the distance between house and workplace. It is influenced by many factors like transportation, housing, land use, etc. Understanding the home-work distance of a region helps to evaluate whether the region is well planned or not. In this case, we demonstrate our system's help in home-work distance understanding.
-
-Considering income potentially determines where people live, we use income as the characteristics to select three groups, the group over 500K, the group during 200-300K and the group less than 100K. In Figure~\ref{case2}, the height of the bar stands for visiting frequency of the TAZ and its color encodes the average home-work distance, red for close and yellow for far. As Figure~\ref{case2}(a) shows, for all the three groups in different income levels, most of the TAZs have dark red or red color which indicates the home-work distance is generally short, especially in downtown. Only those with less than 100K salary work outside the center, such as the space in the green circle. When comparing the three groups in the downtown area, it is seen that it takes more time to go to work in Futian District as the decrease of the income.
-
-We explore the home-work distance of groups with and without a house.
-Figure~\ref{case2}(b) shows the close-up views. It is found that the Nanshan District has a shorter home-work distance for individuals without a house, while Futian District has shorter for those with a house. Nanshan is relatively newer to Futian so that there might be more easily-accessible houses to be rent.
-\fi
 
 \section{Conclusion}
 \label{sec:conclusion}
