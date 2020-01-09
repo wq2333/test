@@ -35,6 +35,29 @@ M.~Mayer, ``Whose city? from ray pahl's critique of the keynesian city to the
   \url{https://doi.org/10.1111/1467-954X.12414}
 \BIBentrySTDinterwordspacing
 
+\bibitem{RN909}
+\BIBentryALTinterwordspacing
+Q.-L. Gao, Q.-Q. Li, Y.~Yue, Y.~Zhuang, Z.-P. Chen, and H.~Kong, ``Exploring
+  changes in the spatial distribution of the low-to-moderate income group using
+  transit smart card data,'' \emph{Computers Environment and Urban Systems},
+  vol.~72, pp. 68--77, 2018. [Online]. Available: \url{<Go to
+  ISI>://WOS:000447102000007}
+\BIBentrySTDinterwordspacing
+
+\bibitem{RN1692}
+\BIBentryALTinterwordspacing
+Y.~Yue, H.-d. Wang, B.~Hu, Q.-q. Li, Y.-g. Li, and A.~G.~O. Yeh, ``Exploratory
+  calibration of a spatial interaction model using taxi gps trajectories,''
+  \emph{Computers, Environment and Urban Systems}, vol.~36, no.~2, pp.
+  140--153, 2012. [Online]. Available:
+  \url{http://www.sciencedirect.com/science/article/pii/S0198971511000901}
+\BIBentrySTDinterwordspacing
+
+\bibitem{retailcity}
+Özge Öner, ``Retail city: the relationship between place attractiveness and
+  accessibility to shops,'' \emph{Spatial Economic Analysis}, vol.~12, no.~1,
+  pp. 72--91, 2017.
+
 \bibitem{wang2013visual}
 Z.~Wang, M.~Lu, X.~Yuan, J.~Zhang, and H.~Van De~Wetering, ``Visual traffic jam
   analysis based on trajectory data,'' \emph{IEEE Transactions on Visualization
@@ -57,11 +80,6 @@ H.~Bosch, D.~Thom, F.~Heimerl, E.~P{\"u}ttmann, S.~Koch, R.~Kr{\"u}ger,
   microblog messages through user-guided filtering,'' \emph{IEEE Transactions
   on Visualization and Computer Graphics}, vol.~19, no.~12, pp. 2022--2031,
   2013.
-
-\bibitem{andrienko2013visual}
-N.~Andrienko and G.~Andrienko, ``A visual analytics framework for
-  spatio-temporal analysis and modelling,'' \emph{Data Mining and Knowledge
-  Discovery}, pp. 1--29, 2013.
 
 \bibitem{Zheng2015_trajectory}
 Y.~Zheng, ``Trajectory data mining: an overview,'' \emph{ACM Transactions on

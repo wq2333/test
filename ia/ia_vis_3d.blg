@@ -15,45 +15,45 @@ Warning--missing publisher in pahl1975whose
 Warning--empty year in RN459
 
 Done.
-You've used 30 entries,
+You've used 32 entries,
             4087 wiz_defined-function locations,
-            1008 strings with 13182 characters,
-and the built_in function-call counts, 27136 in all, are:
-= -- 2203
-> -- 679
-< -- 279
-+ -- 388
-- -- 110
-* -- 1322
-:= -- 3906
-add.period$ -- 63
-call.type$ -- 30
-change.case$ -- 28
-chr.to.int$ -- 651
-cite$ -- 32
-duplicate$ -- 1847
-empty$ -- 2053
-format.name$ -- 132
-if$ -- 6380
+            1026 strings with 13764 characters,
+and the built_in function-call counts, 29154 in all, are:
+= -- 2374
+> -- 736
+< -- 298
++ -- 421
+- -- 121
+* -- 1430
+:= -- 4219
+add.period$ -- 67
+call.type$ -- 32
+change.case$ -- 30
+chr.to.int$ -- 687
+cite$ -- 34
+duplicate$ -- 1983
+empty$ -- 2187
+format.name$ -- 144
+if$ -- 6851
 int.to.chr$ -- 0
-int.to.str$ -- 30
-missing$ -- 307
-newline$ -- 119
-num.names$ -- 30
-pop$ -- 665
+int.to.str$ -- 32
+missing$ -- 333
+newline$ -- 129
+num.names$ -- 32
+pop$ -- 712
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 2101
+skip$ -- 2259
 stack$ -- 0
-substring$ -- 1545
-swap$ -- 1640
-text.length$ -- 62
+substring$ -- 1632
+swap$ -- 1768
+text.length$ -- 69
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 30
+type$ -- 32
 warning$ -- 2
-while$ -- 131
-width$ -- 32
-write$ -- 331
+while$ -- 138
+width$ -- 34
+write$ -- 360
 (There were 2 warnings)

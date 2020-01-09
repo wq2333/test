@@ -65,7 +65,7 @@ Visual analytics, spatial preference, individual characteristics, data collectio
 \PARstart{T}{he} science fiction \textbf{Folding Beijing}~\cite{hao2016_foldingbeijing} depicts a world where three social classes of people live in independent spatiotemporal patterns, though sharing the same earth surface. This is an artistic metaphor for one potential fact that people prefer to select different places to live according to individual characteristics, especially personal demographic characteristics. This phenomenon has attracted the research interest for a long time in the sociological field. Back to 1970, Pahl~\cite{pahl1975whose} posed the question "whose city" and interest in understanding the territorial inequalities. Contemporary contestation also continually raises the banner "The City Belongs to All!"~\cite{Mayer2017_whosecity}. Some approaches have been to discuss spatial distribution~\cite{RN909}, spatial interaction~\cite{RN1692} and place attractiveness~\cite{retailcity}. However, lacking of movers' characteristics, they almost only analyzed from the spatial perspective, and individual characteristic factors were not put into the context of the problems. It is required to explore the relationship between spatial preference and individual demographic characteristics for better region utilization, diversity mix-up, and opportunity promotion.
 
 Due to the multidimensional nature of demographic characteristics and spatial diversity of movements, it is challenging to explore, analysis and express the relationship between them. In the past decades, the power of visual analytics on urban problems has been recognized and well developed~\cite{wang2013visual, zeng2013visualizing}. The presence of social media applications fuels the spatial analysis with rich semantic texts, so researchers get the chances to explore the thematic meaning of the moving behavior, such as events~\cite{chen2017map} or topics~\cite{bosch2013scatterblogs2}. Those works essentially contribute on deepening the contextual understanding of moving activity. \colorbox{yellow}{However, they rarely combine the movement analysis with individuals' characteristics because which cannot be fully inferred from social media profiles. One of the main challenges is the sensitivity issue in privacy data.}
-The question of how to intuitively discover the relationship between spatial preference and multidimensional characteristics is worthy of further investigation. 
+The question of how to intuitively discover the relationship between spatial preference and multidimensional characteristics is worthy of further investigation.
 
 
 In this work, we contextualize the analysis of citizens' spatial preference in the backcloth of individual demographic characteristics. With the motivation of it, we need to obtain the demographic characteristics of individuals and their daily movements. The conventional offline census takes lots of effort and too much time to be out of date. With the wide use of the mobile device, it is possible to collect information online. In this work, we ran an online demographical collection campaign released via a social media application. Based on the data collected, we developed a visual analytics system to explore where do specified charactered citizens prefer to go. The system incorporates visualizations of individuals' characteristics, including t-SNE for an overview and data-driven profile visualization for the detailed check, as well as 2.5D spatial visualization to explore the spatial distribution of movements. Finally, applying our method in Shenzhen, several cases are derived to demonstrate the power of our method. There are two contributions of this work:
@@ -102,7 +102,7 @@ Considering there is no existing public dataset could fit our topic well, this w
 
 The advent of mobile sensing techniques and social media applications makes it possible to collect spatial data by apps within the phones. Complementary to the conventional survey, it brings the benefit of convenience without much manpower and precise spatial locations by GPS instead of semantic description.
 
-In this work, we perform the survey in Shenzhen, which is one of the most modern metropolis in China. The experiment is deployed on Wechat, the most widely used social media mobile application in China. Fig. \ref{fig:app} shows \colorbox{yellow}{the interfaces of survey app.} For privacy issue, all detailed personal information are desensitized to categorical levels. Considering the main aim on the relationship between spatial preference and demographic characteristics, two crucial aspects need to be collected:
+In this work, we perform the survey in Shenzhen, which is one of the most modern metropolis in China. The experiment is deployed on Wechat, the most widely used social media mobile application in China. Fig. \ref{fig:app} shows the interfaces of survey app. For privacy issue, all detailed personal information are desensitized to categorical levels. Considering the main aim on the relationship between spatial preference and demographic characteristics, two crucial aspects need to be collected:
 
 \textbf{Demographic Characteristics} Fig. \ref{fig:data_over} lists the eight domains to give a generalized description of the individuals. The profile will serve as the ingredients for the analysis of mobility patterns over diverse individuals.
 
@@ -111,9 +111,9 @@ In this work, we perform the survey in Shenzhen, which is one of the most modern
 
 \begin{figure}
  \centering
- \includegraphics[width=9cm]{pictures/survey_app}
+ \includegraphics[width=9cm]{pictures/survey_app_eng}
   \captionsetup{justification=centering}
- \caption{Census Interface: (a) personal characteristics collecting page; (b) trips collecting page; (c) credit system page.}
+ \caption{Census app interface: (a) personal characteristics collecting page; (b) trips collecting page; (c) credit system page. (In real census survey, contents are shown in Chinese.)}
  \label{fig:app}
 \end{figure}
 
@@ -130,7 +130,23 @@ In this work, we perform the survey in Shenzhen, which is one of the most modern
 
 \subsection{Statistics of Collected Data}
 
-Over the releasing time period from 2015-11 to 2016-01, 21,435 individuals participated in the census and 229,155 trips were collected. \colorbox{yellow}{Each volunteer contributed 11 trips average.}
+Over the releasing time period from 2015-11 to 2016-01, 21,435 individuals participated in the census and 229,155 trips were collected.
+
+Our case-study data is confined to a small proportion of Wechat users who opt to contribute their demographic profiles and movements. Considering the caveat that self-selecting individuals are most unlikely to represent any clearly defined population~\cite{Longley2015}, we performed a series of preliminary statistics. In Fig.\ref{fig:data_overview}, population distribution of each characteristic is shown. The length of the block is coded for population quantity.
+
+\begin{figure}[htb!]
+ \centering % avoid the use of \begin{center}...\end{center} and use \centering instead (more compact)
+ \includegraphics[width=\columnwidth]{pictures/data_overview}
+ \caption{Preliminary statistics of each characteristic in collected demographic data.}
+ \label{fig:data_overview}
+\end{figure}
+
+
+From the figure, 51.2\% of the participated citizens are male and 48.8\% are female. It is consistent with governmental statistics that 47\% of the whole citizens are female and 53\% are male\footnote{http://tjj.sz.gov.cn/zwgk/zfxxgkml/tjsj/tjgb/201804/t20180427\_11800902.htm}. The age collected covers a wide range, dominating between 18 and 45. There are also records pertaining to individuals below the age of 18 or above 70. According to the 2015 Annual Census Statistics report\footnote{http://www.sztj.gov.cn/xxgk/tjsj/pcgb/201606/t20160614\_3697000.htm}, people aging 15-64 occupy 83.23\% and the median age is 31.5. The age distribution in collected data follows the fact that Shenzhen is a city where the majority is young. From the distribution of education levels, ranging from low to high. The technical college and university dominate the samples at the 61\% occupancy rate. The majority get paid below 200,000. Citizens with higher salary are also reached in our census. Due to lacking of governmental statistics, we cannot verify all characteristics collected are consistent with all the citizens in Shenzhen. From the perspective of survey, there is always inevitable bias inherent in fully representing the ground truth of the population. However, the preliminary statistical analysis shows the rich scope of the data, which embodies positive sign of a relatively even sampling of the population in the city.
+
+
+\iffalse
+Fig. \ref{fig:data_age_edu} gives the distribution of gender, age and education over the population. For participated citizens, 48\% of them are female and 52\% are male. It is consistent with governmental statistics that 47\% of the whole citizens are female and 53\% are male\footnote{http://tjj.sz.gov.cn/zwgk/zfxxgkml/tjsj/tjgb/201804/t20180427\_11800902.htm}. The age collected covers a wide range, dominating between 18 and 45. There are also records pertaining to individuals below the age of 18 or above 70. According to the 2015 Annual Census Statistics report\footnote{http://www.sztj.gov.cn/xxgk/tjsj/pcgb/201606/t20160614\_3697000.htm}, people aging 15-64 occupy 83.23\% and the median age is 31.5. The age distribution in collected data follows the fact that Shenzhen is a city where the majority is young. Fig, \ref{fig:data_age_edu}(b) gives the distribution of education levels, ranging from low to high. The technical college and university dominate the samples at the 61\% occupancy rate. Fig. \ref{fig:data_job_inc}(a) shows the job types of sampled individuals, who are servants, workers, officers, businessmen and so on. \colorbox{yellow}{Fig. \ref{fig:data_job_inc}(b) gives the radar diagram of the annual pay.} The majority get paid below 200,000. Citizens with higher salary are also reached in our census.
 
 \begin{figure}[htb!]
  \centering % avoid the use of \begin{center}...\end{center} and use \centering instead (more compact)
@@ -139,10 +155,6 @@ Over the releasing time period from 2015-11 to 2016-01, 21,435 individuals parti
  \label{fig:data_age_edu}
 \end{figure}
 
-Our case-study data is confined to a small proportion of Wechat users who opt to contribute their demographic profiles and movements.
-Considering the caveat that self-selecting individuals are most unlikely to represent any clearly defined population~\cite{Longley2015}, we performed a series of preliminary statistics to check whether it is rich enough to represent a wide range of the population in the city.
-
-Fig. \ref{fig:data_age_edu} gives the distribution of gender, age and education over the population. For participated citizens, 48\% of them are female and 52\% are male. It is consistent with governmental statistics that 47\% of the whole citizens are female and 53\% are male\footnote{http://tjj.sz.gov.cn/zwgk/zfxxgkml/tjsj/tjgb/201804/t20180427\_11800902.htm}. The age collected covers a wide range, dominating between 18 and 45. There are also records pertaining to individuals below the age of 18 or above 70. According to the 2015 Annual Census Statistics report\footnote{http://www.sztj.gov.cn/xxgk/tjsj/pcgb/201606/t20160614\_3697000.htm}, people aging 15-64 occupy 83.23\% and the median age is 31.5. The age distribution in collected data follows the fact that Shenzhen is a city where the majority is young. Fig, \ref{fig:data_age_edu}(b) gives the distribution of education levels, ranging from low to high. The technical college and university dominate the samples at the 61\% occupancy rate. Fig. \ref{fig:data_job_inc}(a) shows the job types of sampled individuals, who are servants, workers, officers, businessmen and so on. \colorbox{yellow}{Fig. \ref{fig:data_job_inc}(b) gives the radar diagram of the annual pay.} The majority get paid below 200,000. Citizens with higher salary are also reached in our census. 
 
 \begin{figure}[htb!]
  \centering % avoid the use of \begin{center}...\end{center} and use \centering instead (more compact)
@@ -150,18 +162,17 @@ Fig. \ref{fig:data_age_edu} gives the distribution of gender, age and education 
  \caption{Job and Income Distribution: (a) job; (b) income}
  \label{fig:data_job_inc}
 \end{figure}
+\fi
 
-
-The basic statistics related to movements are shown in Fig. \ref{fig:data_geometry}. \colorbox{yellow}{Fig. ~\ref{fig:data_geometry}(a) visualizes the distribution of trip quantity of each citizen. It has a heavy-tail trait, which follows the law of most human-related statistics}. In Fig. ~\ref{fig:data_geometry}(b), the active traveling time (here, we take the start time as the representative of active time) follows the common knowledge about urban life. There are obvious morning and evening rush hours. Fig. ~\ref{fig:data_geometry}(c) gives the counting of different traveling purposes. 95\% trips are tagged with clear raveling purpose in the data. 33\% are going home and 37\% are going to work. Besides this kind of routine traveling, there are also substantial trips such as going shopping, going the hospital, etc. Fig. ~\ref{fig:data_geometry}(d) shows the spatial distribution of the origins and destinations. It is found that more dots are located in Futian and Nanshan districts, the city's heart than the surrounding areas. This is consistent to Batty's exposition of the focus of city networks and interaction patterns~\cite{batty2013new}.
+The basic statistics related to movements are shown in Fig. \ref{fig:data_geometry}. Fig. ~\ref{fig:data_geometry}(a) visualizes the distribution of trip quantity of each citizen. It has a heavy-tail trait, which follows the law of most human-related statistics. In Fig. ~\ref{fig:data_geometry}(b), the active traveling time (here, we take the start time as the representative of active time) follows the common knowledge about urban life. There are obvious morning and evening rush hours. Fig. ~\ref{fig:data_geometry}(c) gives the counting of different traveling purposes. 95\% trips are tagged with clear raveling purpose in the data. 33\% are going home and 37\% are going to work. Besides this kind of routine traveling, there are also substantial trips such as going shopping, going the hospital, etc. Fig. ~\ref{fig:data_geometry}(d) shows the spatial distribution of the origins and destinations. It is found that more dots are located in Futian and Nanshan districts, the city's heart than the surrounding areas. This is consistent to Batty's exposition of the focus of city networks and interaction patterns~\cite{batty2013new}.
 
 \begin{figure}[htb!]
  \centering % avoid the use of \begin{center}...\end{center} and use \centering instead (more compact)
- \includegraphics[width=\columnwidth]{pictures/data3}
+ \includegraphics[width=\columnwidth]{pictures/data3_2}
  \caption{Statistics of Trips: (a) distribution of trip quantity of each citizen; (b) start time of trips; (c) purpose of trips; (d) distribution of origins/destinations. }
  \label{fig:data_geometry}
 \end{figure}
 
-Due to lacking of governmental statistics, we cannot verify all characteristics and movements collected are consistent with all the citizens in Shenzhen. From the perspective of survey, there is always inevitable bias inherent in fully representing the ground truth of the population. However, the preliminary statistical analysis shows the rich scope of the data, which embodies positive sign of a relatively even sampling of the population.
 
 
 \section{Visual Design}
@@ -179,7 +190,7 @@ The exploration of core contents (introduced in Section~\ref{sec:concept}) is re
 \end{itemize}
 
 \begin{figure*}[htb!]
- \centering % avoid the use of \begin{center}...\end{center} and use \centering instead (more compact)
+ \centering
  \includegraphics[width=18.1cm]{pictures/teaser.eps}
  \caption{System Interface: (a) an interactive infographics provides the basic statistic facets of individuals; (b) a t-SNE visualization gives an overview of individuals, where the similarity in high dimensional space is preserved in 2D space; (c) data-driven profiles support users with organic individual perception; (d) group of interested individuals can be saved; (e) movement of the chosen group is visualized and explored in 2.5D main view; (f) a dock is provided to restore and compare findings; (g) different choices of 2.5D encoding can be selected.}
  \label{fig:teaser}
@@ -199,7 +210,7 @@ With three tasks above, we derive following design considerations:
 
 
 \subsection{Visualizations}
-\label{subsec:vis} 
+\label{subsec:vis}
 
 With all the design considerations, we develop a visual analytics system as Fig. \ref{fig:teaser} shows. It composes of individual panel (the left part) for individuals (\textit{Task 1}) and spatial panel (the right part) for the mobility pattern (\textit{Task 2 and 3}). In the individual panel, interactive infographics, t-SNE visualization, and data-driven profiles support users to narrow the scope down to groups of individuals with interested characteristics. With the specified group of individuals, its moving-related information is visualized and explored in a 2.5D spatiotemporal view.
 
