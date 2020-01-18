@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.3.19)  17 JAN 2020 19:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.3.19)  19 JAN 2020 00:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -451,35 +451,47 @@ Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 407.
 Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 408.
 Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
 )
+(d:/texlive/texlive/2018/texmf-dist/tex/latex/soul/soul.sty
+Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
+\SOUL@word=\toks26
+\SOUL@lasttoken=\toks27
+\SOUL@cmds=\toks28
+\SOUL@buffer=\toks29
+\SOUL@token=\toks30
+\SOUL@spaceskip=\skip53
+\SOUL@ttwidth=\dimen140
+\SOUL@uldp=\dimen141
+\SOUL@ulht=\dimen142
+)
 (d:/texlive/texlive/2018/texmf-dist/tex/latex/subfig/subfig.sty
 Package: subfig 2005/06/28 ver: 1.3 subfig package
 
 (d:/texlive/texlive/2018/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2018/09/12 v1.8c caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 64.
-\captionmargin=\dimen140
-\captionmargin@=\dimen141
-\captionwidth=\dimen142
-\caption@tempdima=\dimen143
-\caption@indent=\dimen144
-\caption@parindent=\dimen145
-\caption@hangindent=\dimen146
+\captionmargin=\dimen143
+\captionmargin@=\dimen144
+\captionwidth=\dimen145
+\caption@tempdima=\dimen146
+\caption@indent=\dimen147
+\caption@parindent=\dimen148
+\caption@hangindent=\dimen149
 Package caption Info: Unknown document class (or package),
 (caption)             standard defaults will be used.
 )
 \c@KVtest=\count121
-\sf@farskip=\skip53
-\sf@captopadj=\dimen147
-\sf@capskip=\skip54
-\sf@nearskip=\skip55
+\sf@farskip=\skip54
+\sf@captopadj=\dimen150
+\sf@capskip=\skip55
+\sf@nearskip=\skip56
 \c@subfigure=\count122
 \c@subfigure@save=\count123
 \c@lofdepth=\count124
 \c@subtable=\count125
 \c@subtable@save=\count126
 \c@lotdepth=\count127
-\sf@top=\skip56
-\sf@bottom=\skip57
+\sf@top=\skip57
+\sf@bottom=\skip58
 )
 (d:/texlive/texlive/2018/texmf-dist/tex/latex/lipsum/lipsum.sty
 (d:/texlive/texlive/2018/texmf-dist/tex/latex/l3kernel/expl3.sty
@@ -498,18 +510,18 @@ Package: expl3 2019-02-15 L3 programming layer (code)
 \l__iow_line_target_int=\count136
 \l__iow_one_indent_int=\count137
 \l__iow_indent_int=\count138
-\c_zero_dim=\dimen148
-\c_max_dim=\dimen149
-\l_tmpa_dim=\dimen150
-\l_tmpb_dim=\dimen151
-\g_tmpa_dim=\dimen152
-\g_tmpb_dim=\dimen153
-\c_zero_skip=\skip58
-\c_max_skip=\skip59
-\l_tmpa_skip=\skip60
-\l_tmpb_skip=\skip61
-\g_tmpa_skip=\skip62
-\g_tmpb_skip=\skip63
+\c_zero_dim=\dimen151
+\c_max_dim=\dimen152
+\l_tmpa_dim=\dimen153
+\l_tmpb_dim=\dimen154
+\g_tmpa_dim=\dimen155
+\g_tmpb_dim=\dimen156
+\c_zero_skip=\skip59
+\c_max_skip=\skip60
+\l_tmpa_skip=\skip61
+\l_tmpb_skip=\skip62
+\g_tmpa_skip=\skip63
+\g_tmpb_skip=\skip64
 \c_zero_muskip=\muskip11
 \c_max_muskip=\muskip12
 \l_tmpa_muskip=\muskip13
@@ -518,7 +530,7 @@ Package: expl3 2019-02-15 L3 programming layer (code)
 \g_tmpb_muskip=\muskip16
 \l_keys_choice_int=\count139
 \l__intarray_loop_int=\count140
-\c__intarray_sp_dim=\dimen154
+\c__intarray_sp_dim=\dimen157
 \g__intarray_font_int=\count141
 \c__fp_leading_shift_int=\count142
 \c__fp_middle_shift_int=\count143
@@ -593,23 +605,23 @@ Package: expl3 2019-02-15 L3 programming layer (code)
 \l_tmpb_box=\box39
 \g_tmpa_box=\box40
 \g_tmpb_box=\box41
-\l__box_top_dim=\dimen155
-\l__box_bottom_dim=\dimen156
-\l__box_left_dim=\dimen157
-\l__box_right_dim=\dimen158
-\l__box_top_new_dim=\dimen159
-\l__box_bottom_new_dim=\dimen160
-\l__box_left_new_dim=\dimen161
-\l__box_right_new_dim=\dimen162
+\l__box_top_dim=\dimen158
+\l__box_bottom_dim=\dimen159
+\l__box_left_dim=\dimen160
+\l__box_right_dim=\dimen161
+\l__box_top_new_dim=\dimen162
+\l__box_bottom_new_dim=\dimen163
+\l__box_left_new_dim=\dimen164
+\l__box_right_new_dim=\dimen165
 \l__box_internal_box=\box42
 \l__coffin_internal_box=\box43
-\l__coffin_internal_dim=\dimen163
-\l__coffin_offset_x_dim=\dimen164
-\l__coffin_offset_y_dim=\dimen165
-\l__coffin_x_dim=\dimen166
-\l__coffin_y_dim=\dimen167
-\l__coffin_x_prime_dim=\dimen168
-\l__coffin_y_prime_dim=\dimen169
+\l__coffin_internal_dim=\dimen166
+\l__coffin_offset_x_dim=\dimen167
+\l__coffin_offset_y_dim=\dimen168
+\l__coffin_x_dim=\dimen169
+\l__coffin_y_dim=\dimen170
+\l__coffin_x_prime_dim=\dimen171
+\l__coffin_y_prime_dim=\dimen172
 \c_empty_coffin=\box44
 \l__coffin_aligned_coffin=\box45
 \l__coffin_aligned_internal_coffin=\box46
@@ -621,17 +633,17 @@ Package: expl3 2019-02-15 L3 programming layer (code)
 \l__coffin_display_coffin=\box52
 \l__coffin_display_coord_coffin=\box53
 \l__coffin_display_pole_coffin=\box54
-\l__coffin_display_offset_dim=\dimen170
-\l__coffin_display_x_dim=\dimen171
-\l__coffin_display_y_dim=\dimen172
+\l__coffin_display_offset_dim=\dimen173
+\l__coffin_display_x_dim=\dimen174
+\l__coffin_display_y_dim=\dimen175
 \g__file_internal_ior=\read1
-\l__coffin_bounding_shift_dim=\dimen173
-\l__coffin_left_corner_dim=\dimen174
-\l__coffin_right_corner_dim=\dimen175
-\l__coffin_bottom_corner_dim=\dimen176
-\l__coffin_top_corner_dim=\dimen177
-\l__coffin_scaled_total_height_dim=\dimen178
-\l__coffin_scaled_width_dim=\dimen179
+\l__coffin_bounding_shift_dim=\dimen176
+\l__coffin_left_corner_dim=\dimen177
+\l__coffin_right_corner_dim=\dimen178
+\l__coffin_bottom_corner_dim=\dimen179
+\l__coffin_top_corner_dim=\dimen180
+\l__coffin_scaled_total_height_dim=\dimen181
+\l__coffin_scaled_width_dim=\dimen182
 \l__seq_internal_a_int=\count276
 \l__seq_internal_b_int=\count277
 )
@@ -654,23 +666,23 @@ File: lipsum.ltd.tex 2019/01/02 v2.2 The Lorem ipsum dummy text
 ))
 (d:/texlive/texlive/2018/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2016/04/27 v1.618033 publication quality tables
-\heavyrulewidth=\dimen180
-\lightrulewidth=\dimen181
-\cmidrulewidth=\dimen182
-\belowrulesep=\dimen183
-\belowbottomsep=\dimen184
-\aboverulesep=\dimen185
-\abovetopsep=\dimen186
-\cmidrulesep=\dimen187
-\cmidrulekern=\dimen188
-\defaultaddspace=\dimen189
+\heavyrulewidth=\dimen183
+\lightrulewidth=\dimen184
+\cmidrulewidth=\dimen185
+\belowrulesep=\dimen186
+\belowbottomsep=\dimen187
+\aboverulesep=\dimen188
+\abovetopsep=\dimen189
+\cmidrulesep=\dimen190
+\cmidrulekern=\dimen191
+\defaultaddspace=\dimen192
 \@cmidla=\count284
 \@cmidlb=\count285
-\@aboverulesep=\dimen190
-\@belowrulesep=\dimen191
+\@aboverulesep=\dimen193
+\@belowrulesep=\dimen194
 \@thisruleclass=\count286
 \@lastruleclass=\count287
-\@thisrulewidth=\dimen192
+\@thisrulewidth=\dimen195
 )
 (d:/texlive/texlive/2018/texmf-dist/tex/latex/threeparttable/threeparttable.sty
 Package: threeparttable 2003/06/13  v 3.0
@@ -774,48 +786,48 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 (./ia_vis_3d_final.aux)
 \openout1 = `ia_vis_3d_final.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 31.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 31.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 32.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 32.
 
 (d:/texlive/texlive/2018/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    ... okay on input line 32.
 
 -- Lines per column: 56 (exact).
-LaTeX Font Info:    Try loading font information for T1+ptm on input line 31.
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 32.
 (d:/texlive/texlive/2018/texmf-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
 
 LaTeX Font Warning: Font shape `T1/ptm/n/n' undefined
-(Font)              using `T1/ptm/m/n' instead on input line 31.
+(Font)              using `T1/ptm/m/n' instead on input line 32.
 
 (d:/texlive/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count290
-\scratchdimen=\dimen193
+\scratchdimen=\dimen196
 \scratchbox=\box56
 \nofMPsegments=\count291
 \nofMParguments=\count292
-\everyMPshowfont=\toks26
+\everyMPshowfont=\toks31
 \MPscratchCnt=\count293
-\MPscratchDim=\dimen194
+\MPscratchDim=\dimen197
 \MPnumerator=\count294
 \makeMPintoPDFobject=\count295
-\everyMPtoPDFconversion=\toks27
+\everyMPtoPDFconversion=\toks32
 )
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
@@ -823,56 +835,56 @@ Package caption Info: End \AtBeginDocument code.
 <bullet.png, id=3, 12.045pt x 35.38219pt>
 File: bullet.png Graphic file (type png)
 <use bullet.png>
-Package pdftex.def Info: bullet.png  used on input line 52.
+Package pdftex.def Info: bullet.png  used on input line 53.
 (pdftex.def)             Requested size: 5.0pt x 14.6871pt.
 
 
-Package xcolor Warning: Incompatible color definition on input line 52.
+Package xcolor Warning: Incompatible color definition on input line 53.
 
-LaTeX Font Info:    Try loading font information for T1+phv on input line 52.
+LaTeX Font Info:    Try loading font information for T1+phv on input line 53.
 (d:/texlive/texlive/2018/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 )
 
 LaTeX Font Warning: Font shape `T1/phv/n/n' undefined
-(Font)              using `T1/phv/m/n' instead on input line 52.
+(Font)              using `T1/phv/m/n' instead on input line 53.
 
 File: bullet.png Graphic file (type png)
 <use bullet.png>
-Package pdftex.def Info: bullet.png  used on input line 55.
+Package pdftex.def Info: bullet.png  used on input line 56.
 (pdftex.def)             Requested size: 5.0pt x 14.6871pt.
 
-Package xcolor Warning: Incompatible color definition on input line 55.
+Package xcolor Warning: Incompatible color definition on input line 56.
 
 
-Package xcolor Warning: Incompatible color definition on input line 61.
+Package xcolor Warning: Incompatible color definition on input line 62.
 
-LaTeX Font Info:    Calculating math sizes for size <9.9> on input line 61.
-LaTeX Font Info:    Try loading font information for U+msa on input line 61.
+LaTeX Font Info:    Calculating math sizes for size <9.9> on input line 62.
+LaTeX Font Info:    Try loading font information for U+msa on input line 62.
 (d:/texlive/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 61.
+LaTeX Font Info:    Try loading font information for U+msb on input line 62.
 
 (d:/texlive/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Calculating math sizes for size <6.6> on input line 61.
+LaTeX Font Info:    Calculating math sizes for size <6.6> on input line 62.
 
-Overfull \hbox (9.2679pt too wide) in paragraph at lines 61--61
+Overfull \hbox (9.2679pt too wide) in paragraph at lines 62--62
 []  
  []
 
 
-Overfull \hbox (9.2679pt too wide) in paragraph at lines 61--61
+Overfull \hbox (9.2679pt too wide) in paragraph at lines 62--62
 []  
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 63.
+Package xcolor Warning: Incompatible color definition on input line 64.
 
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 65.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 66.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -881,12 +893,12 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-Package xcolor Warning: Incompatible color definition on input line 72.
+Package xcolor Warning: Incompatible color definition on input line 73.
 
 <Logo.png, id=4, 206.27063pt x 53.44969pt>
 File: Logo.png Graphic file (type png)
 <use Logo.png>
-Package pdftex.def Info: Logo.png  used on input line 72.
+Package pdftex.def Info: Logo.png  used on input line 73.
 (pdftex.def)             Requested size: 91.32pt x 23.66309pt.
 
 Overfull \hbox (505.12177pt too wide) has occurred while \output is active
@@ -913,21 +925,21 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 
  <./logo.png> <./bullet.png>]
 
-Package xcolor Warning: Incompatible color definition on input line 79.
+Package xcolor Warning: Incompatible color definition on input line 80.
 
 
-Package xcolor Warning: Incompatible color definition on input line 82.
+Package xcolor Warning: Incompatible color definition on input line 83.
 
 
-Package xcolor Warning: Incompatible color definition on input line 86.
+Package xcolor Warning: Incompatible color definition on input line 87.
 
 
-Package xcolor Warning: Incompatible color definition on input line 88.
+Package xcolor Warning: Incompatible color definition on input line 89.
 
 <notaglineLogo.png, id=15, 169.38281pt x 42.91031pt>
 File: notaglineLogo.png Graphic file (type png)
 <use notaglineLogo.png>
-Package pdftex.def Info: notaglineLogo.png  used on input line 92.
+Package pdftex.def Info: notaglineLogo.png  used on input line 93.
 (pdftex.def)             Requested size: 91.32pt x 23.1352pt.
 
 Overfull \hbox (505.12177pt too wide) has occurred while \output is active
@@ -946,10 +958,10 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 
 [2 <./notaglinelogo.png>]
 
-Package xcolor Warning: Incompatible color definition on input line 97.
+Package xcolor Warning: Incompatible color definition on input line 98.
 
 
-Package xcolor Warning: Incompatible color definition on input line 101.
+Package xcolor Warning: Incompatible color definition on input line 102.
 
 Package epstopdf Info: Source file: <pictures/survey_app_eng.eps>
 (epstopdf)                    date: 2020-01-17 19:21:59
@@ -960,17 +972,17 @@ df>
 (epstopdf)                    size: 460571 bytes
 (epstopdf)             Command: <repstopdf --outfile=pictures/survey_app_eng-ep
 s-converted-to.pdf pictures/survey_app_eng.eps>
-(epstopdf)             \includegraphics on input line 114.
+(epstopdf)             \includegraphics on input line 115.
 Package epstopdf Info: Output file is already uptodate.
 <pictures/survey_app_eng-eps-converted-to.pdf, id=21, 1305.87875pt x 853.1875pt
 >
 File: pictures/survey_app_eng-eps-converted-to.pdf Graphic file (type pdf)
 <use pictures/survey_app_eng-eps-converted-to.pdf>
 Package pdftex.def Info: pictures/survey_app_eng-eps-converted-to.pdf  used on 
-input line 114.
+input line 115.
 (pdftex.def)             Requested size: 256.0748pt x 167.30171pt.
 
-Overfull \hbox (13.40125pt too wide) in paragraph at lines 114--116
+Overfull \hbox (13.40125pt too wide) in paragraph at lines 115--117
  [][] 
  []
 
@@ -982,21 +994,21 @@ Package epstopdf Info: Source file: <pictures/data_over.eps>
 (epstopdf)                    size: 32651 bytes
 (epstopdf)             Command: <repstopdf --outfile=pictures/data_over-eps-con
 verted-to.pdf pictures/data_over.eps>
-(epstopdf)             \includegraphics on input line 123.
+(epstopdf)             \includegraphics on input line 124.
 Package epstopdf Info: Output file is already uptodate.
 <pictures/data_over-eps-converted-to.pdf, id=22, 757.83125pt x 411.5375pt>
 File: pictures/data_over-eps-converted-to.pdf Graphic file (type pdf)
 <use pictures/data_over-eps-converted-to.pdf>
 Package pdftex.def Info: pictures/data_over-eps-converted-to.pdf  used on input
- line 123.
+ line 124.
 (pdftex.def)             Requested size: 256.0748pt x 139.0606pt.
 
-Overfull \hbox (13.40125pt too wide) in paragraph at lines 123--125
+Overfull \hbox (13.40125pt too wide) in paragraph at lines 124--126
  [][] 
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 131.
+Package xcolor Warning: Incompatible color definition on input line 132.
 
 Package epstopdf Info: Source file: <pictures/data_overview.eps>
 (epstopdf)                    date: 2020-01-17 19:33:46
@@ -1007,23 +1019,23 @@ f>
 (epstopdf)                    size: 32549 bytes
 (epstopdf)             Command: <repstopdf --outfile=pictures/data_overview-eps
 -converted-to.pdf pictures/data_overview.eps>
-(epstopdf)             \includegraphics on input line 139.
+(epstopdf)             \includegraphics on input line 140.
 Package epstopdf Info: Output file is already uptodate.
 <pictures/data_overview-eps-converted-to.pdf, id=23, 430.60875pt x 287.0725pt>
 File: pictures/data_overview-eps-converted-to.pdf Graphic file (type pdf)
 <use pictures/data_overview-eps-converted-to.pdf>
 Package pdftex.def Info: pictures/data_overview-eps-converted-to.pdf  used on i
-nput line 139.
+nput line 140.
 (pdftex.def)             Requested size: 242.67355pt x 161.7845pt.
 
-Overfull \hbox (18.43236pt too wide) in paragraph at lines 145--145
+Overfull \hbox (18.43236pt too wide) in paragraph at lines 146--146
 [][][]\T1/ptm/m/n/8 http://tjj.sz.gov.cn/zwgk/zfxxgkml/tjsj/tjgb/201804/t201804
 27_11800902.htm| 
  []
 
 File: notaglineLogo.png Graphic file (type png)
 <use notaglineLogo.png>
-Package pdftex.def Info: notaglineLogo.png  used on input line 146.
+Package pdftex.def Info: notaglineLogo.png  used on input line 147.
 (pdftex.def)             Requested size: 91.32pt x 23.1352pt.
 
 Overfull \hbox (505.12177pt too wide) has occurred while \output is active
@@ -1050,20 +1062,20 @@ Package epstopdf Info: Source file: <pictures/data3_2.eps>
 (epstopdf)                    size: 704045 bytes
 (epstopdf)             Command: <repstopdf --outfile=pictures/data3_2-eps-conve
 rted-to.pdf pictures/data3_2.eps>
-(epstopdf)             \includegraphics on input line 172.
+(epstopdf)             \includegraphics on input line 173.
 Package epstopdf Info: Output file is already uptodate.
 <pictures/data3_2-eps-converted-to.pdf, id=44, 1230.5975pt x 740.7675pt>
 File: pictures/data3_2-eps-converted-to.pdf Graphic file (type pdf)
 <use pictures/data3_2-eps-converted-to.pdf>
 Package pdftex.def Info: pictures/data3_2-eps-converted-to.pdf  used on input l
-ine 172.
+ine 173.
 (pdftex.def)             Requested size: 242.67355pt x 146.07108pt.
 
 
-Package xcolor Warning: Incompatible color definition on input line 179.
+Package xcolor Warning: Incompatible color definition on input line 180.
 
 
-Package xcolor Warning: Incompatible color definition on input line 183.
+Package xcolor Warning: Incompatible color definition on input line 184.
 
 Package epstopdf Info: Source file: <pictures/teaser.eps>
 (epstopdf)                    date: 2018-05-31 19:15:26
@@ -1073,30 +1085,25 @@ Package epstopdf Info: Source file: <pictures/teaser.eps>
 (epstopdf)                    size: 1192112 bytes
 (epstopdf)             Command: <repstopdf --outfile=pictures/teaser-eps-conver
 ted-to.pdf pictures/teaser.eps>
-(epstopdf)             \includegraphics on input line 195.
+(epstopdf)             \includegraphics on input line 196.
 Package epstopdf Info: Output file is already uptodate.
 <pictures/teaser-eps-converted-to.pdf, id=45, 791.95876pt x 412.54124pt>
 File: pictures/teaser-eps-converted-to.pdf Graphic file (type pdf)
 <use pictures/teaser-eps-converted-to.pdf>
 Package pdftex.def Info: pictures/teaser-eps-converted-to.pdf  used on input li
-ne 195.
+ne 196.
 (pdftex.def)             Requested size: 514.99504pt x 268.26823pt.
 
-Overfull \hbox (9.87328pt too wide) in paragraph at lines 195--196
+Overfull \hbox (9.87328pt too wide) in paragraph at lines 196--197
  [][] 
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 200.
-
-
-Underfull \hbox (badness 1997) in paragraph at lines 207--208
-[]\T1/ptm/b/n/10 Effective mul-ti-vari-able cross-filter for in-di-vid-ual
- []
+Package xcolor Warning: Incompatible color definition on input line 201.
 
 File: notaglineLogo.png Graphic file (type png)
 <use notaglineLogo.png>
-Package pdftex.def Info: notaglineLogo.png  used on input line 208.
+Package pdftex.def Info: notaglineLogo.png  used on input line 207.
 (pdftex.def)             Requested size: 91.32pt x 23.1352pt.
 
 Overfull \hbox (505.12177pt too wide) has occurred while \output is active
@@ -1115,11 +1122,19 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 
 [4 <./pictures/data_overview-eps-converted-to.pdf> <./pictures/data3_2-eps-conv
 erted-to.pdf>]
+Underfull \hbox (badness 1997) in paragraph at lines 208--209
+[]\T1/ptm/b/n/10 Effective mul-ti-vari-able cross-filter for in-di-vid-ual
+ []
 
-Package xcolor Warning: Incompatible color definition on input line 213.
+
+Package xcolor Warning: Incompatible color definition on input line 214.
 
 
-Package xcolor Warning: Incompatible color definition on input line 220.
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package xcolor Warning: Incompatible color definition on input line 221.
 
 File: notaglineLogo.png Graphic file (type png)
 <use notaglineLogo.png>
@@ -1150,14 +1165,14 @@ df>
 (epstopdf)                    size: 171998 bytes
 (epstopdf)             Command: <repstopdf --outfile=pictures/design_profile-ep
 s-converted-to.pdf pictures/design_profile.eps>
-(epstopdf)             \includegraphics on input line 238.
+(epstopdf)             \includegraphics on input line 239.
 Package epstopdf Info: Output file is already uptodate.
 <pictures/design_profile-eps-converted-to.pdf, id=107, 420.57124pt x 215.80624p
 t>
 File: pictures/design_profile-eps-converted-to.pdf Graphic file (type pdf)
 <use pictures/design_profile-eps-converted-to.pdf>
 Package pdftex.def Info: pictures/design_profile-eps-converted-to.pdf  used on 
-input line 238.
+input line 239.
 (pdftex.def)             Requested size: 242.67355pt x 124.52228pt.
 Package epstopdf Info: Source file: <pictures/design_example.eps>
 (epstopdf)                    date: 2018-05-31 10:46:28
@@ -1168,22 +1183,22 @@ df>
 (epstopdf)                    size: 229273 bytes
 (epstopdf)             Command: <repstopdf --outfile=pictures/design_example-ep
 s-converted-to.pdf pictures/design_example.eps>
-(epstopdf)             \includegraphics on input line 248.
+(epstopdf)             \includegraphics on input line 249.
 Package epstopdf Info: Output file is already uptodate.
 <pictures/design_example-eps-converted-to.pdf, id=108, 447.6725pt x 387.4475pt>
 
 File: pictures/design_example-eps-converted-to.pdf Graphic file (type pdf)
 <use pictures/design_example-eps-converted-to.pdf>
 Package pdftex.def Info: pictures/design_example-eps-converted-to.pdf  used on 
-input line 248.
+input line 249.
 (pdftex.def)             Requested size: 242.67355pt x 210.02847pt.
 
 
-Package xcolor Warning: Incompatible color definition on input line 253.
+Package xcolor Warning: Incompatible color definition on input line 254.
 
 File: notaglineLogo.png Graphic file (type png)
 <use notaglineLogo.png>
-Package pdftex.def Info: notaglineLogo.png  used on input line 266.
+Package pdftex.def Info: notaglineLogo.png  used on input line 267.
 (pdftex.def)             Requested size: 91.32pt x 23.1352pt.
 
 Overfull \hbox (505.12177pt too wide) has occurred while \output is active
@@ -1210,17 +1225,17 @@ Package epstopdf Info: Source file: <pictures/tsne.eps>
 (epstopdf)                    size: 362732 bytes
 (epstopdf)             Command: <repstopdf --outfile=pictures/tsne-eps-converte
 d-to.pdf pictures/tsne.eps>
-(epstopdf)             \includegraphics on input line 269.
+(epstopdf)             \includegraphics on input line 270.
 Package epstopdf Info: Output file is already uptodate.
 <pictures/tsne-eps-converted-to.pdf, id=140, 567.11874pt x 212.795pt>
 File: pictures/tsne-eps-converted-to.pdf Graphic file (type pdf)
 <use pictures/tsne-eps-converted-to.pdf>
 Package pdftex.def Info: pictures/tsne-eps-converted-to.pdf  used on input line
- 269.
+ 270.
 (pdftex.def)             Requested size: 242.67355pt x 91.05522pt.
 
 
-Package xcolor Warning: Incompatible color definition on input line 274.
+Package xcolor Warning: Incompatible color definition on input line 275.
 
 Package epstopdf Info: Source file: <pictures/space1.eps>
 (epstopdf)                    date: 2020-01-09 17:46:23
@@ -1230,13 +1245,13 @@ Package epstopdf Info: Source file: <pictures/space1.eps>
 (epstopdf)                    size: 523910 bytes
 (epstopdf)             Command: <repstopdf --outfile=pictures/space1-eps-conver
 ted-to.pdf pictures/space1.eps>
-(epstopdf)             \includegraphics on input line 284.
+(epstopdf)             \includegraphics on input line 285.
 Package epstopdf Info: Output file is already uptodate.
 <pictures/space1-eps-converted-to.pdf, id=141, 813.0375pt x 432.61626pt>
 File: pictures/space1-eps-converted-to.pdf Graphic file (type pdf)
 <use pictures/space1-eps-converted-to.pdf>
 Package pdftex.def Info: pictures/space1-eps-converted-to.pdf  used on input li
-ne 284.
+ne 285.
 (pdftex.def)             Requested size: 244.6937pt x 130.20175pt.
 Package epstopdf Info: Source file: <pictures/space2.eps>
 (epstopdf)                    date: 2020-01-09 17:47:42
@@ -1246,13 +1261,13 @@ Package epstopdf Info: Source file: <pictures/space2.eps>
 (epstopdf)                    size: 488881 bytes
 (epstopdf)             Command: <repstopdf --outfile=pictures/space2-eps-conver
 ted-to.pdf pictures/space2.eps>
-(epstopdf)             \includegraphics on input line 287.
+(epstopdf)             \includegraphics on input line 288.
 Package epstopdf Info: Output file is already uptodate.
 <pictures/space2-eps-converted-to.pdf, id=142, 813.0375pt x 432.61626pt>
 File: pictures/space2-eps-converted-to.pdf Graphic file (type pdf)
 <use pictures/space2-eps-converted-to.pdf>
 Package pdftex.def Info: pictures/space2-eps-converted-to.pdf  used on input li
-ne 287.
+ne 288.
 (pdftex.def)             Requested size: 244.6937pt x 130.20175pt.
 Package epstopdf Info: Source file: <pictures/space3.eps>
 (epstopdf)                    date: 2020-01-11 11:55:58
@@ -1262,41 +1277,35 @@ Package epstopdf Info: Source file: <pictures/space3.eps>
 (epstopdf)                    size: 23204 bytes
 (epstopdf)             Command: <repstopdf --outfile=pictures/space3-eps-conver
 ted-to.pdf pictures/space3.eps>
-(epstopdf)             \includegraphics on input line 290.
+(epstopdf)             \includegraphics on input line 291.
 Package epstopdf Info: Output file is already uptodate.
 <pictures/space3-eps-converted-to.pdf, id=143, 740.7675pt x 192.72pt>
 File: pictures/space3-eps-converted-to.pdf Graphic file (type pdf)
 <use pictures/space3-eps-converted-to.pdf>
 Package pdftex.def Info: pictures/space3-eps-converted-to.pdf  used on input li
-ne 290.
+ne 291.
 (pdftex.def)             Requested size: 244.6937pt x 63.65955pt.
 
-Overfull \hbox (4.52014pt too wide) in paragraph at lines 284--291
+Overfull \hbox (4.52014pt too wide) in paragraph at lines 285--292
  [][][] 
  []
 
 
-Overfull \hbox (4.52014pt too wide) in paragraph at lines 284--291
+Overfull \hbox (4.52014pt too wide) in paragraph at lines 285--292
  [][] 
  []
 
 
-Overfull \hbox (4.52014pt too wide) in paragraph at lines 284--291
+Overfull \hbox (4.52014pt too wide) in paragraph at lines 285--292
  [][] 
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 301.
-
-
-Package xcolor Warning: Incompatible color definition on input line 305.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Package xcolor Warning: Incompatible color definition on input line 302.
 
 File: notaglineLogo.png Graphic file (type png)
 <use notaglineLogo.png>
-Package pdftex.def Info: notaglineLogo.png  used on input line 308.
+Package pdftex.def Info: notaglineLogo.png  used on input line 306.
 (pdftex.def)             Requested size: 91.32pt x 23.1352pt.
 
 Overfull \hbox (505.12177pt too wide) has occurred while \output is active
@@ -1316,6 +1325,9 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [7 <./pictures/tsne-eps-converted-to.pdf> <./pictures/space1-eps-converted-to.p
 df> <./pictures/space2-eps-converted-to.pdf> <./pictures/space3-eps-converted-t
 o.pdf>]
+
+Package xcolor Warning: Incompatible color definition on input line 306.
+
 Package epstopdf Info: Source file: <pictures/case1_1.eps>
 (epstopdf)                    date: 2020-01-17 19:39:03
 (epstopdf)                    size: 2919278 bytes
@@ -1324,13 +1336,13 @@ Package epstopdf Info: Source file: <pictures/case1_1.eps>
 (epstopdf)                    size: 302864 bytes
 (epstopdf)             Command: <repstopdf --outfile=pictures/case1_1-eps-conve
 rted-to.pdf pictures/case1_1.eps>
-(epstopdf)             \includegraphics on input line 311.
+(epstopdf)             \includegraphics on input line 312.
 Package epstopdf Info: Output file is already uptodate.
 <pictures/case1_1-eps-converted-to.pdf, id=183, 713.66624pt x 454.69875pt>
 File: pictures/case1_1-eps-converted-to.pdf Graphic file (type pdf)
 <use pictures/case1_1-eps-converted-to.pdf>
 Package pdftex.def Info: pictures/case1_1-eps-converted-to.pdf  used on input l
-ine 311.
+ine 312.
 (pdftex.def)             Requested size: 242.67355pt x 154.61633pt.
 Package epstopdf Info: Source file: <pictures/case1_2.eps>
 (epstopdf)                    date: 2018-06-01 02:26:52
@@ -1340,23 +1352,22 @@ Package epstopdf Info: Source file: <pictures/case1_2.eps>
 (epstopdf)                    size: 56840 bytes
 (epstopdf)             Command: <repstopdf --outfile=pictures/case1_2-eps-conve
 rted-to.pdf pictures/case1_2.eps>
-(epstopdf)             \includegraphics on input line 324.
+(epstopdf)             \includegraphics on input line 325.
 Package epstopdf Info: Output file is already uptodate.
 <pictures/case1_2-eps-converted-to.pdf, id=184, 712.6625pt x 424.58624pt>
 File: pictures/case1_2-eps-converted-to.pdf Graphic file (type pdf)
 <use pictures/case1_2-eps-converted-to.pdf>
 Package pdftex.def Info: pictures/case1_2-eps-converted-to.pdf  used on input l
-ine 324.
+ine 325.
 (pdftex.def)             Requested size: 242.67355pt x 144.57768pt.
 <pictures/case1_3_new-eps-converted-to.pdf, id=185, 1409.265pt x 2757.30125pt>
 File: pictures/case1_3_new-eps-converted-to.pdf Graphic file (type pdf)
 <use pictures/case1_3_new-eps-converted-to.pdf>
 Package pdftex.def Info: pictures/case1_3_new-eps-converted-to.pdf  used on inp
-ut line 334.
+ut line 335.
 (pdftex.def)             Requested size: 242.67355pt x 474.79353pt.
 
-
-Package xcolor Warning: Incompatible color definition on input line 342.
+Package xcolor Warning: Incompatible color definition on input line 343.
 
 Package epstopdf Info: Source file: <pictures/case2.eps>
 (epstopdf)                    date: 2020-01-17 19:41:08
@@ -1366,17 +1377,17 @@ Package epstopdf Info: Source file: <pictures/case2.eps>
 (epstopdf)                    size: 1381705 bytes
 (epstopdf)             Command: <repstopdf --outfile=pictures/case2-eps-convert
 ed-to.pdf pictures/case2.eps>
-(epstopdf)             \includegraphics on input line 347.
+(epstopdf)             \includegraphics on input line 348.
 Package epstopdf Info: Output file is already uptodate.
 <pictures/case2-eps-converted-to.pdf, id=186, 2423.0525pt x 1977.3875pt>
 File: pictures/case2-eps-converted-to.pdf Graphic file (type pdf)
 <use pictures/case2-eps-converted-to.pdf>
 Package pdftex.def Info: pictures/case2-eps-converted-to.pdf  used on input lin
-e 347.
+e 348.
 (pdftex.def)             Requested size: 242.67355pt x 198.02188pt.
 File: notaglineLogo.png Graphic file (type png)
 <use notaglineLogo.png>
-Package pdftex.def Info: notaglineLogo.png  used on input line 353.
+Package pdftex.def Info: notaglineLogo.png  used on input line 354.
 (pdftex.def)             Requested size: 91.32pt x 23.1352pt.
 
 Overfull \hbox (505.12177pt too wide) has occurred while \output is active
@@ -1396,11 +1407,11 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [8 <./pictures/case1_1-eps-converted-to.pdf> <./pictures/case1_2-eps-converted-
 to.pdf>]
 
-Package xcolor Warning: Incompatible color definition on input line 360.
+Package xcolor Warning: Incompatible color definition on input line 361.
 
 File: notaglineLogo.png Graphic file (type png)
 <use notaglineLogo.png>
-Package pdftex.def Info: notaglineLogo.png  used on input line 362.
+Package pdftex.def Info: notaglineLogo.png  used on input line 363.
 (pdftex.def)             Requested size: 91.32pt x 23.1352pt.
 
 Overfull \hbox (505.12177pt too wide) has occurred while \output is active
@@ -1427,13 +1438,13 @@ Package epstopdf Info: Source file: <pictures/case3.eps>
 (epstopdf)                    size: 1738238 bytes
 (epstopdf)             Command: <repstopdf --outfile=pictures/case3-eps-convert
 ed-to.pdf pictures/case3.eps>
-(epstopdf)             \includegraphics on input line 365.
+(epstopdf)             \includegraphics on input line 366.
 Package epstopdf Info: Output file is already uptodate.
 <pictures/case3-eps-converted-to.pdf, id=275, 1524.69624pt x 910.40125pt>
 File: pictures/case3-eps-converted-to.pdf Graphic file (type pdf)
 <use pictures/case3-eps-converted-to.pdf>
 Package pdftex.def Info: pictures/case3-eps-converted-to.pdf  used on input lin
-e 365.
+e 366.
 (pdftex.def)             Requested size: 242.67355pt x 144.88924pt.
 Package epstopdf Info: Source file: <pictures/case3_2.eps>
 (epstopdf)                    date: 2020-01-09 17:35:31
@@ -1443,35 +1454,25 @@ Package epstopdf Info: Source file: <pictures/case3_2.eps>
 (epstopdf)                    size: 1565089 bytes
 (epstopdf)             Command: <repstopdf --outfile=pictures/case3_2-eps-conve
 rted-to.pdf pictures/case3_2.eps>
-(epstopdf)             \includegraphics on input line 374.
+(epstopdf)             \includegraphics on input line 375.
 Package epstopdf Info: Output file is already uptodate.
 <pictures/case3_2-eps-converted-to.pdf, id=276, 1619.04875pt x 1087.06125pt>
 File: pictures/case3_2-eps-converted-to.pdf Graphic file (type pdf)
 <use pictures/case3_2-eps-converted-to.pdf>
 Package pdftex.def Info: pictures/case3_2-eps-converted-to.pdf  used on input l
-ine 374.
+ine 375.
 (pdftex.def)             Requested size: 242.67355pt x 162.93604pt.
 
 
-Package xcolor Warning: Incompatible color definition on input line 382.
+Package xcolor Warning: Incompatible color definition on input line 383.
 
 
-Package xcolor Warning: Incompatible color definition on input line 388.
+Package xcolor Warning: Incompatible color definition on input line 389.
 
 (./ia_vis_3d_final.bbl
-
-Package xcolor Warning: Incompatible color definition on input line 2.
-
-
-LaTeX Font Warning: Font shape `T1/ptm/n/it' undefined
-(Font)              using `T1/ptm/n/n' instead on input line 25.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
 File: notaglineLogo.png Graphic file (type png)
 <use notaglineLogo.png>
-Package pdftex.def Info: notaglineLogo.png  used on input line 27.
+Package pdftex.def Info: notaglineLogo.png  used on input line 2.
 (pdftex.def)             Requested size: 91.32pt x 23.1352pt.
 
 Overfull \hbox (505.12177pt too wide) has occurred while \output is active
@@ -1489,28 +1490,36 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [10 <./pictures/case3-eps-converted-to.pdf> <./pictures/case3_2-eps-converted-t
-o.pdf>])
+o.pdf>]
+
+Package xcolor Warning: Incompatible color definition on input line 2.
+
+
+LaTeX Font Warning: Font shape `T1/ptm/n/it' undefined
+(Font)              using `T1/ptm/n/n' instead on input line 25.
+
+)
 <bio/wq.pdf, id=304, 2845.27985pt x 3556.59747pt>
 File: bio/wq.pdf Graphic file (type pdf)
 <use bio/wq.pdf>
-Package pdftex.def Info: bio/wq.pdf  used on input line 397.
+Package pdftex.def Info: bio/wq.pdf  used on input line 398.
 (pdftex.def)             Requested size: 72.24326pt x 90.304pt.
 File: bio/wq.pdf Graphic file (type pdf)
 <use bio/wq.pdf>
-Package pdftex.def Info: bio/wq.pdf  used on input line 397.
+Package pdftex.def Info: bio/wq.pdf  used on input line 398.
 (pdftex.def)             Requested size: 72.24326pt x 90.304pt.
 <bio/minlu.pdf, id=307, 113.42375pt x 153.57375pt>
 File: bio/minlu.pdf Graphic file (type pdf)
 <use bio/minlu.pdf>
-Package pdftex.def Info: bio/minlu.pdf  used on input line 400.
+Package pdftex.def Info: bio/minlu.pdf  used on input line 401.
 (pdftex.def)             Requested size: 66.72038pt x 90.33823pt.
 File: bio/minlu.pdf Graphic file (type pdf)
 <use bio/minlu.pdf>
-Package pdftex.def Info: bio/minlu.pdf  used on input line 400.
+Package pdftex.def Info: bio/minlu.pdf  used on input line 401.
 (pdftex.def)             Requested size: 66.72038pt x 90.33823pt.
 File: notaglineLogo.png Graphic file (type png)
 <use notaglineLogo.png>
-Package pdftex.def Info: notaglineLogo.png  used on input line 403.
+Package pdftex.def Info: notaglineLogo.png  used on input line 404.
 (pdftex.def)             Requested size: 91.32pt x 23.1352pt.
 
 Overfull \hbox (505.12177pt too wide) has occurred while \output is active
@@ -1531,19 +1540,19 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 <bio/lqq.pdf, id=559, 199.82655pt x 293.05484pt>
 File: bio/lqq.pdf Graphic file (type pdf)
 <use bio/lqq.pdf>
-Package pdftex.def Info: bio/lqq.pdf  used on input line 403.
+Package pdftex.def Info: bio/lqq.pdf  used on input line 404.
 (pdftex.def)             Requested size: 61.59798pt x 90.33629pt.
 File: bio/lqq.pdf Graphic file (type pdf)
 <use bio/lqq.pdf>
-Package pdftex.def Info: bio/lqq.pdf  used on input line 403.
+Package pdftex.def Info: bio/lqq.pdf  used on input line 404.
 (pdftex.def)             Requested size: 61.59798pt x 90.33629pt.
 File: bullet.png Graphic file (type png)
 <use bullet.png>
-Package pdftex.def Info: bullet.png  used on input line 406.
+Package pdftex.def Info: bullet.png  used on input line 407.
 (pdftex.def)             Requested size: 5.0pt x 14.6871pt.
 File: notaglineLogo.png Graphic file (type png)
 <use notaglineLogo.png>
-Package pdftex.def Info: notaglineLogo.png  used on input line 408.
+Package pdftex.def Info: notaglineLogo.png  used on input line 409.
 (pdftex.def)             Requested size: 91.32pt x 23.1352pt.
 
 Overfull \hbox (505.12177pt too wide) has occurred while \output is active
@@ -1568,13 +1577,13 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 16537 strings out of 492616
- 298010 string characters out of 6128960
- 487471 words of memory out of 5000000
- 20235 multiletter control sequences out of 15000+600000
- 629658 words of font info for 150 fonts, out of 8000000 for 9000
+ 16704 strings out of 492616
+ 300095 string characters out of 6128960
+ 489945 words of memory out of 5000000
+ 20397 multiletter control sequences out of 15000+600000
+ 629971 words of font info for 151 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 53i,12n,92p,1939b,481s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 53i,13n,92p,1939b,438s stack positions out of 5000i,500n,10000p,200000b,80000s
 {d:/texlive/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}<d:/texlive/t
 exlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><d:/texlive/te
 xlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><d:/texlive/tex
@@ -1589,7 +1598,7 @@ nts/type1/urw/helvetic/uhvr8a.pfb><d:/texlive/texlive/2018/texmf-dist/fonts/typ
 e1/urw/helvetic/uhvro8a.pfb><d:/texlive/texlive/2018/texmf-dist/fonts/type1/urw
 /times/utmb8a.pfb><d:/texlive/texlive/2018/texmf-dist/fonts/type1/urw/times/utm
 r8a.pfb><d:/texlive/texlive/2018/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on ia_vis_3d_final.pdf (12 pages, 17860760 bytes).
+Output written on ia_vis_3d_final.pdf (12 pages, 17860801 bytes).
 PDF statistics:
  620 PDF objects out of 1000 (max. 8388607)
  204 compressed objects within 3 object streams

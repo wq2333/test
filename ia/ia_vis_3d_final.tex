@@ -6,6 +6,7 @@
 \usepackage{algpseudocode}
 \usepackage{graphicx}
 \usepackage{textcomp}
+\usepackage{soul}
 
 \ifCLASSOPTIONcompsoc
 \usepackage[caption=false, font=normalsize, labelfont=sf, textfont=sf]{subfig}
@@ -106,7 +107,7 @@ In this work, we perform a survey in Shenzhen, which is one of the most modern m
 
 \textbf{Demographic Characteristics} Fig. \ref{fig:data_over} lists the eight domains needed to give a generalized description of an individual. The profile serves as the components for the analysis of mobility patterns of diverse individuals.
 
-\textbf{Traveling Trips} Individuals can upload dynamic traveling trips (Fig. \ref{fig:app}(b)). Each trip requires information on the start/end location, start/end time, traveling purpose, and traveling mode. Locations are recorded by GPS modules in the phones. To encourage trip uploading, a credit system retains the contribution of individuals on trips and rewards the volunteers with the top credits (Fig. \ref{fig:app}(c)).
+\textbf{Traveling Trips} Individuals can upload dynamic traveling trips (Fig. \ref{fig:app}(b)). Each trip requires information on the start/end location, start/end time, traveling purpose, and traveling mode. Locations are recorded by GPS modules in the phones. A credit system (Fig. \ref{fig:app}(c)) is utilized to encourage participation. Individuals who have enough credits will obtain raffle tickets. There are three ways for credits: recommending friends to participate in the survey, filling personal information, and filling daily trips.
 
 
 \begin{figure}
@@ -164,7 +165,7 @@ Fig. \ref{fig:data_age_edu} gives the distribution of gender, age and education 
 \end{figure}
 \fi
 
-The basic statistics related to movements are shown in Fig. \ref{fig:data_geometry}. Fig. ~\ref{fig:data_geometry}(a) visualizes the distribution of the trip quantity of each citizen. The distribution has a heavy-tail, which follows the trends of most human-related statistics. In Fig. ~\ref{fig:data_geometry}(b), the active traveling time (here, we take the start time as representative of the active time) follows the common knowledge about urban life. There are obvious morning and evening rush hours. Fig. ~\ref{fig:data_geometry}(c) shows the counts for different traveling purposes. Ninety-five percent of trips are tagged with a clear traveling purpose in the data. Thirty-three percent of trips are going home, and 37\% are going to work. In addition to this kind of routine travel, there are also substantial numbers of trips for other purposes such as going shopping and going the hospital. Fig. ~\ref{fig:data_geometry}(d) shows the spatial distribution of the origins and destinations. It is found that more dots are located in Futian and Nanshan Districts, the city's heart, than in the surrounding areas. This result is consistent with Batty's exposition of the focus of city networks and interaction patterns~\cite{batty2013new}.
+The basic statistics related to movements are shown in Fig. \ref{fig:data_geometry}. Fig. ~\ref{fig:data_geometry}(a) visualizes the distribution of the trip quantity of each citizen. The distribution has a heavy-tail, which follows the trends of most human-related statistics. All trips are reported by the participants. To make sure the trips are available, we checked trips from temporal and spatial perspectives. In Fig. ~\ref{fig:data_geometry}(b), the active traveling time (here, we take the start time as representative of the active time) follows the common knowledge about urban life. There are obvious morning and evening rush hours. Fig. ~\ref{fig:data_geometry}(c) shows the counts for different traveling purposes. Ninety-five percent of trips are tagged with a clear traveling purpose in the data. Thirty-three percent of trips are going home, and 37\% are going to work. In addition to this kind of routine travel, there are also substantial numbers of trips for other purposes such as going shopping and going the hospital. Fig. ~\ref{fig:data_geometry}(d) shows the spatial distribution of the origins and destinations. It is found that more dots are located in Futian and Nanshan Districts, the city's heart, than in the surrounding areas. This result is consistent with Batty's exposition of the focus of city networks and interaction patterns~\cite{batty2013new}.
 
 
 \begin{figure}[htb!]
